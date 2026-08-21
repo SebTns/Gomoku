@@ -1,9 +1,9 @@
-#Detta är vårat skolprojekt för ett spel kallat Gomoku välkommna 
+# Detta är vårat skolprojekt för ett spel kallat Gomoku välkommna 
 
-##MVH
+## MVH
 
-####Fanny 
-####Anders 
-####Simon 
-####Sebastian
+#### Fanny 
+#### Anders 
+#### Simon 
+#### Sebastian
 
