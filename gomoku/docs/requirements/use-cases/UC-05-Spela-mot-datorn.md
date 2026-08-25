@@ -2,9 +2,9 @@
 UC-05-spela mot datorn
 
 Aktör: Spelare
-Mål: Spelaren vill kunna spela ett parti Gomoku mot datorn.
+Beskrivning: Spelaren vill kunna spela ett parti Gomoku mot datorn.
 
-Precondition: Spelaren har öppnat Gomoku-spelet.
+Precondition: Spelaren har öppnat Gomoku-spelet, spelet fungerar och är redo att starta ett nytt parti.
 
 Huvudflöde:
     1. systemet visar startsidan.
@@ -21,6 +21,19 @@ Huvudflöde:
     12. systemet kontrollerar efter varje drag om någon har fått fem i rad.
     13. när någon får fem i rad avslutas partiet.
     14. systemet visar resultet.
+Alternative flöden: 
+    AF-01 Partiet mot datorn kan inte starta
+        Systemet visar ett meddelande om att partiet inte kunde startas.
+        Spelaren stannar kvar på sidan.
+        Spelaren kan försöka starta partiet igen eller gå tillbaka till startsidan.
+    AF-02 Datorn kan inte göra sitt drag 
+        om datorn inte kan göra sitt drag under partiet:
+        System visar att något gick fel.
+        Partiet pausas.
+        Spelaren kan försöka igen eller avsluta partiet.
+            
     
-    Postcondition:
-    partiet mot datorn är avslutat och spelaren kan se resultat.
+    
+Postcondition:
+    Lyckat: partiet mot datorn är avslutat och spelaren kan se resultat.
+    Pågående: Om partiet inte är avslutade fortsätter spelaren och datorn att gör drag i tur och ordning.
