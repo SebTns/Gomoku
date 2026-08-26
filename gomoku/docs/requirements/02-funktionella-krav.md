@@ -1,4 +1,5 @@
 # 02-funktionellakrav
+### Denna fil är ej klar detta är en demo version vi måste skriva om alla krav som riktiga krav just nnu står dem som user stories!!!!
 
 ## SPELSTART 
 
