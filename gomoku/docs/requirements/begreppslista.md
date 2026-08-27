@@ -1,6 +1,8 @@
 # Begräppslista
 Lista med termer och betydelser för att hjälpa förståelse. Dessa definitioner tar företräde vid konflikt.
 
+---
+
 ## Domän Termer
 
 | Term | Definition |
@@ -12,10 +14,15 @@ Lista med termer och betydelser för att hjälpa förståelse. Dessa definitione
 ---
 
 ## GDPR & Privata Termer
+
 | Term | Definition |
+|-----|-----------|
 
 ---
 
 ## Tekniska Term
+
 | Term | Definition |
+|-----|-----------|
+
 
