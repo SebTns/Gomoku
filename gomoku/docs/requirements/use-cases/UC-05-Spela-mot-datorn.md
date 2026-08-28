@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UC-05: Spela mot datorn
 
 | Fält | Värde |
@@ -75,3 +76,4 @@ Under steg 13 väljer spelaren att avbryta.
 
 ## Öppna frågor
 - Ska ett avbrutet parti mot datorn räknas som förlust i statistiken (→ UC-17)?
+>>>>>>> 4a8002c18f4c321d58f36925250a1a37938e6356
