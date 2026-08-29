@@ -17,7 +17,7 @@ roblemet kan undersökas och hanteras.
 
 ## Förutsättningar
 - Spelaren har öppnat Gomoku-spelet, Ett teksniskt problem har uppstått och upptäckts av spelaren.
-- 
+  
 ## Huvudflöde
 
    1. Spelaren väljer "Rapportera problem".
