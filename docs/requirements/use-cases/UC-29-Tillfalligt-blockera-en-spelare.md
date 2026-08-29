@@ -46,8 +46,7 @@ vid steg 7 går det inte att blockera spelaren.
 
 ## Postconditions
 
-**Lyckat:** Spelaren är tillfälligt blockerad och blockeringen är sparad .
-i systemet.
+**Lyckat:** Spelaren är tillfälligt blockerad och blockeringen är sparad i systemet.
 **Misslyckat:** Spelaren är inte blockerad och administratören får information om att något gick fel.
 
 ## Särskilda krav
