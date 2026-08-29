@@ -54,7 +54,7 @@ roblemet kan undersökas och hanteras.
 **Misslyckat:** Rapporten har inte skickats och spelaren får information om att något gick fel.
 
 ## Särskilda krav
-- - Problemrapporteringen ska kunna nås inom högst två klick från valfri vy (NFR-03.1).
+- Problemrapporteringen ska kunna nås inom högst två klick från valfri vy (NFR-03.1).
 - En inskickad rapport ska bekräftas inom 3 sekunder (NFR-03.2).
 - Rapporten ska automatiskt innehålla webbläsare, tidpunkt och parti-ID (NFR-03.3).
 - Rapporteringen ska inte avbryta ett pågående parti (NFR-03.4).
