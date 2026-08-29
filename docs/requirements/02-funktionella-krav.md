@@ -202,3 +202,15 @@ när respektive UC är färdigskriven:
 | Ångra drag, lokal multiplayer, regler, återställning | UC-18, UC-19, UC-20, UC-32 |
 | Problemrapportering och moderering | UC-28, UC-29 |
 
+# FR-28: Rapportera ett tekniskt problem
+
+**Realiserar:** UC-28 Rapportera ett tekniskt problem
+
+| ID | Krav |
+| --- | --- |
+| **FR-28.1** | Systemet ska låta spelaren rapportera ett tekniskt problem som har uppstått i spelet. |
+| **FR-28.2** | Systemet ska låta spelaren beskriva vad som hände och vad som gick fel. |
+| **FR-28.3** | Systemet ska kontrollera att nödvändig information finns med innan rapporten registreras. |
+| **FR-28.4** | Systemet ska registrera problemrapporten för vidare hantering. |
+| **FR-28.5** | Systemet ska visa en bekräftelse när problemrapporten har skickats. |
+| **FR-28.6** | Om problemrapporten inte kan registreras ska systemet informera spelaren om detta. |
