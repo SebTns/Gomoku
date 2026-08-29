@@ -1,8 +1,8 @@
-
-```mermaid
-graph TD;
-    A-->B;
-    B-->C;
-    B-->D;
-    D-->E;
-```
+        Spelare
+           |
+           |
+      ( Starta spel )
+           |
+      ( Göra drag )
+           |
+      ( Avsluta spel )
