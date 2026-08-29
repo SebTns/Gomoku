@@ -214,3 +214,15 @@ när respektive UC är färdigskriven:
 | **FR-28.4** | Systemet ska registrera problemrapporten för vidare hantering. |
 | **FR-28.5** | Systemet ska visa en bekräftelse när problemrapporten har skickats. |
 | **FR-28.6** | Om problemrapporten inte kan registreras ska systemet informera spelaren om detta. |
+# FR-29: Tillfälligt blockera en spelare
+
+**Realiserar:** UC-28 Tillfälligt blockera en spelare
+
+| ID | Krav |
+| --- | --- |
+| **FR-29.1** | Systemet ska låta administratören tillfälligt blockera en spelare |
+| **FR-29.2** | Systemet ska visar information om spelaren och den aktuella ärendet innan en blockering genomförs. |
+| **FR-29.3** | Systemet ska kräva att administratören bekräftar blockeringen innan den genomförs |
+| **FR-29.4** | Systemet ska registrera genomförda blockeringar. |
+| **FR-29.5** | Systemet ska informera administratören om blockeringen har genomförts eller inte. |
+ 
