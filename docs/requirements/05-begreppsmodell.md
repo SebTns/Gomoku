@@ -1,8 +1,8 @@
 
 ```mermaid
 graph TD;
-    Besökande-->Vill du starta ett spel;
-    Vill du starta ett spel-->Nej;
-    Vill du starta ett spel-->Ja;
-    Ja-->Placera en bricka;
+    ABesökande-->BVill du starta ett spel;
+    BVill du starta ett spel-->CNej;
+    BVill du starta ett spel-->DJa;
+    DJa-->EPlacera en bricka;
 ```
