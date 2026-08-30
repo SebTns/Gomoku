@@ -1,0 +1,15 @@
+# OS / editor-skrap
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Node
+node_modules/
