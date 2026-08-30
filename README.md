@@ -1,6 +1,4 @@
-# Gomoku
-
-Skolprojekt för kursen **Krav och användningsfall (TS26)** — vi dokumenterar och bygger en webbaserad version av strategispelet Gomoku (fem i rad).
+**Krav och användningsfall ** — vi dokumenterar och bygger en webbaserad version av strategispelet Gomoku (fem i rad).
 
 ## Om spelet
 
@@ -16,7 +14,6 @@ Projektets kravdokumentation ligger i [`docs/`](docs/):
 - Testfall
 
 ## Medlemmar
-
 - Fanny
 - Andersson
 - Simonsson
