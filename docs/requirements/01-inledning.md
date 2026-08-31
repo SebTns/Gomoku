@@ -1,4 +1,21 @@
 # Gomoku 
+## 1.3 Definitioner och förkortningar
+
+| Begrepp | Förklaring |
+|---------|------------|
+| Gomoku | Ett brädspel där målet är att få fem stenar i rad. |
+| Spelare | En person som spelar Gomoku, antingen mot datorn eller mot en annan spelare. |
+| Spelplan | Området där spelarna placerar sina stenar under ett parti. |
+| Sten | En svart eller vit spelpjäs som placeras på spelplanen. |
+| Parti | Ett Gomoku-spel från start tills någon vinner, förlorar eller partiet slutar oavgjort. |
+| AI-motståndare | En datorstyrd motståndare som spelaren kan spela mot. |
+| Administratör | En användare som kan hantera rapporter och modereringsärenden i systemet. |
+| Gästspelare | En spelare som använder spelet utan att ha ett registrerat konto. |
+| UC | Förkortning för Use Case (användningsfall). Beskriver hur en aktör använder systemet för att uppnå ett mål. |
+| FR | Förkortning för Functional Requirement (funktionellt krav). Beskriver vad systemet ska kunna göra. |
+| NFR | Förkortning för Non-Functional Requirement (icke-funktionellt krav). Beskriver krav på till exempel prestanda, säkerhet och användbarhet. |
+| GDPR | EU:s dataskyddsförordning som reglerar hur personuppgifter får behandlas. |
+
 
 ## 1.5 Översikt över dokumentstrukturen
 
