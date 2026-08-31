@@ -4,7 +4,7 @@
 | Namn | Begära tillgång till personuppgifter |
 | Version | 1.0 |
 | Primär aktör | Registrerad spelare |
-| Sekundär aktör | — |
+| Sekundär aktör | systemet |
 | Relaterade FR | — |
 | Relaterade NFR | NFR-10.1, NFR-10.2 |
 | GDPR-referens | Artikel 15 |
