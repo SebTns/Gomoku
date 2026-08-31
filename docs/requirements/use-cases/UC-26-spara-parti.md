@@ -7,8 +7,8 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet, Databasen |
-| Relaterade FR | FR-xx (Spelhistorik och sparade partier) |
-| Relaterade NFR | NFR-04.2 |
+| Relaterade FR | FR-26.1, FR-26.2, FR-26.3, FR-26.4, FR-26.5, FR-26.6, FR-26.7, FR-26.8, FR-26.9 |
+| Relaterade NFR | NFR-04.2, NFR-07.4 |
 
 ---
 
@@ -28,9 +28,10 @@ Spelaren sparar ett pågående parti så att det kan återupptas senare utan att
 ## Huvudflöde
 
 1. Spelaren väljer "Spara parti".
-2. Systemet sparar partitillståndet (positioner, tur, färger, brädstorlek, svårighetsgrad).
-3. Systemet visar en bekräftelse på att partiet är sparat.
-4. Spelaren kan lämna partiet.
+2. Systemet frågar om spelaren vill spara till kontot, molnet eller en fil för nedladdning.
+3. Systemet sparar partitillståndet (positioner, tur, färger, brädstorlek, svårighetsgrad).
+4. Systemet visar en bekräftelse på att partiet är sparat.
+5. Spelaren kan lämna partiet.
 
 ---
 
@@ -51,6 +52,11 @@ Vid steg 1 finns redan ett sparat tillstånd för partiet.
 Vid steg 1 är partiet redan avslutat.
 
 - Systemet erbjuder att spara partiet till historiken i stället.
+
+### AF-04: Spelaren är inte inloggad (Ladda ner till fil)
+Vid steg 1 är spelaren i gästläge.
+
+- Systemet frågar om spelet ska sparas i moln eller fil för nedladdning.
 
 ---
 
