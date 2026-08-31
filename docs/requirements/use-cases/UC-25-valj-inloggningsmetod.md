@@ -7,8 +7,8 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet |
-| Relaterade FR | FR-xx (Autentisering) |
-| Relaterade NFR | NFR-xx (Säkerhet) |
+| Relaterade FR | FR-25.1, FR-25.2, FR-25.3, FR-25.4, FR-25.5 |
+| Relaterade NFR | NFR-07.1, NFR-07.3, NFR-06.1 |
 
 ---
 
@@ -58,7 +58,7 @@ Misslyckat: Spelaren förblir utloggad på inloggningssidan.
 
 ## Särskilda krav
 
-- Ska uppfylla NFR-xx genoma att aldrig avslöja vilka metoder som är kopplade till vilka konton.
+- Ska uppfylla NFR-07.3 och NFR-07.1 genom att aldrig avslöja vilka metoder som är kopplade till vilka konton vid felaktiga inloggningsförsök.
 
 ---
 
