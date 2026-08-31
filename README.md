@@ -1,17 +1,20 @@
-# Detta är vårat skolprojekt för ett spel kallat Gomoku välkommna 
+**Krav och användningsfall ** — vi dokumenterar och bygger en webbaserad version av strategispelet Gomoku (fem i rad).
 
-## MVH
+## Om spelet
 
-#### Fannysson 
+Gomoku är ett tvåspelarspel som spelas på ett 15×15-bräde (alternativt 19×19). Spelarna turas om att placera stenar, och den som först får fem i rad — horisontellt, vertikalt eller diagonalt — vinner.
 
-#### Andersson 
+## Dokumentation
 
-#### Simonsson 
+Projektets kravdokumentation ligger i [`docs/`](docs/):
 
-#### Sebastiansson
+- Kravspecifikation (funktionella och icke-funktionella krav)
+- Användningsfall (UC-01 – UC-32)
+- Diagram (UML, user journey, begreppsmodell)
+- Testfall
 
-<<<<<<< HEAD
-#### johan mår lite bättre
-=======
-#### Woodysson
->>>>>>> 4a8002c18f4c321d58f36925250a1a37938e6356
+## Medlemmar
+- Fanny
+- Andersson
+- Simonsson
+- Sebastian
