@@ -1,4 +1,25 @@
 # Gomoku 
+# 1. Introduktion
+
+## 1.1 Syfte
+
+Detta dokument definierar programvarukraven för **Gomoku Web Application** — en online,
+webbläsarbaserad implementering av det klassiska japanska strategispelet "Fem i rad" (Gomoku /
+Omok). Det fungerar som en auktoritativ referens för utvecklare, testare, designers och
+intressenter under hela projektets livscykel.
+
+## 1.2 Omfattning
+
+Systemet gör det möjligt för spelare att:
+
+- Spela Gomoku mot en AI-motståndare eller mot andra registrerade spelare online i realtid
+- Hantera en spelarprofil, visa statistik och spåra spelhistorik
+- Få tillgång till en global topplista och jämföra rankningar
+- Utöva sina rättigheter som registrerad person i enlighet med GDPR
+
+Systemet täcker **inte**: skrivbords-/native-applikationer, turneringsadministration eller betalda
+prenumerationsfunktioner.
+
 ## 1.3 Definitioner och förkortningar
 
 | Begrepp | Förklaring |
@@ -16,11 +37,22 @@
 | NFR | Förkortning för Non-Functional Requirement (icke-funktionellt krav). Beskriver krav på till exempel prestanda, säkerhet och användbarhet. |
 | GDPR | EU:s dataskyddsförordning som reglerar hur personuppgifter får behandlas. |
 
+## 1.4 Aktörer
 
+| Aktör | Typ | Beskrivning |
+|-------|------|-------------|
+| Gästanvändare | Primär, människa | En oautentiserad besökare. Kan spela mot AI:n men har inte åtkomst till historik, rankningar eller sociala funktioner. |
+| Registrerad spelare | Primär, människa | En autentiserad användare med en profil. Har åtkomst till alla spellägen, historik, topplista och GDPR-självbetjäningsfunktioner. |
+| Systemadministratör | Primär, människa | Plattformsoperatör som hanterar användarkonton, övervakar systemhälsa, tillämpar innehållsmoderering och granskar GDPR-efterlevnadsinstrumentpaneler. |
+| Dataskyddsombud (DPO) | Primär, människa | Övervakar GDPR-efterlevnad, granskar granskningsloggar, hanterar svar på dataintrång och hanterar eskalerade förfrågningar från registrerade. |
+| AI-motståndare | Sekundär, system | Datorstyrd spelare som genererar drag med hjälp av en spelalgoritm. |
+| E-posttjänst | Sekundär, extern | Tredjepartsleverantör av SMTP/transaktionella e-postmeddelanden som används för verifieringsmejl, lösenordsåterställningar och meddelanden om dataintrång. |
+| Analystjänst | Sekundär, Extern | Sekretesskompatibel analysplattform (medgivandebevakad) som används för att aggregera anonymiserade användningsdata. |****
 ## 1.5 Översikt över dokumentstrukturen
 
 | Avsnitt | Innehåll |
 |---------|---------|
+| 00 – begreppslista | en ordlista specifikt för detta projekt |
 | 01 – Inledning | Introduktion till projektet, syfte och omfattning |
 | 02 – Funktionella krav | Beskriver vad systemet ska kunna göra |
 | 03 – Kompletterande krav | Kompletterande krav, begränsningar och antaganden |
