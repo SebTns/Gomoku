@@ -117,3 +117,22 @@ NFR-05 Moderering och spelarrapporter
 | NFR-09.3 | Datorns drag ska gå att göra deterministiska via en seed, så att partier kan återskapas i test. |
 | NFR-09.4 | Alla tester ska köras automatiskt vid varje push till huvudgrenen. |
 | NFR-09.5 | Kravdokumenten ska versionshanteras i samma repo som koden. |
+
+
+## NFR-10: Tillgång till personuppgifter
+
+| **ID** | **Krav** |
+| --- | --- |
+| NFR-10.1 | Systemet ska göra det möjligt för en registrerad spelare att begära tillgång till sina personuppgifter. |
+| NFR-10.2 | Systemet ska tillhandahålla de begärda personuppgifterna i ett strukturerat format. |
+
+---
+
+## NFR-11: Delning av personuppgifter med tredje part
+
+| **ID** | **Krav** |
+| --- | --- |
+| NFR-11.1 | Systemet ska informera användaren om personuppgifter behandlas av tredje part. |
+| NFR-11.2 | Systemet ska informera användaren om personuppgifter överförs till ett land utanför det tillämpliga dataskyddsområdet och vilka skyddsåtgärder som gäller. |
+
+---
