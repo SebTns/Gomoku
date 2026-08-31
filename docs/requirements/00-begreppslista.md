@@ -55,10 +55,20 @@ Lista med termer och deras betydelser för att underlätta förståelsen. Dessa 
 
 ---
 
-## Tekniska Term
+## Tekniska Termer
 
 | Term | Definition |
 |-----|-----------|
-|  |  |
+| AES-256 | Avancerad krypteringsstandard med en 256-bitars nyckel. Används för att kryptera data i vila. |
+| API | Applikationsprogrammeringsgränssnitt. I detta projekt: RESTful HTTP-backend. |
+| bcrypt | En lösenordshashningsalgoritm. Lösenord lagras som bcrypt-hashar; lösenord i klartext lagras eller loggas aldrig. |
+| CDN | Innehållsleveransnätverk. Serverar statiska byggresurser (JavaScript, CSS, bilder) från kantnoder nära användare. |
+| CSRF | Förfalskning av begäran över flera webbplatser. En attack där en skadlig webbplats får en användares webbläsare att göra en oavsiktlig begäran. Begränsas av CSRF-tokens på alla tillståndsförändrande slutpunkter. |
+| JWT | JSON-webbtoken. En signerad, tillståndslös autentiseringstoken som utfärdas till en användare vid inloggning. Förfaller efter 24 timmar. |
+| MFA | Flerfaktorsautentisering. Krävs för systemadministratör och dataskyddsombud för åtkomst till administratörspanelen. |
+| SPA | Enkelsidig applikation. Frontend-gränssnittet är ett React-SPA som uppdaterar DOM utan att hela sidan laddas om. |
+| TLS | Transportlagersäkerhet. All klient-server-kommunikation använder TLS 1.2 eller högre; vanlig HTTP är inte tillåtet. |
+| WebSocket | Ett fullduplexkommunikationsprotokoll som används för leverans av rörelser och aviseringar i realtid i flerspelarspel. |
+| XSS | Cross-Site Scripting. En attack där skadliga skript injiceras på webbsidor. Begränsas genom sanering av indata på allt användarlevererat innehåll. |
 
 
