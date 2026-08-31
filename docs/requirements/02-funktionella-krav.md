@@ -202,7 +202,23 @@ när respektive UC är färdigskriven:
 | Ångra drag, lokal multiplayer, regler, återställning | UC-18, UC-19, UC-20, UC-32 |
 | Problemrapportering och moderering | UC-28, UC-29 |
 
-# FR-28: Rapportera ett tekniskt problem
+---
+
+## FR-25: Välj inloggningsmetod
+
+**Realiserar:** UC-25 Välj inloggningsmetod
+
+| ID | Krav |
+| --- | --- |
+| FR-25.1 | Systemet ska visa en lista över tillgängliga inloggningsmetoder på inloggningssidan. |
+| FR-25.2 | Systemet ska låta spelaren välja en specifik inloggningsmetod genom att välja den. |
+| FR-25.3 | Systemet ska dirigera spelaren till det specifika inloggningsflödet för den valda metoden (kopplat till UC-22 och UC-24). |
+| FR-25.4 | Systemet ska visa ett tydligt felmeddelande och låta spelaren välja en annan metod eller avsluta om en vald inloggningsmetod är otillgänglig. |
+| FR-25.5 | Systemet ska skapa en aktiv användarsession när inloggningen via vald metod är slutförd. |
+
+---
+
+## FR-28: Rapportera ett tekniskt problem
 
 **Realiserar:** UC-28 Rapportera ett tekniskt problem
 
