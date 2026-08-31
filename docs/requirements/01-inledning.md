@@ -24,30 +24,31 @@ prenumerationsfunktioner.
 
 | Begrepp | Förklaring |
 |---------|------------|
+| Administratör | En användare som kan hantera rapporter och modereringsärenden i systemet. |
+| AI-motståndare | En datorstyrd motståndare som spelaren kan spela mot. |
+| FR | Förkortning för Functional Requirement (funktionellt krav). Beskriver vad systemet ska kunna göra. |
+| GDPR | EU:s allmänna dataskyddsförordning (EU) 2016/679 som reglerar hur personuppgifter får behandlas. |
 | Gomoku | Ett brädspel där målet är att få fem stenar i rad. |
+| Gästspelare | En spelare som använder spelet utan att ha ett registrerat konto. |
+| NFR | Förkortning för Non-Functional Requirement (icke-funktionellt krav). Beskriver krav på till exempel prestanda, säkerhet och användbarhet. |
+| Parti | Ett Gomoku-spel från start tills någon vinner, förlorar eller partiet slutar oavgjort. |
 | Spelare | En person som spelar Gomoku, antingen mot datorn eller mot en annan spelare. |
 | Spelplan | Området där spelarna placerar sina stenar under ett parti. |
 | Sten | En svart eller vit spelpjäs som placeras på spelplanen. |
-| Parti | Ett Gomoku-spel från start tills någon vinner, förlorar eller partiet slutar oavgjort. |
-| AI-motståndare | En datorstyrd motståndare som spelaren kan spela mot. |
-| Administratör | En användare som kan hantera rapporter och modereringsärenden i systemet. |
-| Gästspelare | En spelare som använder spelet utan att ha ett registrerat konto. |
 | UC | Förkortning för Use Case (användningsfall). Beskriver hur en aktör använder systemet för att uppnå ett mål. |
-| FR | Förkortning för Functional Requirement (funktionellt krav). Beskriver vad systemet ska kunna göra. |
-| NFR | Förkortning för Non-Functional Requirement (icke-funktionellt krav). Beskriver krav på till exempel prestanda, säkerhet och användbarhet. |
-| GDPR | EU:s dataskyddsförordning som reglerar hur personuppgifter får behandlas. |
 
 ## 1.4 Aktörer
 
 | Aktör | Typ | Beskrivning |
 |-------|------|-------------|
-| Gästanvändare | Primär, människa | En oautentiserad besökare. Kan spela mot AI:n men har inte åtkomst till historik, rankningar eller sociala funktioner. |
-| Registrerad spelare | Primär, människa | En autentiserad användare med en profil. Har åtkomst till alla spellägen, historik, topplista och GDPR-självbetjäningsfunktioner. |
-| Systemadministratör | Primär, människa | Plattformsoperatör som hanterar användarkonton, övervakar systemhälsa, tillämpar innehållsmoderering och granskar GDPR-efterlevnadsinstrumentpaneler. |
-| Dataskyddsombud (DPO) | Primär, människa | Övervakar GDPR-efterlevnad, granskar granskningsloggar, hanterar svar på dataintrång och hanterar eskalerade förfrågningar från registrerade. |
 | AI-motståndare | Sekundär, system | Datorstyrd spelare som genererar drag med hjälp av en spelalgoritm. |
-| E-posttjänst | Sekundär, extern | Tredjepartsleverantör av SMTP/transaktionella e-postmeddelanden som används för verifieringsmejl, lösenordsåterställningar och meddelanden om dataintrång. |
 | Analystjänst | Sekundär, Extern | Sekretesskompatibel analysplattform (medgivandebevakad) som används för att aggregera anonymiserade användningsdata. |****
+| Dataskyddsombud (DPO) | Primär, människa | Övervakar GDPR-efterlevnad, granskar granskningsloggar, hanterar svar på dataintrång och hanterar eskalerade förfrågningar från registrerade. |
+| E-posttjänst | Sekundär, extern | Tredjepartsleverantör av SMTP/transaktionella e-postmeddelanden som används för verifieringsmejl, lösenordsåterställningar och meddelanden om dataintrång. |
+| Gästanvändare | Primär, människa | En oautentiserad besökare. Kan spela mot AI:n men har inte åtkomst till historik, rankningar eller sociala funktioner. |
+| Systemadministratör | Primär, människa | Plattformsoperatör som hanterar användarkonton, övervakar systemhälsa, tillämpar innehållsmoderering och granskar GDPR-efterlevnadsinstrumentpaneler. |
+| Registrerad spelare | Primär, människa | En autentiserad användare med en profil. Har åtkomst till alla spellägen, historik, topplista och GDPR-självbetjäningsfunktioner. |
+
 ## 1.5 Översikt över dokumentstrukturen
 
 | Avsnitt | Innehåll |
