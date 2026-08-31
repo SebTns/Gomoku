@@ -218,6 +218,23 @@ när respektive UC är färdigskriven:
 
 ---
 
+## FR-26: Spara Parti
+**Realiserar:** UC-26 Spara parti
+
+| ID | Krav |
+| --- | --- |
+| FR-26.1 | Systemet ska låta spelaren spara ett pågående parti. |
+| FR-26.2 | Systemet ska spara hela partitillståndet, inklusive stenarnas positioner, vems tur det är, spelarnas valda värg, brädstorlek och svårighetsgrad. |
+| FR-26.3 | Systemet ska spara partitillståndet kopplat till den inloggade spelarens konto. |
+| FR-26.4 | om spelaren inte är inloggad, ska systemet fråga om spelaren vill att systemet exporterar partiet till en nedladdningsbar datafil på spelarens enhet eller spara i webbläsarens lokala lagring. |
+| FR-26.5 | Systemet ska visa en bekräftelse för spelaren när partiet har sparats. |
+| FR-26.6 | Systemet ska tillåta spelaren att skriva över ett tidigare sparat parti om spelaren bekräftar detta. |
+| FR-26.7 | Systemet ska visa ett felmeddelande och fråga om spelaren vill försöka igen om sparningen misslyckas. |
+| FR-26.8 | Systemet ska endast tillåta sparande av ett parti som har status pågående. |
+| FR-26.9 | Systemet ska automatiskt spara partitillståndet vid sidomladdning eller tillfälligt nätverksavbrott. |
+
+---
+
 ## FR-28: Rapportera ett tekniskt problem
 
 **Realiserar:** UC-28 Rapportera ett tekniskt problem
