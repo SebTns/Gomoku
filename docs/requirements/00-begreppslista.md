@@ -38,7 +38,20 @@ Lista med termer och deras betydelser för att underlätta förståelsen. Dessa 
 
 | Term | Definition |
 |-----|-----------|
-|  |  |
+| Anonymisering | Den oåterkallbara processen att omvandla personuppgifter så att individen inte kan identifieras, direkt eller indirekt. Till skillnad från pseudonymisering. |
+| Begäran om tillgång till uppgifter (SAR) | En databegäran av typen ÅTKOMST: den registrerade begär en kopia av alla personuppgifter som innehas om hen (GDPR artikel 15). |
+| Databegäran | En formell begäran från en registrerad om att utöva en GDPR-rättighet: åtkomst (artikel 15), radering (artikel 17) eller portabilitet (artikel 20). |
+| Databehandlare | En enhet som behandlar personuppgifter för den personuppgiftsansvariges räkning (t.ex. e-posttjänst, analystjänst). |
+| Dataskyddsombud (DPO) | Den person som ansvarar för att övervaka efterlevnaden av GDPR, hantera revisionsloggar, hantera dataintrång och svara på eskalerade förfrågningar från registrerade. |
+| GDPR | Allmän dataskyddsförordning (EU) 2016/679. Den rättsliga ramen för behandling av personuppgifter för EU-invånare. |
+| Personuppgifter | All information som rör en identifierad eller identifierbar fysisk person (GDPR artikel 4(1)). Inkluderar e-postadress, användarnamn, IP-adress och spelhistorik. |
+| Personuppgiftsansvarig | Den enhet som fastställer ändamålen och medlen för behandling av personuppgifter. För detta system: operatören av Gomoku-plattformen. |
+| Radering | Permanent radering eller anonymisering av personuppgifter som svar på en begäran om dataradering (GDPR artikel 17, "Rätten att bli glömd"). |
+| Registrerad person | Varje identifierad eller identifierbar fysisk person vars personuppgifter behandlas – i detta sammanhang en Registrerad Spelare eller Gästanvändare. |
+| Pseudonymisering | Behandling av personuppgifter så att de inte längre kan hänföras till en specifik individ utan ytterligare information (GDPR artikel 4(5)). Inte samma sak som anonymisering. |
+| Samtycke | En frivillig, specifik, informerad och otvetydig indikation på en registrerads samtycke till behandling av dennes personuppgifter (GDPR artikel 4(11)). |
+| Samtyckesregister | Systemenheten som registrerar en användares samtyckesåtgärd: vad som samtycktes till, när och enligt vilken version av integritetsmeddelandet. |
+| Viktig bearbetning | Databehandling som är absolut nödvändig för att tillhandahålla kärntjänsten (t.ex. sessionshantering, autentisering). Kräver inte samtycke utöver godkännande av användarvillkoren. |
 
 ---
 
