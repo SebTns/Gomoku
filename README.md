@@ -18,3 +18,4 @@ Projektets kravdokumentation ligger i [`docs/`](docs/):
 - Andersson
 - Simonsson
 - Sebastian
+- Johan
