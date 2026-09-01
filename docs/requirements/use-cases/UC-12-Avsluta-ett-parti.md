@@ -7,7 +7,7 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet, Motståndaren |
-| Relaterade FR | FR-xx (Partiavslut och resultat) |
+| Relaterade FR | FR-10.1, FR-10.2, FR-10.3, FR-10.4, FR-10.5 |
 | Relaterade NFR | NFR-04.2, NFR-04.6, NFR-08.2 |
 
 ---
