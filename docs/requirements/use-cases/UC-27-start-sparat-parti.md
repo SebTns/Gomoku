@@ -7,7 +7,7 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet, Databasen |
-| Relaterade FR | FR-xx (Spelhistorik och sparade partier) |
+| Relaterade FR | FR-17.1, FR-17.2, FR-17.3, FR-17.4, FR-17.5 |
 | Relaterade NFR | NFR-04.2 |
 
 ---
