@@ -92,3 +92,29 @@ journey
       Ser resultatet: 3: Spelare, Motspelare
       Avslutar eller startar ett nytt parti: 4: Spelare
 ```
+
+
+## UJ-05: Spelare rapporterar ett tekniskt problem
+**Deltagare:** Spelare, System, Administratör
+
+```mermaid
+journey
+    title UJ-05: Spelare rapporterar ett tekniskt problem
+
+    section Upptäcka problem
+      Upptäcker ett tekniskt problem: 2: Spelare
+      Öppnar rapportfunktionen: 3: Spelare
+      Visar rapportformuläret: 4: System
+
+    section Rapportera
+      Beskriver problemet: 3: Spelare
+      Skickar rapporten: 4: Spelare
+      Registrerar rapporten: 4: System
+      Visar en bekräftelse: 4: System
+
+    section Hantera
+      Tar emot rapporten: 3: Administratör
+      Granskar informationen: 3: Administratör
+      Registrerar hanteringen: 4: System
+```
+
