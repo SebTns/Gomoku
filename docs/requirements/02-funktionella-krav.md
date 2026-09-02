@@ -105,7 +105,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 **Realiserar:** UC-04 Välja färg
 
 | ID | Krav |
-|----|------|
+| --- | --- |
 | FR-04.1 | Systemet ska låta spelaren välja svart eller vit före partistart. |
 | FR-04.2 | Systemet ska automatiskt tilldela motståndaren den färg som inte valdes. |
 | FR-04.3 | Systemet ska låta svart göra första draget i varje parti. |
@@ -121,7 +121,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 **Realiserar:** UC-08 Välj svårighetsgrad
 
 | ID | Krav |
-|----|------|
+| --- | --- |
 | FR-05.1 | Systemet ska erbjuda tre svårighetsgrader: Lätt, Medel och Svår. |
 | FR-05.2 | Systemet ska förvälja Medel. |
 | FR-05.3 | Systemet ska visa en kort beskrivning av vad varje svårighetsgrad innebär. |
@@ -137,7 +137,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 **Realiserar:** UC-05 Spela mot datorn
 
 | ID | Krav |
-|----|------|
+| --- | --- |
 | FR-06.1 | Systemet ska starta ett parti mot datorn när spelaren valt svårighetsgrad och bekräftat. |
 | FR-06.2 | Systemet ska låta datorn göra sitt drag automatiskt när det är datorns tur. |
 | FR-06.3 | Systemet ska endast tillåta datorn att placera en sten på en ledig skärningspunkt. |
@@ -154,7 +154,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 **Realiserar:** UC-03 Bjud in en vän
 
 | ID | Krav |
-|----|------|
+| --- | --- |
 | FR-07.1 | Systemet ska generera en unik inbjudningslänk när spelaren väljer att spela mot en vän. |
 | FR-07.2 | Systemet ska låta spelaren kopiera eller dela inbjudningslänken. |
 | FR-07.3 | Systemet ska låta en inbjudan förfalla efter 15 minuter om den inte använts. |
@@ -172,7 +172,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 **Realiserar:** UC-02 Gör ett drag
 
 | ID | Krav |
-|----|------|
+| --- | --- |
 | FR-08.1 | Systemet ska låta den spelare vars tur det är placera en sten på en ledig skärningspunkt genom klick eller tryck. |
 | FR-08.2 | Systemet ska avvisa placering på en upptagen skärningspunkt utan att turen byts. |
 | FR-08.3 | Systemet ska avvisa drag från en spelare vars tur det inte är. |
@@ -189,18 +189,155 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 
 ---
 
-## Ej täckt av UC-01 – UC-08
+## FR-09: Ge upp
 
-Följande finns som use case-filer i repot men saknar ännu krav i denna fil. Skriv in dem
-när respektive UC är färdigskriven:
+**Realiserar:** UC-11 Ge upp
 
-| Område | Berörda UC |
-|--------|-----------|
-| Partiavslut och resultat | UC-11, UC-12, UC-14, UC-15, UC-16 |
-| Spelhistorik och sparade partier | UC-17, UC-26, UC-27 |
-| Konto och inloggning | UC-21 – UC-25, UC-30, UC-31 |
-| Ångra drag, lokal multiplayer, regler, återställning | UC-18, UC-19, UC-20, UC-32 |
-| Problemrapportering och moderering | UC-28, UC-29 |
+| ID | Krav |
+| --- | --- |
+| FR-09.1 | Systemet ska låta spelaren ge upp ett pågående parti. |
+| FR-09.2 | Systemet ska visa en bekräftelse innan uppgivandet genomförs, eftersom handlingen inte går att ångra. |
+| FR-09.3 | Systemet ska registrera uppgivandet och tilldela motståndaren vinsten. |
+| FR-09.4 | Systemet ska visa resultatvyn med information om vem som vann och vem som gav upp. |
+| FR-09.5 | Systemet ska förhindra att spelaren ger upp om partiet redan är avslutat. |
+
+---
+
+## FR-10: Avsluta ett parti
+
+**Realiserar:** UC-12 Avsluta ett parti
+
+| ID | Krav |
+| --- | --- |
+| FR-10.1 | Systemet ska låta spelaren avsluta ett pågående parti utan att en vinnare utses. |
+| FR-10.2 | Systemet ska visa en bekräftelse innan partiet avslutas. |
+| FR-10.3 | Systemet ska ändra partiets status från PÅGÅENDE till AVSLUTAT när spelaren bekräftar. |
+| FR-10.4 | Systemet ska visa en sammanfattning av partiet (antal drag och spelare) när det avslutas. |
+| FR-10.5 | Systemet ska inte registrera en vinnare eller förlorare när partiet avslutas manuellt. |
+
+---
+
+## FR-11: Spelhistorik
+
+**Realiserar:** UC-17 Spelhistorik
+
+| ID | Krav |
+| --- | --- |
+| FR-11.1 | Systemet ska visa en lista över spelarens tidigare avslutade partier. |
+| FR-11.2 | Systemet ska visa information om varje tidigare parti, inklusive datum, motståndare, brädstorlek, svårighetsgrad och resultat. |
+| FR-11.3 | Systemet ska låta spelaren sortera historiken efter datum, resultat eller motståndare. |
+| FR-11.4 | Systemet ska låta spelaren öppna ett tidigare parti från historiken för att se dragföljden. |
+| FR-11.5 | Systemet ska radera spelhistoriken för gästspelare senast 30 dagar efter att partiet avslutats. *(Kopplat till NFR-07.5)* |
+
+---
+
+## FR-12: Ångra ett drag
+
+**Realiserar:** UC-19 Ångra ett drag
+
+| ID | Krav |
+| --- | --- |
+| FR-12.1 | Systemet ska låta spelaren ångra sitt senaste giltiga drag. |
+| FR-12.2 | Systemet ska återställa brädet till tillståndet innan det senaste draget gjordes. |
+| FR-12.3 | Systemet ska endast tillåta ångring av drag i partier mot datorn. |
+| FR-12.4 | Systemet ska återlämna turen till spelaren när ett drag ångras. |
+| FR-12.5 | Systemet ska förhindra att spelaren ångrar ett drag om motståndaren redan har gjort sitt nästa drag. |
+| FR-12.6 | Systemet ska visa en bekräftelse innan ett drag ångras i ett parti mot en vän, eftersom det påverkar båda spelarna. |
+
+---
+
+## FR-13: Skapa ett konto
+
+**Realiserar:** UC-21 Skapa ett konto
+
+| ID | Krav |
+| --- | --- |
+| FR-13.1 | Systemet ska låta spelaren skapa ett konto med en e-postadress och ett lösenord. |
+| FR-13.2 | Systemet ska acceptera en giltig e-postadress och ett lösenord som uppfyller säkerhetskraven (t.ex. minst 8 tecken). |
+| FR-13.3 | Systemet ska avvisa registrering om e-postadressen redan är registrerad. |
+| FR-13.4 | Systemet ska skapa kontot och logga in spelaren automatiskt efter lyckad registrering. |
+| FR-13.5 | Systemet ska visa ett felmeddelande om registreringen misslyckas. |
+
+---
+
+## FR-14: Logga in
+
+**Realiserar:** UC-22 Logga in
+
+| ID | Krav |
+| --- | --- |
+| FR-14.1 | Systemet ska låta spelaren logga in med sitt användarnamn/e-postadress och lösenord. |
+| FR-14.2 | Systemet ska skapa en aktiv användarsession när inloggningen är lyckad. |
+| FR-14.3 | Systemet ska visa ett felmeddelande när inloggningsuppgifterna är felaktiga. |
+| FR-14.4 | Systemet ska förhindra inloggning om kontot är tillfälligt blockerat. |
+
+---
+
+## FR-15: Radera ett konto
+
+**Realiserar:** UC-23 Radera ett konto
+
+| ID | Krav |
+| --- | --- |
+| FR-15.1 | Systemet ska låta en inloggad spelare radera sitt eget konto. |
+| FR-15.2 | Systemet ska kräva att spelaren anger sitt lösenord innan kontot raderas, som en säkerhetskontroll. |
+| FR-15.3 | Systemet ska visa en tydlig varning om att all data (inklusive spelhistorik och sparade partier) går förlorad vid radering. |
+| FR-15.4 | Systemet ska permanent radera all data kopplad till kontot efter bekräftelse. |
+| FR-15.5 | Systemet ska logga ut spelaren och återgå till startsidan efter att kontot har raderats. |
+
+---
+
+## FR-16: Lägg till inloggningsmetod
+
+**Realiserar:** UC-24 Lägg till inloggningsmetod
+
+| ID | Krav |
+| --- | --- |
+| FR-16.1 | Systemet ska låta en inloggad spelare lägga till en ny inloggningsmetod (t.ex. social inloggning) till sitt befintliga konto. |
+| FR-16.2 | Systemet ska verifiera att den nya metoden inte redan är kopplad till ett annat konto. |
+| FR-16.3 | Systemet ska kräva att spelaren bekräftar sitt nuvarande lösenord innan en ny metod läggs till. |
+| FR-16.4 | Systemet ska uppdatera kontot med den nya inloggningsmetoden och visa en bekräftelse. |
+
+---
+
+## FR-17: Starta sparat parti
+
+**Realiserar:** UC-27 Starta sparat parti
+
+| ID | Krav |
+| --- | --- |
+| FR-17.1 | Systemet ska visa en lista över spelarens sparade partier. |
+| FR-17.2 | Systemet ska låta spelaren välja ett sparat parti för att återuppta det. |
+| FR-17.3 | Systemet ska återställa brädet, turtillståndet och alla andra partiparametrar (som svårighetsgrad) när partiet startas. |
+| FR-17.4 | Systemet ska låta spelaren importera en nedladdad datafil för att starta ett sparat parti. |
+| FR-17.5 | Systemet ska visa ett felmeddelande om det sparade partiet inte kan laddas (t.ex. korrupt fil). |
+
+---
+
+## FR-18: Ändra kontoinställningar
+
+**Realiserar:** UC-30 Ändra kontoinställningar
+
+| ID | Krav |
+| --- | --- |
+| FR-18.1 | Systemet ska låta en inloggad spelare visa och ändra sin profilinformation (t.ex. synligt spelarnamn, e-postadress). |
+| FR-18.2 | Systemet ska validera att den nya informationen är giltig innan den sparas. |
+| FR-18.3 | Systemet ska uppdatera kontot och visa en bekräftelse när ändringarna har sparats. |
+| FR-18.4 | Systemet ska visa ett felmeddelande om ändringen inte kan genomföras. |
+
+---
+
+## FR-19: Byta lösenord
+
+**Realiserar:** UC-31 Byta lösenord
+
+| ID | Krav |
+| --- | --- |
+| FR-19.1 | Systemet ska låta en inloggad spelare byta sitt lösenord. |
+| FR-19.2 | Systemet ska kräva att spelaren anger sitt nuvarande lösenord för verifiering. |
+| FR-19.3 | Systemet ska kontrollera att det nya lösenordet uppfyller säkerhetskraven (t.ex. minst 8 tecken). |
+| FR-19.4 | Systemet ska spara det nya lösenordet och visa en bekräftelse. |
+| FR-19.5 | Systemet ska visa ett felmeddelande om det nuvarande lösenordet är felaktigt eller om det nya lösenordet inte uppfyller kraven. |
 
 ---
 
@@ -226,7 +363,7 @@ när respektive UC är färdigskriven:
 | FR-26.1 | Systemet ska låta spelaren spara ett pågående parti. |
 | FR-26.2 | Systemet ska spara hela partitillståndet, inklusive stenarnas positioner, vems tur det är, spelarnas valda värg, brädstorlek och svårighetsgrad. |
 | FR-26.3 | Systemet ska spara partitillståndet kopplat till den inloggade spelarens konto. |
-| FR-26.4 | om spelaren inte är inloggad, ska systemet fråga om spelaren vill att systemet exporterar partiet till en nedladdningsbar datafil på spelarens enhet eller spara i webbläsarens lokala lagring. |
+| FR-26.4 | Systemet ska erbjuda alternativen "exportera till nedladdningsbar fil" eller "spara i webbläsarens lokala lagring" när spelaren inte är inloggad. |
 | FR-26.5 | Systemet ska visa en bekräftelse för spelaren när partiet har sparats. |
 | FR-26.6 | Systemet ska tillåta spelaren att skriva över ett tidigare sparat parti om spelaren bekräftar detta. |
 | FR-26.7 | Systemet ska visa ett felmeddelande och fråga om spelaren vill försöka igen om sparningen misslyckas. |
@@ -259,3 +396,24 @@ när respektive UC är färdigskriven:
 | **FR-29.4** | Systemet ska registrera genomförda blockeringar. |
 | **FR-29.5** | Systemet ska informera administratören om blockeringen har genomförts eller inte. |
  
+---
+
+## Ej täckt av UC-01 – UC-08
+
+Följande finns som use case-filer i repot men saknar ännu krav i denna fil. Skriv in dem
+när respektive UC är färdigskriven:
+
+| Område | Berörda UC |
+|--------|-----------|
+| Partiavslut och resultat | UC-11, UC-12, UC-14, UC-15, UC-16 |
+| Spelhistorik och sparade partier | UC-17, UC-26, UC-27 |
+| Konto och inloggning | UC-21 – UC-25, UC-30, UC-31 |
+| Ångra drag, lokal multiplayer, regler, återställning | UC-18, UC-19, UC-20, UC-32 |
+| Problemrapportering och moderering | UC-28, UC-29 |
+
+---
+
+
+
+
+

@@ -7,7 +7,7 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet, Extern identitetsleverantör (t.ex. Google) |
-| Relaterade FR | FR-xx (Konto och inloggning) |
+| Relaterade FR | FR-16.1, FR-16.2, FR-16.3, FR-16.4 |
 | Relaterade NFR | NFR-07.1 |
 
 ---

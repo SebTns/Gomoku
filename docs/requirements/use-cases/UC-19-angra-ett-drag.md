@@ -7,7 +7,7 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet |
-| Relaterade FR | FR-xx (Ångra drag, lokal multiplayer, regler, återställning) |
+| Relaterade FR | FR-12.1, FR-12.2, FR-12.3, FR-12.4, FR-12.5, FR-12.6 |
 | Relaterade NFR | NFR-02.2 |
 
 ---

@@ -7,7 +7,7 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet, Databasen |
-| Relaterade FR | FR-xx (Konto och inloggning) |
+| Relaterade FR | FR-14.1, FR-14.2, FR-14.3, FR-14.4 |
 | Relaterade NFR | NFR-07.1, NFR-07.4 |
 
 ---
