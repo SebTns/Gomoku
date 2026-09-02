@@ -1,8 +1,9 @@
-# UC-XX: Namn på use case
+#
+UC-XX: Namn på use case
 
 | Fält | Värde |
 |------|-------|
-| **Use Case ID** | UC-NFR-05 |
+| **Use Case ID** | UC-NFR-07 |
 | **Namn** |Spelare får feedback efter handling |
 | **Version** | 1.0 |
 | **Primär aktör** |Spelare |
@@ -21,31 +22,44 @@ Som spelare vill jag få notiser eller svar på vad som händer efter att jag g�
 
 1. Spelare startar sidan 
 2. Spelaren startar ett spel mot dator
-(Systemet frågar vilken färg spelaren vill köra med)
+- (Systemet frågar vilken färg spelaren vill köra med)
 3. Spelaren väljer att börja spela med svart 
-(Systemet skickar en bekräftelse och frågar ifall spelare vill starta)
+- (Systemet skickar en bekräftelse och frågar ifall spelare vill starta)
 4. Spelaren gör sitt drag 
-(Systemet frågar ifall det draget är det som spelaren är nöjd med)
+- (Systemet frågar ifall det draget är det som spelaren är nöjd med)
 5. Spelaren väntar på datorn 
-(Systemet säger till att det är spelarens tur)
+- (Systemet säger till att det är spelarens tur)
 6. Spelaren spelar igen 
 7. Datorn lägger fem i rad
-(Systemet säger att spelaren har förlorat)
+- (Systemet säger att spelaren har förlorat)
 8. Spelaren spelar till en förlust 
-(Systemet frågar ifall spelaren vill spela igen eller återgå till huvudmeny)
+- (Systemet frågar ifall spelaren vill spela igen eller återgå till huvudmeny)
 ## Alternativa flöden
-
-### AF-01: Kort namn på avvikelsen
 Vid steg N inträffar X.
 - Systemet gör Y.
 - Aktören kan Z.
 
+### AF-01: Spelare försöker att göra ett drag på en upptagen ruta
+
+Spelarens tur att göra ett drag men gör det på en upptagen ruta
+1. Spelare startar sidan
+2. Spelaren startar ett spel mot dator
+- (Systemet frågar vilken färg spelaren vill köra med)
+3. Spelaren väljer att börja spela med svart
+- (Systemet skickar en bekräftelse och frågar ifall spelare vill starta)
+4. Spelaren gör sitt drag
+- (Systemet frågar ifall det draget är det som spelaren är nöjd med)
+5. Spelaren väntar på datorn
+- (Systemet säger till att det är spelarens tur)
+6. Spelaren trycker på en redan upptagen ruta 
+- (Systemet skickar feedback som säger att rutan är upptagen)
+7. Spelare väljer en annan ruta
+
 ## Postconditions
 
-**Lyckat:** Vad som gäller när flödet gått igenom.
+**Lyckat:** Systemet har levererat tydlig och korrekt feedback som gör det möjligt för spelaren att förstå resultatet av sina handlingar
 
-**Misslyckat:** Vad som gäller när flödet avbrutits.
-
+**Misslyckat:** Systemet har inte presenterat feedback eller presenterat otydlig, felaktig eller feedback som ej överensstämmer med systemets aktuella tillstånd.
 ## Särskilda krav
 - Hänvisningar till NFR som gäller specifikt här.
 
