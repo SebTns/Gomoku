@@ -94,12 +94,12 @@ journey
 ```
 
 
-## UJ-05: Spelare rapporterar ett tekniskt problem
+## UJ-04: Spelare rapporterar ett tekniskt problem
 **Deltagare:** Spelare, System, Administratör
 
 ```mermaid
 journey
-    title UJ-05: Spelare rapporterar ett tekniskt problem
+    title UJ-04: Spelare rapporterar ett tekniskt problem
 
     section Upptäcka problem
       Upptäcker ett tekniskt problem: 2: Spelare
