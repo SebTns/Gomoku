@@ -1,0 +1,13 @@
+AC-[0032] – [konto/inloggningsmetoder]
+## Relaterat krav/use case:UC-25
+
+### [AC-0032 ]
+# hej
+Given: Spelare har Registrerat konto på Gomoku 
+
+When: Spelaren trycker på logga in knapp
+
+Then: Systemet levererar olika alternativ för att logga in som är: 
+
+- Epost med lösenord 
+- Inloggning direkt via google
