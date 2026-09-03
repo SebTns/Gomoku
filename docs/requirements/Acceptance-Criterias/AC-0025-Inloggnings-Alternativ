@@ -1,7 +1,8 @@
-# AC-[0032] – [konto/inloggningsmetoder]
+AC-[0032] – [konto/inloggningsmetoder]
 ## Relaterat krav/use case:UC-25
 
-###[AC-0032 ]
+### [AC-0032 ]
+
 Given: Spelare har Registrerat konto på Gomoku 
 
 When: Spelaren trycker på logga in knapp
