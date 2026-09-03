@@ -1,1 +1,10 @@
 
+AC-12- Avsluta ett parti 
+
+##Relaterade Use case: UC-12- Avsluta ett parti 
+Given att ett parti pågår 
+When spelaren väljer att avsluta partiet och bekräftar 
+Then ska systemet spara partiets aktuella status 
+And avsluta partiet 
+And återföra spelaren till menyn 
+And informera motståndaren om att partiet har avslutats.
