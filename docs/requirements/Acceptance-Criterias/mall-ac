@@ -1,0 +1,18 @@
+Generell mall för acceptanskriterium
+AC-[nummer] – [Namn på kriteriet]
+Relaterat krav/use case:
+[ID och namn]
+Given:
+[Beskriv utgångsläget/förutsättningarna.]
+When:
+[Beskriv vad aktören/användaren gör.]
+Then:
+[Beskriv vad systemet ska göra eller vilket resultat som ska uppstå.]
+And:
+[Beskriv eventuella ytterligare krav på resultatet.]
+En ännu enklare minnesregel:
+Given → Vad gäller innan?
+When → Vad gör användaren?
+Then → Vad ska hända?
+And → Vad mer måste vara uppfyllt?
+Alla fält behöver inte alltid användas. And tar ni bara med när det finns ytterligare ett tydligt resultat som behöver verifieras.
