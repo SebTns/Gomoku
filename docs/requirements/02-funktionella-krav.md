@@ -376,6 +376,8 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 
 **Realiserar:** UC-28 Rapportera ett tekniskt problem
 
+| ID | Krav |
+| --- | --- |
 | FR-28.1 | Systemet ska låta spelaren öppna funktionen "Rapportera problem" från spelet. |
 | FR-28.2 | Systemet ska låta spelaren beskriva det tekniska problemet i ett fritextfält. |
 | FR-28.3 | Systemet ska kräva en beskrivning av problemet innan rapporten kan skickas. |
@@ -387,6 +389,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-28.9 | Efter ett misslyckat försök ska systemet låta spelaren försöka skicka problemrapporten igen. |
 | FR-28.10 | Spelaren ska kunna avbryta rapporteringen utan att någon problemrapport registreras. |
 
+## FR-29:Tillfälligt blockera en spelare 
 **Realiserar:** UC-29 Tillfälligt blockera en spelare
 
 | ID | Krav |
