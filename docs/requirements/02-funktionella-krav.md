@@ -378,25 +378,32 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 
 | ID | Krav |
 | --- | --- |
-| **FR-28.1** | Systemet ska låta spelaren rapportera ett tekniskt problem som har uppstått i spelet. |
-| **FR-28.2** | Systemet ska låta spelaren beskriva vad som hände och vad som gick fel. |
-| **FR-28.3** | Systemet ska kontrollera att nödvändig information finns med innan rapporten registreras. |
-| **FR-28.4** | Systemet ska registrera problemrapporten för vidare hantering. |
-| **FR-28.5** | Systemet ska visa en bekräftelse när problemrapporten har skickats. |
-| **FR-28.6** | Om problemrapporten inte kan registreras ska systemet informera spelaren om detta. |
-# FR-29: Tillfälligt blockera en spelare
+| FR-28.1 | Systemet ska låta spelaren öppna funktionen "Rapportera problem" från spelet. |
+| FR-28.2 | Systemet ska låta spelaren beskriva det tekniska problemet i ett fritextfält. |
+| FR-28.3 | Systemet ska kräva en beskrivning av problemet innan rapporten kan skickas. |
+| FR-28.4 | Om beskrivningen saknas ska systemet informera spelaren om detta och rapporten ska inte registreras. |
+| FR-28.5 | Systemet ska registrera en giltig problemrapport för vidare hantering. |
+| FR-28.6 | Systemet ska tilldela varje registrerad problemrapport ett unikt rapport-ID. |
+| FR-28.7 | Systemet ska visa en bekräftelse när problemrapporten har registrerats. |
+| FR-28.8 | Om problemrapporten inte kan registreras ska systemet informera spelaren om detta. |
+| FR-28.9 | Efter ett misslyckat försök ska systemet låta spelaren försöka skicka problemrapporten igen. |
+| FR-28.10 | Spelaren ska kunna avbryta rapporteringen utan att någon problemrapport registreras. |
 
-**Realiserar:** UC-28 Tillfälligt blockera en spelare
+## FR-29:Tillfälligt blockera en spelare 
+**Realiserar:** UC-29 Tillfälligt blockera en spelare
 
 | ID | Krav |
 | --- | --- |
-| **FR-29.1** | Systemet ska låta administratören tillfälligt blockera en spelare |
-| **FR-29.2** | Systemet ska visar information om spelaren och den aktuella ärendet innan en blockering genomförs. |
-| **FR-29.3** | Systemet ska kräva att administratören bekräftar blockeringen innan den genomförs |
-| **FR-29.4** | Systemet ska registrera genomförda blockeringar. |
-| **FR-29.5** | Systemet ska informera administratören om blockeringen har genomförts eller inte. |
- 
----
+| FR-29.1 | Systemet ska låta administratören välja en spelare som ska blockeras tillfälligt. |
+| FR-29.2 | Innan en blockering genomförs ska systemet visa spelarens namn, spelar-ID och det aktuella modereringsärendet. |
+| FR-29.3 | Systemet ska låta administratören välja hur länge den tillfälliga blockeringen ska gälla. |
+| FR-29.4 | Systemet ska kräva att administratören bekräftar blockeringen innan den genomförs. |
+| FR-29.5 | Om administratören avbryter bekräftelsen ska ingen blockering genomföras. |
+| FR-29.6 | När blockeringen har bekräftats ska systemet förhindra den blockerade spelaren från att delta i nya partier under den valda blockeringstiden. |
+| FR-29.7 | Systemet ska registrera vilken spelare som blockerades, blockeringens starttid, blockeringens sluttid och vilket modereringsärende blockeringen är kopplad till. |
+| FR-29.8 | Systemet ska informera administratören när blockeringen har genomförts. |
+| FR-29.9 | Om blockeringen inte kan genomföras ska systemet informera administratören om detta och spelaren ska inte registreras som blockerad. |
+| FR-29.10 | När blockeringstiden har gått ut ska systemet automatiskt ta bort den tillfälliga blockeringen. |
 
 ## Ej täckt av UC-01 – UC-08
 
