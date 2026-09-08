@@ -1,15 +1,37 @@
-## AC-14-Oavgjort
 
-Relaterade use case: UC-14-Oavgjort
 
-**Given** att ett parti pågår och endast en ledig position finns kvar 
+### AC-14-01: Partiet avslutas som oavgjort
 
-**And** ingen spelare har fem i rad 
+**Relaterade krav:** FR-14.1, FR-14.2, FR-14.3
 
-**When** en spelare gör det sista giltiga draget utan att få fem i rad 
+**Given** att ett parti pågår  
+**And** det finns en ledig skärningspunkt kvar på spelplanen  
+**And** ingen spelare har fem i rad  
+**When** en spelare gör ett giltigt drag på den sista lediga skärningspunkten  
+**Then** ska systemet kontrollera om någon har fem i rad  
+**And** konstatera att ingen spelare har fem i rad  
+**And** avsluta partiet som oavgjort  
+**And** visa i resultatvyn att partiet slutade oavgjort.
 
-**Then** ska systemet avsluta partiet som oavgjort 
+---
 
-**And** visa ett meddelande om oavgjort 
+### AC-14-02: Sista draget ger fem i rad
 
-**And** förhindra att fler drag görs.
+**Relaterade krav:** FR-14.1, FR-14.5
+
+**Given** att ett parti pågår  
+**And** det finns en ledig skärningspunkt kvar på spelplanen  
+**When** en spelare gör ett giltigt drag på den sista lediga skärningspunkten  
+**And** draget skapar fem i rad  
+**Then** ska systemet registrera resultatet som vinst  
+**And** partiet ska inte registreras som oavgjort.
+
+---
+
+### AC-14-03: Inga fler drag efter oavgjort
+
+**Relaterade krav:** FR-14.4
+
+**Given** att partiet har avslutats som oavgjort  
+**When** spelaren försöker göra ytterligare ett drag  
+**Then** ska systemet förhindra draget.
