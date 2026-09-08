@@ -97,6 +97,10 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-03.5 | Systemet ska låta spelaren avbryta konfigurationen utan att något parti skapas. |
 | FR-03.6 | Om partiet inte kan startas ska systemet visa ett felmeddelande och behålla spelaren i konfigurationsvyn. |
 | FR-03.7 | Systemet ska begära bekräftelse innan ett pågående parti överges till förmån för ett nytt. |
+| FR-03.8 | Om spelaren avbryter bekräftelsen enligt FR-03.7 ska det pågående partiet fortsätta och inget nytt parti ska skapas. |
+| FR-03.9 | Om spelaren bekräftar enligt FR-03.7 ska det pågående partiet avslutas innan spelaren fortsätter med konfigurationen av ett nytt parti. |
+
+
 
 ---
 
