@@ -347,6 +347,20 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 
 ---
 
+## FR-20: Oavgjort
+
+**Realiserar:** UC-14 Oavgjort
+
+| ID | Krav |
+| --- | --- |
+| FR-14.1 | Systemet ska kontrollera efter varje giltigt drag om spelplanen är full. |
+| FR-14.2 | Om spelplanen är full och ingen spelare har fått fem i rad ska systemet avsluta partiet som oavgjort. |
+| FR-14.3 | Systemet ska visa i resultatvyn att partiet slutade oavgjort. |
+| FR-14.4 | När partiet har avslutats som oavgjort ska systemet förhindra ytterligare drag. |
+| FR-14.5 | Om det sista draget fyller spelplanen och samtidigt skapar fem i rad ska systemet registrera resultatet som vinst och inte som oavgjort. |
+
+---
+
 ## FR-25: Välj inloggningsmetod
 
 **Realiserar:** UC-25 Välj inloggningsmetod

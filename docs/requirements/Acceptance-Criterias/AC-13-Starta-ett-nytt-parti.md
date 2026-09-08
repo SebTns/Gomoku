@@ -62,7 +62,7 @@
 
 ---
 
-### AT-UC01-06: Spelaren bekräftar byte till nytt parti
+### AC-13-06: Spelaren bekräftar byte till nytt parti
 
 **Relaterade krav:** FR-03.7, FR-03.9
 
