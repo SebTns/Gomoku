@@ -201,6 +201,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-09.3 | Systemet ska registrera uppgivandet och tilldela motståndaren vinsten. |
 | FR-09.4 | Systemet ska visa resultatvyn med information om vem som vann och vem som gav upp. |
 | FR-09.5 | Systemet ska förhindra att spelaren ger upp om partiet redan är avslutat. |
+| FR-09.6 | Om spelaren avbryter bekräftelsen ska uppgivandet inte genomföras och partiet ska fortsätta. |
 
 ---
 
