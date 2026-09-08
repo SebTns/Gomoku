@@ -146,6 +146,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-06.6 | Om datorn inte kan göra ett drag ska systemet visa ett felmeddelande, pausa partiet och låta spelaren välja mellan att försöka igen och att avsluta partiet. |
 | FR-06.7 | Systemet ska bevara partitillståndet när ett parti pausas enligt FR-06.6. |
 | FR-06.8 | Systemet ska visa resultatet när partiet avslutas. |
+| FR-06.9 | Om datorns drag inte kan beräknas inom 3 sekunder ska systemet automatiskt försöka beräkna draget en gång till. Om det andra försöket också misslyckas ska systemet hantera felet enligt FR-06.6. |
 
 ---
 
