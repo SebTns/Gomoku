@@ -7,7 +7,7 @@
 | Version | 1.0 |
 | Primär aktör | Systemet |
 | Sekundär aktör | Spelarna |
-| Relaterade FR | FR-08.11 |
+| Relaterade FR | FR-08.11，FR-14.1 – FR-14.5 |
 | Relaterade NFR | NFR-02.4, NFR-08.2 |
 
 ---
