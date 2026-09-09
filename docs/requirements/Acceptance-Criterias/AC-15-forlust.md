@@ -1,18 +1,37 @@
-## AC-15- Förlust 
-Relaterade use case: UC-15-forlust
 
-**Given** att ett parti pågår 
 
-**And** motståndaren har fyra stenar i rad 
+### AC-15-01: Motståndaren får fem i rad
 
-**When** motståndaren gör ett giltigt drag och får fem i rad 
+**Relaterade krav:** FR-08.8, FR-08.9, FR-08.10
 
-**Then** ska systemet avsluta partiet
+**Given** att ett parti pågår  
+**And** det är motståndarens tur  
+**When** motståndaren gör ett giltigt drag som skapar fem stenar i rad  
+**Then** ska systemet kontrollera att fem i rad har uppstått  
+**And** avsluta partiet  
+**And** registrera motståndaren som vinnare och spelaren som förlorare  
+**And** markera den vinnande raden visuellt.
 
-**And** registrera förlust för spelaren 
+---
 
-**And** markera den vinnande raden
+### AC-15-02: Motståndaren får inte fem i rad
 
-**And** visa ett meddelande om att spelaren har förlorat 
+**Relaterade krav:** FR-08.8
 
-**And** förhindra att fler drag görs.
+**Given** att ett parti pågår  
+**And** det är motståndarens tur  
+**When** motståndaren gör ett giltigt drag som inte skapar fem i rad  
+**Then** ska systemet konstatera att ingen vinst har uppstått  
+**And** partiet ska fortsätta enligt spelets regler.
+
+---
+
+### AC-15-03: Inga fler drag efter förlust
+
+**Relaterade krav:** FR-08.13
+
+**Given** att motståndaren har fått fem i rad  
+**And** partiet har avslutats  
+**When** spelaren försöker göra ytterligare ett drag  
+**Then** ska systemet förhindra draget. 
+
