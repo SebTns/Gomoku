@@ -2,25 +2,37 @@
 
 ```mermaid
 flowchart TD
+
     A([Start]) --> B[Spelaren väljer att spela med en vän]
+
     B --> C[Systemet skapar en unik inbjudningslänk]
     C --> D[Spelaren kopierar och delar länken]
     D --> E[Vännen öppnar länken]
 
     E --> F{Är länken giltig?}
 
+    %% Ogiltig eller utgången länk
     F -- Nej --> G[Systemet visar att länken är ogiltig eller har gått ut]
-    G --> Z([Slut])
+    G --> H{Vad vill spelaren göra?}
 
-    F -- Ja --> H{Finns det plats i partiet?}
+    H -- Avsluta --> Z([Slut])
+    H -- Skicka en ny länk --> C
 
-    H -- Nej --> I[Systemet nekar anslutningen]
-    I --> Z
+    %% Giltig länk
+    F -- Ja --> I{Finns det plats i partiet?}
 
-    H -- Ja --> J[Vännen ansluter till partiet]
-    J --> K[Systemet registrerar anslutningen]
-    K --> L[Systemet visar båda spelarna]
-    L --> M[Partiet startar]
+    %% Partiet är fullt
+    I -- Nej --> J[Systemet nekar anslutningen]
+    J --> K{Vad vill spelaren göra?}
 
-    M --> Z
+    K -- Avsluta --> Z
+    K -- Skicka en ny länk --> C
+
+    %% Vännen kan ansluta
+    I -- Ja --> L[Vännen ansluter till partiet]
+    L --> M[Systemet registrerar anslutningen]
+    M --> N[Systemet visar båda spelarna]
+    N --> O[Partiet startar]
+
+    O --> Z
 ```
