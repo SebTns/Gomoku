@@ -16,7 +16,7 @@ flowchart TD
     G --> H{Vad vill spelaren göra?}
 
     H -- Avsluta --> Z([Slut])
-    H -- Be om en ny länk --> C
+    H -- Vännen ber om en ny länk --> C
 
     %% Giltig länk
     F -- Ja --> I{Finns det plats i partiet?}
@@ -26,7 +26,7 @@ flowchart TD
     J --> K{Vad vill spelaren göra?}
 
     K -- Avsluta --> Z
-    K --  Be om en ny länk --> C
+    K --  Vännen ber om en ny länk --> C
 
     %% Vännen kan ansluta
     I -- Ja --> L[Vännen ansluter till partiet]
