@@ -2,7 +2,7 @@
 
 ### AC-14-01: Partiet avslutas som oavgjort
 
-**Relaterade krav:** FR-14.1, FR-14.2, FR-14.3
+**Relaterade krav:** FR-20.1, FR-20.2, FR-20.3
 
 **Given** att ett parti pågår  
 **And** det finns en ledig skärningspunkt kvar på spelplanen  
@@ -17,7 +17,7 @@
 
 ### AC-14-02: Sista draget ger fem i rad
 
-**Relaterade krav:** FR-14.1, FR-14.5
+**Relaterade krav:** FR-20.1, FR-20.5
 
 **Given** att ett parti pågår  
 **And** det finns en ledig skärningspunkt kvar på spelplanen  
@@ -30,7 +30,7 @@
 
 ### AC-14-03: Inga fler drag efter oavgjort
 
-**Relaterade krav:** FR-14.4
+**Relaterade krav:** FR-20.4
 
 **Given** att partiet har avslutats som oavgjort  
 **When** spelaren försöker göra ytterligare ett drag  

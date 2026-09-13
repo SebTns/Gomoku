@@ -5,8 +5,9 @@
 | Version | 1.0 |
 | Primär aktör | Registrerad spelare |
 | Sekundär aktör | systemet |
-| Relaterade FR | — |
+| Relaterade FR | — (kraven ligger som NFR-10.1 och NFR-10.2; eget FR saknas ännu) |
 | Relaterade NFR | NFR-10.1, NFR-10.2 |
+| Kopplade begränsningar | SR-03.1, SR-03.2 |
 | GDPR-referens | Artikel 15 |
 
 ## Beskrivning

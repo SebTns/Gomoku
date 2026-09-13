@@ -1,14 +1,15 @@
-# UC-03: Informeras om delning med tredje part
+# UC-NFR-03: Informeras om delning med tredje part
 
 | Fält | Värde |
 |------|-------|
-| **Use Case ID** | UC-03 |
+| **Use Case ID** | UC-NFR-03 |
 | **Namn** |Informeras om delning med tredje part|
 | **Version** | 1.0 |
 | **Primär aktör** |Spelare|
 | **Sekundär aktör** |Systemet,Tredjepartsleverantör |
-| **Relaterade FR** | |
-| **Relaterade NFR** |NFR-11.1, NFR-11.2|
+| **Relaterade FR** | — (kraven ligger som NFR-11.1 och NFR-11.2; eget FR saknas ännu) |
+| **Relaterade NFR** | NFR-11.1, NFR-11.2 |
+| **Kopplade begränsningar** | SR-03.1, SR-03.3 |
 | **GDPR-referens** |Artikel 28, Artikel 46|
 
 

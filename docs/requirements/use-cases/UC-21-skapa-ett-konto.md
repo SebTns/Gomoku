@@ -8,7 +8,8 @@
 | Primär aktör | Spelare |
 | Sekundär aktör | Systemet, Databasen |
 | Relaterade FR | FR-13.1, FR-13.2, FR-13.3, FR-13.4, FR-13.5 |
-| Relaterade NFR | NFR-07.1, NFR-07.4 |
+| Relaterade NFR | NFR-07.1, NFR-07.4, NFR-07.6 |
+| Relaterade AC | AC-21-01 – AC-21-07 |
 
 ---
 

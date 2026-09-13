@@ -7,8 +7,9 @@
 | Version | 1.0 |
 | Primär aktör | Besökare |
 | Sekundär aktör | Systemet |
-| Relaterade FR | FR-xx (Icke-funktionella krav) |
+| Relaterade FR | — (kraven ligger som NFR-07.4 och SR-02.7; eget FR saknas ännu) |
 | Relaterade NFR | NFR-07.4 |
+| Kopplade begränsningar | SR-02.7, SR-03.1 |
 
 ---
 
@@ -60,6 +61,7 @@ Vid ett senare besök vill besökaren ändra sitt tidigare val.
 ## Särskilda krav
 
 - Systemet ska inte samla in fler personuppgifter än nödvändigt (NFR-07.4).
+- Inga analys- eller spårningsskript från tredje part får laddas innan samtycke har lämnats (SR-02.7).
 
 ---
 

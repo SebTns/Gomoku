@@ -1,56 +1,19 @@
-# 02-funktionellakrav
-### Denna fil är ej klar detta är en demo version vi måste skriva om alla krav som riktiga krav just nnu står dem som user stories!!!!
-
-## SPELSTART 
-
-- Som spelare vill jag välja spelplanens storlek (t.ex. 15x15 eller 19x19) så att jag kan spela enligt olika standarder.
-- Som spelare vill jag kunna starta ett nytt spel så att jag kan börja spela mot en motståndare.
-- Som spelare vill jag se vem som spelar svart respektive vitt så att jag vet vem som börjar (svart går alltid först enligt standardreglerna).
-
-
-## Spelmekanik 
-
-- Som spelare vill jag placera min spelbricka på en ledig ruta genom att klicka/trycka på den så att jag kan göra mitt drag.
-- Som spelare vill jag att systemet markerar vems tur det är så att jag inte råkar spela utanför min tur.
-- Som spelare vill jag inte kunna placera en bricka på en redan upptagen ruta så att spelets integritet upprätthålls.
-
-
-## Vinstvillkor
-
-- Som spelare vill jag att spelet automatiskt upptäcker när jag har fem brickor i rad (horisontellt, vertikalt eller diagonalt) så att spelet avgörs korrekt.
-- Som spelare vill jag se en tydlig visuell markering av den vinnande raden så att jag förstår varför spelet tog slut.
-- Som spelare vill jag att spelet meddelar oavgjort om brädet blir fullt utan att någon fått fem i rad.
-
-
-## Regler/validering 
-
-- Som spelare vill jag (i vissa varianter) hindras från "förbjudna drag" som dubbla treor för svart, om den regeln används, så att spelet följer officiella tävlingsregler.
-- Som ny spelare vill jag kunna läsa en kort regelsammanfattning i spelet så att jag förstår hur man vinner.
-
-
-## Granssnitt/UX
-
-- Som spelare vill jag kunna ångra mitt senaste drag innan jag bekräftar det så att jag undviker misstag.
-- Som spelare vill jag kunna starta om spelet utan att ladda om hela sidan/appen så att jag snabbt kan spela igen.
-- Som spelare vill jag se en räknare eller logg över gjorda drag så att jag kan följa spelets förlopp.
-
-
-## Motstand/flerspellagen
-
-- Som spelare vill jag kunna spela mot en AI-motståndare med olika svårighetsgrader så att jag kan öva på egen hand.
-- Som spelare vill jag kunna spela mot en vän lokalt på samma enhet (hot-seat) så att vi kan spela tillsammans utan internet.
-- Som spelare vill jag kunna spela online mot en annan spelare i realtid så att jag kan utmana vänner på distans.
-
 # 2. Funktionella krav
 
 Kraven är formulerade som verifierbara systemkrav ("Systemet ska ...") och härledda ur
-use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
+use case UC-01 – UC-32 samt UC-NFR-01 – UC-NFR-07. Varje krav ska gå att testa med
+minst ett testfall (se `Acceptance-Criterias/`).
 
 **Formregler för denna fil**
 
 - Ett krav = en mening = en testbar sak.
 - Inga lösningsförslag (t.ex. "med React"), bara vad systemet ska göra.
 - Inga user stories här — de hör hemma i backloggen, inte i kravspecen.
+
+**Om numreringen.** FR-numret är ett grupperingsnummer och sammanfaller inte alltid med numret på
+det use case gruppen realiserar — FR-01 realiserar till exempel UC-06. Det är raden
+**Realiserar** under varje rubrik som anger kopplingen, inte numret. Numren ändras inte i
+efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 
 ---
 
@@ -169,6 +132,7 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-07.7 | Systemet ska låta inbjudaren avbryta en inbjudan innan motståndaren anslutit. |
 | FR-07.8 | Systemet ska begränsa varje parti till två spelare och avvisa ytterligare anslutningsförsök. |
 | FR-07.9 | Systemet ska visa motståndarens synliga spelarnamn för båda spelarna när partiet startar. |
+| FR-07.10 | Systemet ska göra en avbruten inbjudningslänk ogiltig, så att ingen kan ansluta med den. |
 
 ---
 
@@ -191,6 +155,10 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-08.11 | Systemet ska förklara partiet oavgjort när brädet är fullt utan att någon fått fem i rad. |
 | FR-08.12 | Systemet ska registrera varje drag i ordning med position, färg och dragnummer. |
 | FR-08.13 | Systemet ska förhindra fler drag efter att partiet avslutats. |
+| FR-08.14 | Systemet ska endast räkna en obruten rad om exakt fem stenar av samma färg som vinst. |
+| FR-08.15 | Systemet ska inte utse en vinnare när en obruten rad av samma färg består av sex eller fler stenar (överlinje). |
+| FR-08.16 | Systemet ska kontrollera vinstvillkoret i FR-08.14 och FR-08.15 endast utifrån den rad som den senast placerade stenen ingår i. |
+| FR-08.17 | Systemet ska registrera tidpunkten för varje drag, så att svarstiden enligt NFR-02.2 och NFR-02.4 kan mätas i efterhand. |
 
 ---
 
@@ -245,10 +213,20 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | --- | --- |
 | FR-12.1 | Systemet ska låta spelaren ångra sitt senaste giltiga drag. |
 | FR-12.2 | Systemet ska återställa brädet till tillståndet innan det senaste draget gjordes. |
-| FR-12.3 | Systemet ska endast tillåta ångring av drag i partier mot datorn. |
+| FR-12.3 | Systemet ska tillåta ångring av drag i partier mot datorn och i lokala partier på samma enhet (UC-18). |
 | FR-12.4 | Systemet ska återlämna turen till spelaren när ett drag ångras. |
 | FR-12.5 | Systemet ska förhindra att spelaren ångrar ett drag om motståndaren redan har gjort sitt nästa drag. |
-| FR-12.6 | Systemet ska visa en bekräftelse innan ett drag ångras i ett parti mot en vän, eftersom det påverkar båda spelarna. |
+| FR-12.6 | Systemet ska visa en bekräftelse innan ett drag ångras i ett lokalt parti, eftersom det påverkar båda spelarna vid samma enhet. |
+| FR-12.7 | Systemet ska inte tillåta ångring i online-partier mot en vän. |
+| FR-12.8 | Om inget drag har gjorts i partiet ska systemet avvisa ångringen och visa att det inte finns något att ångra. |
+| FR-12.9 | Systemet ska avvisa ångring av ett drag i ett parti som redan är avslutat. |
+| FR-12.10 | Systemet ska minska dragräknaren med ett när ett drag ångras. |
+
+> **Löst motsägelse.** FR-12.3 angav tidigare att ångring endast är tillåten mot datorn, samtidigt
+> som FR-12.6 beskrev hur ångring bekräftas i ett parti mot en vän. Kraven uteslöt varandra.
+> UC-19:s öppna fråga är avgjord så här: ångring tillåts mot datorn och i lokalt hot-seat-parti,
+> där båda spelarna sitter vid samma skärm och kan se bekräftelsen. I online-partier är den inte
+> tillåten (FR-12.7), eftersom motståndaren inte kan se vad som händer med brädet.
 
 ---
 
@@ -275,7 +253,11 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-14.1 | Systemet ska låta spelaren logga in med sitt användarnamn/e-postadress och lösenord. |
 | FR-14.2 | Systemet ska skapa en aktiv användarsession när inloggningen är lyckad. |
 | FR-14.3 | Systemet ska visa ett felmeddelande när inloggningsuppgifterna är felaktiga. |
-| FR-14.4 | Systemet ska förhindra inloggning om kontot är tillfälligt blockerat. |
+| FR-14.4 | Systemet ska förhindra inloggning om kontot är tillfälligt blockerat (FR-29.6). |
+| FR-14.5 | Systemet ska visa samma felmeddelande oavsett om e-postadressen eller lösenordet var fel, så att det inte går att avgöra vilka e-postadresser som är registrerade. |
+| FR-14.6 | Systemet ska låsa kontot tillfälligt efter fem misslyckade inloggningsförsök i följd. |
+| FR-14.7 | Systemet ska ange när ett tillfälligt låst konto kan användas igen. |
+| FR-14.8 | Om inloggningen inte kan genomföras på grund av ett tekniskt fel ska systemet visa ett felmeddelande och låta spelaren försöka igen. |
 
 ---
 
@@ -288,8 +270,18 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-15.1 | Systemet ska låta en inloggad spelare radera sitt eget konto. |
 | FR-15.2 | Systemet ska kräva att spelaren anger sitt lösenord innan kontot raderas, som en säkerhetskontroll. |
 | FR-15.3 | Systemet ska visa en tydlig varning om att all data (inklusive spelhistorik och sparade partier) går förlorad vid radering. |
-| FR-15.4 | Systemet ska permanent radera all data kopplad till kontot efter bekräftelse. |
+| FR-15.4 | Systemet ska efter bekräftelse radera kontots personuppgifter och anonymisera den data som måste bevaras, enligt FR-30.5 – FR-30.7. |
 | FR-15.5 | Systemet ska logga ut spelaren och återgå till startsidan efter att kontot har raderats. |
+| FR-15.6 | Om lösenordet enligt FR-15.2 är felaktigt ska systemet avvisa bekräftelsen och låta spelaren försöka igen, utan att kontot raderas. |
+| FR-15.7 | Om spelaren avbryter bekräftelsen ska kontot behållas oförändrat. |
+| FR-15.8 | Om raderingen inte kan genomföras ska systemet informera spelaren om att kontot finns kvar och låta spelaren försöka igen. |
+
+> **Löst motsägelse.** FR-15.4 angav tidigare att *all* data raderas permanent. Det motsäger
+> FR-30.7, NFR-12.5 och NFR-12.6, som säger att drag, partier och samtyckesregister bevaras i
+> anonymiserad form — samtyckesregistren i minst 3 år enligt SR-03.4. Två dokument gav två svar
+> på vad "radera kontot" betyder. GDPR-kraven gäller: personuppgifterna raderas, den bevarade
+> datan anonymiseras. Varningstexten i FR-15.3 måste säga samma sak, annars lovar gränssnittet
+> något systemet inte gör.
 
 ---
 
@@ -302,7 +294,10 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-16.1 | Systemet ska låta en inloggad spelare lägga till en ny inloggningsmetod (t.ex. social inloggning) till sitt befintliga konto. |
 | FR-16.2 | Systemet ska verifiera att den nya metoden inte redan är kopplad till ett annat konto. |
 | FR-16.3 | Systemet ska kräva att spelaren bekräftar sitt nuvarande lösenord innan en ny metod läggs till. |
-| FR-16.4 | Systemet ska uppdatera kontot med den nya inloggningsmetoden och visa en bekräftelse. |
+| FR-16.4 | Systemet ska uppdatera kontot med den nya inloggningsmetoden och visa en bekräftelse med samtliga kopplade metoder. |
+| FR-16.5 | Om metoden redan är kopplad till spelarens eget konto ska systemet informera spelaren och inte lägga till den igen. |
+| FR-16.6 | Om den externa identitetsleverantören nekar kopplingen ska systemet informera spelaren och lämna kontots befintliga metoder oförändrade. |
+| FR-16.7 | Om spelaren avbryter flödet hos den externa leverantören ska ingen metod läggas till. |
 
 ---
 
@@ -353,11 +348,43 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 
 | ID | Krav |
 | --- | --- |
-| FR-14.1 | Systemet ska kontrollera efter varje giltigt drag om spelplanen är full. |
-| FR-14.2 | Om spelplanen är full och ingen spelare har fått fem i rad ska systemet avsluta partiet som oavgjort. |
-| FR-14.3 | Systemet ska visa i resultatvyn att partiet slutade oavgjort. |
-| FR-14.4 | När partiet har avslutats som oavgjort ska systemet förhindra ytterligare drag. |
-| FR-14.5 | Om det sista draget fyller spelplanen och samtidigt skapar fem i rad ska systemet registrera resultatet som vinst och inte som oavgjort. |
+| FR-20.1 | Systemet ska kontrollera efter varje giltigt drag om spelplanen är full. |
+| FR-20.2 | Om spelplanen är full och ingen spelare har fått fem i rad ska systemet avsluta partiet som oavgjort. |
+| FR-20.3 | Systemet ska visa i resultatvyn att partiet slutade oavgjort. |
+| FR-20.4 | När partiet har avslutats som oavgjort ska systemet förhindra ytterligare drag. |
+| FR-20.5 | Om det sista draget fyller spelplanen och samtidigt skapar fem i rad ska systemet registrera resultatet som vinst och inte som oavgjort. |
+
+---
+
+## FR-21: Spela lokalt på samma enhet
+
+**Realiserar:** UC-18 Spela multiplayer lokalt
+
+| ID | Krav |
+| --- | --- |
+| FR-21.1 | Systemet ska erbjuda ett lokalt läge där två spelare turas om vid samma enhet. |
+| FR-21.2 | Systemet ska låta båda spelarna ange var sitt synliga spelarnamn innan partiet startar. |
+| FR-21.3 | Systemet ska visa båda spelarnas namn och färg i turindikatorn under hela partiet. |
+| FR-21.4 | Systemet ska växla turen mellan de två spelarna på samma enhet efter varje giltigt drag. |
+| FR-21.5 | Systemet ska genomföra ett lokalt parti utan nätverksanslutning. |
+| FR-21.6 | Systemet ska inte generera någon inbjudningslänk i lokalt läge. |
+| FR-21.7 | Systemet ska begränsa ett lokalt parti till exakt två spelare. |
+
+---
+
+## FR-22: Visa spelregler
+
+**Realiserar:** UC-20 Visa spelregler
+
+| ID | Krav |
+| --- | --- |
+| FR-22.1 | Systemet ska visa en regelsammanfattning när spelaren väljer "Visa spelregler". |
+| FR-22.2 | Regelsammanfattningen ska beskriva spelets mål, hur ett drag görs, vinstvillkoret och när partiet blir oavgjort. |
+| FR-22.3 | Regelsammanfattningen ska ange att vinstvillkoret är exakt fem i rad och att sex eller fler i rad inte är en vinst (SR-01.3). |
+| FR-22.4 | Systemet ska återföra spelaren till den vy hen kom ifrån när reglerna stängs. |
+| FR-22.5 | Systemet ska gå vidare till konfigurationsvyn om spelaren väljer att starta ett parti direkt från regelvyn. |
+| FR-22.6 | Om regelsammanfattningen inte kan laddas ska systemet visa ett felmeddelande med möjlighet att försöka igen. |
+| FR-22.7 | Regelsammanfattningen ska vara åtkomlig både från startsidan och från ett pågående parti, utan att partiet påverkas. |
 
 ---
 
@@ -424,23 +451,95 @@ use case UC-01 – UC-xx. Varje krav ska gå att testa med minst ett testfall.
 | FR-29.8 | Systemet ska informera administratören när blockeringen har genomförts. |
 | FR-29.9 | Om blockeringen inte kan genomföras ska systemet informera administratören om detta och spelaren ska inte registreras som blockerad. |
 | FR-29.10 | När blockeringstiden har gått ut ska systemet automatiskt ta bort den tillfälliga blockeringen. |
-
-## Ej täckt av UC-01 – UC-08
-
-Följande finns som use case-filer i repot men saknar ännu krav i denna fil. Skriv in dem
-när respektive UC är färdigskriven:
-
-| Område | Berörda UC |
-|--------|-----------|
-| Partiavslut och resultat | UC-11, UC-12, UC-14, UC-15, UC-16 |
-| Spelhistorik och sparade partier | UC-17, UC-26, UC-27 |
-| Konto och inloggning | UC-21 – UC-25, UC-30, UC-31 |
-| Ångra drag, lokal multiplayer, regler, återställning | UC-18, UC-19, UC-20, UC-32 |
-| Problemrapportering och moderering | UC-28, UC-29 |
+| FR-29.11 | Systemet ska informera den blockerade spelaren om att en blockering gäller och när den upphör, vid nästa inloggnings- eller spelstartsförsök. |
+| FR-29.12 | Systemet ska ange orsakskategorin för blockeringen för den blockerade spelaren, utan att röja vem som har rapporterat. |
+| FR-29.13 | Systemet ska låta en blockerad spelare slutföra ett parti som redan pågick när blockeringen trädde i kraft, men inte påbörja något nytt parti. |
+| FR-29.14 | Systemet ska låta administratören välja om blockeringen ska omfatta alla spellägen eller endast partier mot andra spelare. |
+| FR-29.15 | Systemet ska låta administratören häva en pågående blockering innan blockeringstiden har löpt ut, och registrera hävningen med tidpunkt och administratör. |
 
 ---
 
+## FR-30: Begär radering av personuppgifter
+
+**Realiserar:** UC-NFR-04 Begär radering av data  
+**Kopplade begränsningar:** SR-03.1, SR-03.2, SR-03.4
+
+| ID | Krav |
+| --- | --- |
+| FR-30.1 | Systemet ska låta en registrerad spelare begära radering av sina personuppgifter. |
+| FR-30.2 | Systemet ska verifiera att begäran kommer från den registrerade spelaren själv innan raderingen påbörjas. |
+| FR-30.3 | Systemet ska registrera varje raderingsbegäran med ett unikt begärande-ID, typ (RADERING), status och tidpunkt för mottagandet. |
+| FR-30.4 | Systemet ska bekräfta för spelaren att begäran är mottagen, och ange senaste datum då raderingen ska vara genomförd. |
+| FR-30.5 | Systemet ska identifiera samtliga datakategorier som är kopplade till spelaren innan raderingen genomförs. |
+| FR-30.6 | Systemet ska radera personuppgifter som inte omfattas av en lagringsskyldighet. |
+| FR-30.7 | Systemet ska anonymisera de poster som måste bevaras (samtyckesregister, begäranden, drag och partier) så att de inte kan kopplas till spelaren. |
+| FR-30.8 | Systemet ska sätta begärans status till GENOMFÖRD och registrera tidpunkten när raderingen är klar. |
+| FR-30.9 | Systemet ska skicka en bekräftelse på genomförd radering till spelarens registrerade e-postadress. |
+| FR-30.10 | Systemet ska genomföra raderingen inom 30 dagar från det att begäran verifierades (SR-03.2). |
+| FR-30.11 | Om raderingen inte kan genomföras inom 30 dagar ska systemet underrätta dataskyddsombudet och informera spelaren om förseningen och ett nytt datum. |
+| FR-30.12 | Om en rättslig skyldighet hindrar fullständig radering ska systemet radera övriga uppgifter, informera spelaren om vilka uppgifter som bevaras och på vilken rättslig grund. |
+| FR-30.13 | Systemet ska förhindra att raderade eller anonymiserade personuppgifter kan återskapas efter att raderingen har genomförts. |
+
+---
+
+## Täckningsstatus – use case utan krav i denna fil
+
+Kraven ovan täcker UC-01 – UC-14, UC-17 – UC-31 och UC-NFR-04.
+Följande use case finns som filer i repot men saknar ännu krav här. Skriv in dem när
+respektive UC är färdigskriven.
+
+| Område | Berörda UC | Status |
+|--------|-----------|--------|
+| Partiavslut och resultat | UC-15 Förlust, UC-16 Vinst | saknas — täcks indirekt av FR-08.9 och FR-08.14, men behöver egna krav för resultatvyn |
+| Återställning | UC-32 Återställ spelet | saknas |
+| GDPR – övriga | UC-NFR-01, UC-NFR-02, UC-NFR-03, UC-NFR-05 | saknas — kraven ligger i dag enbart som NFR-07, NFR-10, NFR-11 och NFR-12 |
+| Prestanda och återkoppling | UC-NFR-06, UC-NFR-07 | saknas — kraven ligger som NFR-02 |
+
+---
+
+## Bilaga A: User stories (backlog — inte krav)
+
+Materialet nedan är den ursprungliga behovsinsamlingen och ligger kvar som spårbarhet till
+var kraven kommer ifrån. **Det är inte kravspecifikation** — formreglerna ovan säger att user
+stories hör hemma i backloggen. Varje story ska antingen ha blivit ett `Systemet ska ...`-krav
+ovan eller stå kvar här som ett identifierat men ännu inte formulerat behov.
+
+## SPELSTART 
+
+- Som spelare vill jag välja spelplanens storlek (t.ex. 15x15 eller 19x19) så att jag kan spela enligt olika standarder.
+- Som spelare vill jag kunna starta ett nytt spel så att jag kan börja spela mot en motståndare.
+- Som spelare vill jag se vem som spelar svart respektive vitt så att jag vet vem som börjar (svart går alltid först enligt standardreglerna).
 
 
+## Spelmekanik 
+
+- Som spelare vill jag placera min spelbricka på en ledig ruta genom att klicka/trycka på den så att jag kan göra mitt drag.
+- Som spelare vill jag att systemet markerar vems tur det är så att jag inte råkar spela utanför min tur.
+- Som spelare vill jag inte kunna placera en bricka på en redan upptagen ruta så att spelets integritet upprätthålls.
 
 
+## Vinstvillkor
+
+- Som spelare vill jag att spelet automatiskt upptäcker när jag har fem brickor i rad (horisontellt, vertikalt eller diagonalt) så att spelet avgörs korrekt.
+- Som spelare vill jag se en tydlig visuell markering av den vinnande raden så att jag förstår varför spelet tog slut.
+- Som spelare vill jag att spelet meddelar oavgjort om brädet blir fullt utan att någon fått fem i rad.
+
+
+## Regler/validering 
+
+- Som spelare vill jag (i vissa varianter) hindras från "förbjudna drag" som dubbla treor för svart, om den regeln används, så att spelet följer officiella tävlingsregler.
+- Som ny spelare vill jag kunna läsa en kort regelsammanfattning i spelet så att jag förstår hur man vinner.
+
+
+## Granssnitt/UX
+
+- Som spelare vill jag kunna ångra mitt senaste drag innan jag bekräftar det så att jag undviker misstag.
+- Som spelare vill jag kunna starta om spelet utan att ladda om hela sidan/appen så att jag snabbt kan spela igen.
+- Som spelare vill jag se en räknare eller logg över gjorda drag så att jag kan följa spelets förlopp.
+
+
+## Motstand/flerspellagen
+
+- Som spelare vill jag kunna spela mot en AI-motståndare med olika svårighetsgrader så att jag kan öva på egen hand.
+- Som spelare vill jag kunna spela mot en vän lokalt på samma enhet (hot-seat) så att vi kan spela tillsammans utan internet.
+- Som spelare vill jag kunna spela online mot en annan spelare i realtid så att jag kan utmana vänner på distans.

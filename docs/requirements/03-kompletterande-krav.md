@@ -2,8 +2,25 @@
 
 ## SR-01: Affärsregler
 
-Affärsreglerna har extraherats till ett eget dokument för tydlighetens skull.
-Se [08 – Affärsregler](08-business-rules.md).
+Uppsatsmallen kräver inget eget affärsregeldokument, och något sådant finns inte i detta repo.
+Reglerna nedan är de som styr systemets beteende men inte hör hemma som funktionella krav.
+Definitionerna i `00-begreppslista.md` tar företräde vid konflikt.
+
+| ID | Regel | Källa |
+|----|-------|-------|
+| SR-01.1 | Ett parti spelas alltid mellan exakt två spelare. | `00-begreppslista.md`, Parti |
+| SR-01.2 | Svart gör alltid första draget. | `00-begreppslista.md`, Svart — FR-04.3 |
+| SR-01.3 | Vinstvillkoret är exakt fem stenar i rad. Sex eller fler i rad är inte en vinst. | `00-begreppslista.md`, 5 i rad / 6 eller mer i rad — FR-08.14, FR-08.15 |
+| SR-01.4 | En placerad sten kan inte flyttas eller tas bort. | `00-begreppslista.md`, Sten |
+| SR-01.5 | Ett uppgivande registreras som förlust för den som ger upp och vinst för motståndaren. | `00-begreppslista.md`, Ge upp — FR-09.3 |
+| SR-01.6 | AI-motståndaren behandlas som en spelare enligt spelreglerna men rankas inte på topplistan. | `00-begreppslista.md`, AI-motståndare |
+| SR-01.7 | Endast spelare med minst 10 avslutade partier visas på topplistan. | `00-begreppslista.md`, Topplista |
+| SR-01.8 | En inbjudan är giltig i 15 minuter och kan användas av högst en motståndare. | FR-07.3, FR-07.8 |
+| SR-01.9 | En gästanvändare har inte tillgång till historik, topplista eller sociala funktioner. | `00-begreppslista.md`, Gästanvändare |
+
+> **Not.** Hänvisningen till `08-business-rules.md` är borttagen. Filen fanns i lärarens
+> referensrepo `miwashi-edu/gomoku` men har aldrig funnits här, och i vår numrering är 08
+> *Use Cases och Test Cases*.
 
 ## SR-02: Tekniska begränsningar
 

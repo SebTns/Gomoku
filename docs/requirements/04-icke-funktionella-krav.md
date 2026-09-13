@@ -1,9 +1,23 @@
-Icke-funktionella krav
-NFR-01 Kompatibilitet med enheter och webbläsare
-NFR-02 Prestanda och svarstid
-NFR-03 Rapportering av problem
-NFR-04 Hantering av problem
-NFR-05 Moderering och spelarrapporter
+# 4. Icke-funktionella krav
+
+Kraven är formulerade så att de går att verifiera. Ett icke-funktionellt krav utan mätbart
+värde eller observerbart utfall är inte ett krav — då är det en ambition och hör hemma i
+`03-kompletterande-krav.md` som antagande.
+
+| Grupp | Rubrik | Främst kopplad till |
+|-------|--------|---------------------|
+| NFR-01 | Kompatibilitet med enheter och webbläsare | Spelare, Gästanvändare |
+| NFR-02 | Prestanda och svarstid | Spelare — UC-02, UC-NFR-06, UC-NFR-07 |
+| NFR-03 | Kvalitet i problemrapportering | Spelare — UC-28 |
+| NFR-04 | Felhantering och robusthet | Spelare, Administratör — UC-28 |
+| NFR-05 | Moderering | Administratör — UC-29 |
+| NFR-06 | Användbarhet och tillgänglighet | Spelare, Gästanvändare |
+| NFR-07 | Säkerhet och dataskydd | Registrerad spelare, DPO |
+| NFR-08 | Tillförlitlighet och tillgänglighet | Samtliga aktörer |
+| NFR-09 | Underhållbarhet och testbarhet | Utvecklare, Testare |
+| NFR-10 | Tillgång till personuppgifter | Registrerad spelare — UC-NFR-02 |
+| NFR-11 | Delning av personuppgifter med tredje part | Registrerad spelare — UC-NFR-03 |
+| NFR-12 | Radering av personuppgifter | Registrerad spelare, DPO — UC-NFR-04, UC-NFR-05 |
 
 
 ## NFR-01: Kompatibilitet med enheter och webbläsare
@@ -31,6 +45,10 @@ NFR-05 Moderering och spelarrapporter
 | NFR-02.6 | Ett drag ska synas hos motståndaren inom 500 ms i ett parti mot en vän. |
 | NFR-02.7 | Ett byte av svårighetsgrad eller brädstorlek ska återspeglas i gränssnittet inom 300 ms. |
 
+**Mätpunkt för NFR-02.2 och NFR-02.4:** tiden mäts från den händelse där klicket eller
+trycket registreras i klienten, till dess att den uppdaterade vyn är renderad. Mätningen görs
+på referensenheten i NFR-01.2 vid 25 Mbit/s. Utan denna definition är NFR-02.2 inte testbart.
+
 ---
 
 ## NFR-03: Kvalitet i problemrapportering
@@ -41,7 +59,9 @@ NFR-05 Moderering och spelarrapporter
 |----|------|
 | NFR-03.1 | Funktionen för problemrapportering ska nås inom högst två klick från valfri vy. |
 | NFR-03.2 | En inskickad rapport ska bekräftas för spelaren inom 3 sekunder. |
-| NFR-03.3 | Varje rapport ska automatiskt innehålla webbläsare, tidpunkt och parti-ID, utan personuppgifter utöver spelarnamnet. |
+| NFR-03.3 | Varje rapport ska automatiskt innehålla webbläsare, tidpunkt och parti-ID. |
+| NFR-03.6 | Den enda personuppgift som får bifogas automatiskt är det synliga spelarnamnet. Inga andra personuppgifter får samlas in via rapporten. |
+| NFR-03.7 | Systemet ska informera spelaren om vilka uppgifter som bifogas rapporten innan den skickas. |
 | NFR-03.4 | Att öppna rapportformuläret ska inte avbryta eller påverka ett pågående parti. |
 | NFR-03.5 | Om rapporten inte kan skickas ska den sparas lokalt så att spelaren kan skicka om den. |
 
@@ -70,6 +90,9 @@ NFR-05 Moderering och spelarrapporter
 | NFR-05.2 | Moderationsbeslut ska loggas och sparas i 12 månader. |
 | NFR-05.3 | Den rapporterade spelaren ska inte få veta vem som rapporterat. |
 | NFR-05.4 | Rapporter ska köas i inkommen ordning och kunna hämtas av administratör inom 24 timmar. |
+| NFR-05.5 | Ett modereringsbeslut ska gå att spåra till den administratör som fattade det. |
+| NFR-05.6 | En blockering ska registreras med starttid och sluttid i UTC, så att den automatiska hävningen enligt FR-29.10 går att verifiera oberoende av tidszon. |
+| NFR-05.7 | Systemet ska kunna visa en blockerings status (aktiv, utgången, hävd) vid varje given tidpunkt utan att blockeringstiden behöver löpa ut i realtid, så att FR-29.10 och NFR-05.2 kan testas med simulerad tid. |
 
 ---
 
@@ -95,6 +118,9 @@ NFR-05 Moderering och spelarrapporter
 | NFR-07.3 | Spelarnamn och fritext ska saneras så att skript inte kan köras i andra spelares webbläsare. |
 | NFR-07.4 | Systemet ska inte samla in fler personuppgifter än det synliga spelarnamnet i gästläge. |
 | NFR-07.5 | Partidata för gästspel ska raderas senast 30 dagar efter att partiet avslutats. |
+| NFR-07.6 | Lösenord ska lagras som bcrypt-hash. Lösenord i klartext ska aldrig lagras, loggas eller ingå i en dataexport. |
+| NFR-07.7 | Ett misslyckat inloggningsförsök ska inte avslöja om e-postadressen är registrerad i systemet. |
+| NFR-07.8 | En extern identitetsleverantör ska inte få tillgång till fler personuppgifter än vad kopplingen kräver. |
 
 ---
 
@@ -134,5 +160,29 @@ NFR-05 Moderering och spelarrapporter
 | --- | --- |
 | NFR-11.1 | Systemet ska informera användaren om personuppgifter behandlas av tredje part. |
 | NFR-11.2 | Systemet ska informera användaren om personuppgifter överförs till ett land utanför det tillämpliga dataskyddsområdet och vilka skyddsåtgärder som gäller. |
+
+---
+
+## NFR-12: Radering av personuppgifter
+
+**Relaterat UC:** UC-NFR-04, UC-NFR-05  
+**Relaterade FR:** FR-30.1 – FR-30.13  
+**GDPR-referens:** Artikel 17 (rätten till radering)
+
+| ID | Krav |
+|----|------|
+| NFR-12.1 | Systemet ska göra det möjligt för en registrerad spelare att begära radering av sina personuppgifter. |
+| NFR-12.2 | En verifierad raderingsbegäran ska vara genomförd senast 30 dagar efter att den togs emot (SR-03.2). |
+| NFR-12.3 | Systemet ska bekräfta en genomförd radering till spelaren via e-post. |
+| NFR-12.4 | Personuppgifter som har raderats ska inte kunna återskapas från säkerhetskopior, loggar, cacheminnen eller export efter att raderingen är genomförd. |
+| NFR-12.5 | Speldata som bevaras efter en radering ska vara anonymiserad enligt definitionen i `00-begreppslista.md` och inte gå att koppla till en identifierbar person, varken direkt eller genom sammanställning med andra uppgifter i systemet. |
+| NFR-12.6 | Samtyckesregister och begäranden ska bevaras i anonymiserad form i minst 3 år för efterlevnadsgranskning (SR-03.4). |
+| NFR-12.7 | Raderingen ska kunna verifieras i en testmiljö utan att 30-dagarsfönstret behöver förflyta i realtid. |
+
+**Anmärkning om testbarhet.** NFR-12.4 är formulerat som ett negativt påstående — att ett
+tillstånd ska vara omöjligt. Ett sådant krav går inte att bevisa genom test, bara att
+falsifiera: ett test kan visa att uppgifterna *går* att återskapa, aldrig att de aldrig gör
+det. Kravet verifieras därför genom ett begränsat antal namngivna sökvägar (databas,
+säkerhetskopia, applikationslogg, dataexport, sökindex). Se AC-NFR-04-05.
 
 ---
