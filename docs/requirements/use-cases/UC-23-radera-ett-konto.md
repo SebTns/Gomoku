@@ -6,7 +6,7 @@
 | Namn | Radera ett konto |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet, Databasen |
+| Sekundär aktör | E-posttjänst |
 | Relaterade FR | FR-15.1 – FR-15.8, FR-30.5 – FR-30.7 |
 | Relaterade NFR | NFR-07.4, NFR-12.5, NFR-12.6 |
 | Relaterade AC | AC-23-01 – AC-23-07 |

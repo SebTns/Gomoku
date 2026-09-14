@@ -6,7 +6,7 @@
 | Namn | Ändra kontoinställningar |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet, Databasen |
+| Sekundär aktör | — |
 | Relaterade FR | FR-18.1, FR-18.2, FR-18.3, FR-18.4 |
 | Relaterade NFR | NFR-07.3 |
 

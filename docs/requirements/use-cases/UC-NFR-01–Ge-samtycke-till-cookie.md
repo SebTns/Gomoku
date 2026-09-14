@@ -5,9 +5,9 @@
 | Use Case ID | UC-NFR-01 |
 | Namn | Ge samtycke till cookie |
 | Version | 1.0 |
-| Primär aktör | Besökare |
-| Sekundär aktör | Systemet |
-| Relaterade FR | — (kraven ligger som NFR-07.4 och SR-02.7; eget FR saknas ännu) |
+| Primär aktör | Gästanvändare |
+| Sekundär aktör | Tredjepartsleverantör (analystjänst) |
+| Relaterade FR | FR-24.1 – FR-24.9 |
 | Relaterade NFR | NFR-07.4 |
 | Kopplade begränsningar | SR-02.7, SR-03.1 |
 
@@ -15,13 +15,13 @@
 
 ## Beskrivning
 
-Besökaren ger eller nekar samtycke till cookies vid första besöket, i enlighet med gällande regler för dataskydd.
+Gästanvändaren ger eller nekar samtycke till cookies vid första besöket, i enlighet med gällande regler för dataskydd.
 
 ---
 
 ## Förutsättningar
 
-- Besökaren öppnar applikationen för första gången (eller efter att tidigare val har rensats).
+- Gästanvändaren öppnar applikationen för första gången (eller efter att tidigare val har rensats).
 
 ---
 
@@ -29,8 +29,8 @@ Besökaren ger eller nekar samtycke till cookies vid första besöket, i enlighe
 
 1. Systemet visar ett meddelande om cookies vid första besöket.
 2. Systemet förklarar vilka cookies som används och varför.
-3. Besökaren väljer "Acceptera alla", "Acceptera nödvändiga" eller gör egna val.
-4. Systemet sparar besökarens val.
+3. Gästanvändaren väljer "Acceptera alla", "Acceptera nödvändiga" eller gör egna val.
+4. Systemet sparar gästanvändarens val.
 5. Systemet laddar endast cookies enligt valet.
 6. Systemet visar inte meddelandet igen vid nästa besök.
 
@@ -38,12 +38,12 @@ Besökaren ger eller nekar samtycke till cookies vid första besöket, i enlighe
 
 ## Alternativa flöden
 
-### AF-01: Besökaren gör inget val
+### AF-01: Gästanvändaren gör inget val
 Vid steg 3 stänger besökaren meddelandet utan att välja.
 
 - Systemet behandlar det som nekande av icke-nödvändiga cookies.
 
-### AF-02: Besökaren vill ändra sitt val
+### AF-02: Gästanvändaren vill ändra sitt val
 Vid ett senare besök vill besökaren ändra sitt tidigare val.
 
 - Systemet erbjuder "Cookie-inställningar" där valet kan ändras.
@@ -52,7 +52,7 @@ Vid ett senare besök vill besökaren ändra sitt tidigare val.
 
 ## Postconditions
 
-**Lyckat:** Besökarens val är sparat och cookies hanteras därefter.
+**Lyckat:** Gästanvändarens val är sparat och cookies hanteras därefter.
 
 **Misslyckat:** Inget val är sparat (endast nödvändiga cookies används).
 

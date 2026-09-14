@@ -5,8 +5,8 @@
 | Use Case ID | UC-14 |
 | Namn | Oavgjort |
 | Version | 1.0 |
-| Primär aktör | Systemet |
-| Sekundär aktör | Spelarna |
+| Primär aktör | Spelare, Motståndare |
+| Sekundär aktör | AI-motståndare |
 | Relaterade FR | FR-08.11, FR-20.1 – FR-20.5 |
 | Relaterade NFR | NFR-02.4, NFR-08.2 |
 
@@ -63,3 +63,9 @@ Vid steg 2 ger sista draget fem i rad.
 ## Öppna frågor
 
 - Ska oavgjort även kunna uppstå genom ömsesidig överenskommelse?
+
+---
+
+## Ändringslogg
+
+**1.1** — Rättad aktör. Primär aktör var tidigare angiven som *Systemet*. Kursens definition är att en aktör är en **konsument** av förväntade resultat — systemet konsumerar ingenting, det är de två spelarna som förväntar sig att partiet förklaras oavgjort. Sekundär aktör var *Spelarna*, vilket var samma sak som den primära.

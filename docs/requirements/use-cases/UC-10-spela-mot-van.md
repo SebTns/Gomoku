@@ -6,7 +6,7 @@
 | Namn | Spela mot vän |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Vännen, Systemet |
+| Sekundär aktör | Vännen |
 | Relaterade FR | FR-07.5, FR-07.8, FR-07.9, FR-08.1, FR-08.4 |
 | Relaterade NFR | NFR-02.6, NFR-04.2, NFR-04.3, NFR-07.2 |
 

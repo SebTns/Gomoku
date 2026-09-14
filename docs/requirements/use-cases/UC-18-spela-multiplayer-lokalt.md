@@ -6,7 +6,7 @@
 | Namn | Spela multiplayer lokalt |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Vännen (lokal motspelare), Systemet |
+| Sekundär aktör | Vännen (lokal motspelare) |
 | Relaterade FR | FR-04.5, FR-08.1, FR-08.3, FR-08.4 |
 | Relaterade NFR | NFR-06.3, NFR-06.5 |
 | Relaterade FR (tillagda) | FR-21.1 – FR-21.7 |

@@ -6,7 +6,7 @@
 | Namn | Ge upp |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet |
+| Sekundär aktör | Motståndaren |
 | Relaterade FR | FR-09.1, FR-09.2, FR-09.3, FR-09.4, FR-09.5 |
 | Relaterade NFR | NFR-04.1, NFR-04.6 |
 

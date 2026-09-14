@@ -6,8 +6,8 @@
 | **Namn** |Informeras om delning med tredje part|
 | **Version** | 1.0 |
 | **Primär aktör** |Spelare|
-| **Sekundär aktör** |Systemet,Tredjepartsleverantör |
-| **Relaterade FR** | — (kraven ligger som NFR-11.1 och NFR-11.2; eget FR saknas ännu) |
+| **Sekundär aktör** | Tredjepartsleverantör |
+| **Relaterade FR** | FR-31.1 – FR-31.7 |
 | **Relaterade NFR** | NFR-11.1, NFR-11.2 |
 | **Kopplade begränsningar** | SR-03.1, SR-03.3 |
 | **GDPR-referens** |Artikel 28, Artikel 46|

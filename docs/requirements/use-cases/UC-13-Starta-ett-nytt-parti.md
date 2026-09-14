@@ -6,7 +6,7 @@
 | Namn | Starta ett nytt parti |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet, Motståndaren |
+| Sekundär aktör | Motståndaren |
 | Relaterade FR | FR-03.1, FR-03.7 |
 | Relaterade NFR | NFR-02.7, NFR-06.6 |
 

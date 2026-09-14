@@ -1,4 +1,4 @@
-## AC-07-01: Spelaren anger ett giltigt namn
+### AC-07-01: Spelaren anger ett giltigt namn
 Relaterade krav: FR-02.1, FR-02.2, FR-02.5, UC-07 (Steg 1-7)
 
 Given att spelaren har öppnat spelet (UC-06)
@@ -13,7 +13,7 @@ And visa namnet i gränssnittet (t.ex. i turindikatorn och resultatvyn)
 
 ---
 
-## AC-07-02: Namnet uppfyller inte reglerna
+### AC-07-02: Namnet uppfyller inte reglerna
 Relaterade krav: FR-02.3, UC-07 (AF-01)
 
 Given att spelaren har öppnat spelet (UC-06)
@@ -28,7 +28,7 @@ And låta spelaren skriva om namnet och försöka igen
 
 ---
 
-## AC-07-03: Spelaren anger inget namn
+### AC-07-03: Spelaren anger inget namn
 Relaterade krav: FR-02.4, UC-07 (AF-02)
 
 Given att spelaren har öppnat spelet (UC-06)
@@ -42,7 +42,7 @@ And visa standardnamnet i gränssnittet
 
 ---
 
-## AC-07-04: Spelaren avbryter namnändringen
+### AC-07-04: Spelaren avbryter namnändringen
 Relaterade krav: FR-02.7, UC-07 (AF-03)
 
 Given att spelaren har öppnet spelet (UC-06)
@@ -57,7 +57,7 @@ And spelarens namn ska förbli oförändrat
 
 ---
 
-## AC-07-05: Namnet saneras och skyddas (NFR-krav)
+### AC-07-05: Namnet saneras och skyddas (NFR-krav)
 Relaterade krav: FR-02.2, NFR-07.3, NFR-07.4, UC-07 (Särskilda krav)
 
 Given att spelaren har öppnat spelet (UC-06)

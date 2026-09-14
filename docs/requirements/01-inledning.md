@@ -39,15 +39,25 @@ prenumerationsfunktioner.
 
 ## 1.4 Aktörer
 
-| Aktör | Typ | Beskrivning |
-|-------|------|-------------|
-| AI-motståndare | Sekundär, system | Datorstyrd spelare som genererar drag med hjälp av en spelalgoritm. |
-| Analystjänst | Sekundär, Extern | Sekretesskompatibel analysplattform (medgivandebevakad) som används för att aggregera anonymiserade användningsdata. |****
-| Dataskyddsombud (DPO) | Primär, människa | Övervakar GDPR-efterlevnad, granskar granskningsloggar, hanterar svar på dataintrång och hanterar eskalerade förfrågningar från registrerade. |
-| E-posttjänst | Sekundär, extern | Tredjepartsleverantör av SMTP/transaktionella e-postmeddelanden som används för verifieringsmejl, lösenordsåterställningar och meddelanden om dataintrång. |
-| Gästanvändare | Primär, människa | En oautentiserad besökare. Kan spela mot AI:n men har inte åtkomst till historik, rankningar eller sociala funktioner. |
-| Systemadministratör | Primär, människa | Plattformsoperatör som hanterar användarkonton, övervakar systemhälsa, tillämpar innehållsmoderering och granskar GDPR-efterlevnadsinstrumentpaneler. |
-| Registrerad spelare | Primär, människa | En autentiserad användare med en profil. Har åtkomst till alla spellägen, historik, topplista och GDPR-självbetjäningsfunktioner. |
+Förkortningarna används i `07-use-cases-overview.md`. Namnen är desamma som i
+användningsfallen — vid konflikt gäller `00-begreppslista.md`.
+
+| Aktör | Förk. | Typ | Beskrivning |
+|-------|-------|------|-------------|
+| Spelare | SP | Primär, människa | Den som spelar ett parti. Samlingsroll för gästanvändare och registrerad spelare; de flesta användningsfall skiljer inte på dem. |
+| Gästanvändare | GÄ | Primär, människa | En oautentiserad besökare. Kan spela mot AI:n men har inte åtkomst till historik, rankningar eller sociala funktioner. |
+| Registrerad spelare | RS | Primär, människa | En autentiserad användare med en profil. Har åtkomst till alla spellägen, historik, topplista och GDPR-självbetjäningsfunktioner. |
+| Motståndare | MO | Primär, människa | Den andra mänskliga spelaren i ett parti, lokalt eller online. |
+| Administratör | AD | Primär, människa | Plattformsoperatör som hanterar användarkonton, rapporter och modereringsärenden samt granskar GDPR-efterlevnad. |
+| Dataskyddsombud (DPO) | DPO | Primär, människa | Övervakar GDPR-efterlevnad, granskar revisionsloggar, hanterar svar på dataintrång och hanterar eskalerade förfrågningar från registrerade. |
+| AI-motståndare | AI | Sekundär, system | Datorstyrd spelare som genererar drag med hjälp av en spelalgoritm. Rankas inte på topplistan. |
+| E-posttjänst | EP | Sekundär, extern | Tredjepartsleverantör av transaktionella e-postmeddelanden: verifieringar, lösenordsåterställningar och bekräftelser. |
+| Identitetsleverantör | IDP | Sekundär, extern | Extern inloggningstjänst (t.ex. Google) som används vid social inloggning. |
+| Tredjepartsleverantör | TP | Sekundär, extern | Databehandlare som behandlar personuppgifter för vår räkning, till exempel en samtyckesbevakad analystjänst. |
+
+**Inte aktörer.** "Systemet" och "Databasen" förekom tidigare som sekundära aktörer i 23
+användningsfall. De är interna komponenter, inte aktörer — ingen av dem konsumerar ett resultat
+utifrån. Referenserna är borttagna.
 
 ## 1.5 Översikt över dokumentstrukturen
 

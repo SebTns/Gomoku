@@ -6,7 +6,7 @@
 | Namn | Visa spelregler |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet |
+| Sekundär aktör | — |
 | Relaterade FR | FR-01.2, FR-22.1 – FR-22.7 |
 | Relaterade NFR | NFR-06.6 |
 | Relaterade AC | AC-20-01 – AC-20-07 |

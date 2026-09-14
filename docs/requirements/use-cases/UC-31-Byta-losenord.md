@@ -6,7 +6,7 @@
 | Namn | Byta lösenord |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet, Databasen |
+| Sekundär aktör | — |
 | Relaterade FR | FR-19.1, FR-19.2, FR-19.3, FR-19.4, FR-19.5 |
 | Relaterade NFR | NFR-07.1 |
 

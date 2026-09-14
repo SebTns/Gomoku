@@ -25,11 +25,9 @@ Strukturen följer avsnittsindelningen i `01-inledning.md` 1.5.
 | Identitetsleverantör | IDP | Sekundär, extern | Extern inloggningstjänst (t.ex. Google). |
 | Tredjepartsleverantör | TP | Sekundär, extern | Databehandlare som behandlar personuppgifter för vår räkning. |
 
-> **Avvikelser mot `01-inledning.md` 1.4.** Aktörslistan där använder *Gästanvändare* medan
-> UC-NFR-01 skriver *Besökare*, och *Systemadministratör* medan UC-28 och UC-29 skriver
-> *Administratör*. Det är samma roller under olika namn. Tabellen ovan använder UC-filernas
-> namn, eftersom det är de som faktiskt står i användningsfallen. Namnen bör samordnas i ett
-> av dokumenten — se 7.6.
+> **Samordnad med `01-inledning.md` 1.4.** Aktörsnamnen var tidigare olika i de två filerna —
+> *Besökare* mot *Gästanvändare*, *Administratör* mot *Systemadministratör*. Listan i 1.4 är
+> omskriven och använder nu samma namn och förkortningar som tabellen ovan.
 
 ---
 
@@ -68,7 +66,7 @@ Strukturen följer avsnittsindelningen i `01-inledning.md` 1.5.
 | UC-29 | Tillfälligt blockera en spelare | AD | RS (blockerad) | FR-29.1 – FR-29.15 |
 | UC-30 | Ändra kontoinställningar | RS | — | FR-18.1 – FR-18.4 |
 | UC-31 | Byta lösenord | RS | — | FR-19.1 – FR-19.5 |
-| UC-32 | Återställ spelet | SP | MO | FR-03.7, FR-08.13 |
+| UC-32 | Återställ spelet | SP | MO | FR-23.1 – FR-23.8, FR-03.7, FR-08.13 |
 
 ### 7.2.1 Spelstart och konfiguration
 
@@ -279,13 +277,14 @@ flowchart LR
 
 | UC-ID | Namn | Primär aktör | Sekundär aktör | Relaterade NFR |
 |-------|------|--------------|----------------|----------------|
-| UC-NFR-01 | Ge samtycke till cookie | GÄ | TP | NFR-07.4, SR-02.7 |
-| UC-NFR-02 | Begära tillgång till personuppgifter | RS | — | NFR-10.1, NFR-10.2 |
-| UC-NFR-03 | Informeras om delning med tredje part | RS | TP | NFR-11.1, NFR-11.2 |
+| UC-NFR-01 | Ge samtycke till cookie | GÄ | TP | NFR-07.4, SR-02.7, FR-24 |
+| UC-NFR-02 | Begära tillgång till personuppgifter | RS | — | NFR-10.1, NFR-10.2, FR-27 |
+| UC-NFR-03 | Informeras om delning med tredje part | RS | TP | NFR-11.1, NFR-11.2, FR-31 |
 | UC-NFR-04 | Begär radering av data | RS | AD, DPO, EP | NFR-12.1 – NFR-12.7, NFR-07.1, NFR-07.5 |
 | UC-NFR-05 | Ta bort konto | RS | EP | NFR-12.1 – NFR-12.7, NFR-07.1 |
 | UC-NFR-06 | Systemets responstid efter handling | SP | — | NFR-02.1 – NFR-02.7 |
 | UC-NFR-07 | Spelaren får återkoppling efter handling | SP | — | NFR-02.2, NFR-02.5, NFR-02.7, NFR-06.1 – NFR-06.3, NFR-04.1 |
+| UC-NFR-08 | DPO granskar en raderingsbegäran | DPO | AD, EP | NFR-12.2, NFR-12.6, NFR-07.1, FR-32 |
 
 ### 7.3.1 Samtycke och information
 
@@ -324,8 +323,11 @@ flowchart LR
         NFR05("Ta bort konto")
         UC23("Radera ett konto")
 
+        NFR08("DPO granskar<br/>en begäran")
+
         NFR05 -.->|include| NFR04
         UC23 -.->|include| NFR04
+        NFR08 -.->|extend| NFR04
     end
 
     RS --> NFR02
@@ -334,6 +336,7 @@ flowchart LR
     RS --> UC23
     NFR04 --> AD
     NFR04 --> DPO
+    DPO --> NFR08
     NFR04 --> EP
     NFR05 --> EP
 ```
@@ -383,41 +386,39 @@ behövs inget av dem.
 
 | Aktör | Äger som primär aktör | Antal |
 |-------|----------------------|-------|
-| Spelare (SP) | UC-01, UC-02, UC-03, UC-04, UC-05, UC-06, UC-07, UC-08, UC-10, UC-11, UC-12, UC-13, UC-14, UC-15, UC-16, UC-18, UC-19, UC-20, UC-26, UC-27, UC-28, UC-32, UC-NFR-06, UC-NFR-07 | 24 |
+| Spelare (SP) | UC-01 – UC-08, UC-10 – UC-16, UC-18, UC-19, UC-20, UC-26, UC-27, UC-28, UC-32, UC-NFR-06, UC-NFR-07 | 24 |
 | Registrerad spelare (RS) | UC-17, UC-22, UC-23, UC-24, UC-25, UC-30, UC-31, UC-NFR-02, UC-NFR-03, UC-NFR-04, UC-NFR-05 | 11 |
 | Gästanvändare (GÄ) | UC-21, UC-NFR-01 | 2 |
-| Motståndare (MO) | UC-09, UC-14, UC-15 | 3 |
+| Motståndare (MO) | UC-09, UC-14 | 2 |
 | Administratör (AD) | UC-29 | 1 |
-| Dataskyddsombud (DPO) | — | 0 |
+| Dataskyddsombud (DPO) | UC-NFR-08 | 1 |
 | AI-motståndare (AI) | UC-09 | 1 |
 
 **Två observationer.**
 
-Administratören äger ett enda användningsfall och dataskyddsombudet inget alls, trots att båda
-står som primära aktörer i `01-inledning.md` 1.4. DPO förekommer bara som sekundär aktör i
-UC-NFR-04. Antingen är de aktörerna felplacerade i inledningen, eller så saknas användningsfall
-för dem — lärarens referensrepo har till exempel *Admin Reviews Consent Audit Log* och *DPO
-Manages Breach Response*, som inte har någon motsvarighet här.
+Dataskyddsombudet stod tidigare som primär aktör i `01-inledning.md` utan att äga ett enda
+användningsfall, trots att UC-NFR-04 skickar två eskaleringar dit. UC-NFR-08 är tillagt och
+beskriver vad som händer på andra sidan av den eskaleringen. Administratören äger fortfarande bara
+UC-29 — lärarens referensrepo har till exempel *Admin Reviews Consent Audit Log*, som saknar
+motsvarighet här.
 
-Tyngdpunkten ligger på Spelare med 24 av 39 användningsfall. Det stämmer med systemets syfte,
+Tyngdpunkten ligger på Spelare med 24 av 40 användningsfall. Det stämmer med systemets syfte,
 men det betyder också att de flesta kraven är skrivna ur ett enda perspektiv.
 
 ---
 
 ## 7.6 Kända problem i användningsfallen
 
-Punkter som den här översikten gör synliga och som gruppen behöver ta ställning till.
+Punkter som den här översikten gjorde synliga. Fem av sex är åtgärdade.
 
-| # | Problem | Berörda filer |
-|---|---------|---------------|
-| 1 | **Tre överlappande use case för att starta ett parti.** UC-06 *Starta spelet* (öppna applikationen), UC-01 *Starta nytt parti* (konfigurera och starta) och UC-13 *Starta ett nytt parti* (starta om efter avslutat parti) beskriver delvis samma sak. UC-13 har bara två egna FR och skulle kunna vara ett alternativflöde i UC-01. | UC-01, UC-06, UC-13 |
-| 2 | **Systemet står som primär aktör i UC-14 och UC-15.** Enligt kursens definition är en aktör en *konsument* av förväntade resultat. Systemet konsumerar ingenting — det är spelarna som förväntar sig resultatet. Samma fel var tidigare i UC-NFR-06 och är rättat där. | UC-14, UC-15 |
-| 3 | **"Databasen" och "Systemet" listas som sekundära aktörer.** De är interna komponenter, inte aktörer — ingen av dem konsumerar ett resultat utifrån. Förekommer i 23 av 39 filer. | UC-09 – UC-13, UC-16 – UC-27, UC-30 – UC-32, UC-NFR-01 – UC-NFR-03 |
-| 4 | **Aktörsnamnen skiljer sig mellan inledningen och UC-filerna.** Besökare/Gästanvändare och Administratör/Systemadministratör är samma roller under olika namn. | `01-inledning.md`, UC-NFR-01, UC-28, UC-29 |
-| 5 | **Fyra use case saknar egna FR.** UC-NFR-01, UC-NFR-02 och UC-NFR-03 realiserar bara NFR, och UC-32 lånar två FR från andra grupper. Ett use case utan krav går inte att spåra till ett testfall. | UC-32, UC-NFR-01 – UC-NFR-03 |
-| 6 | **Inget use case för DPO eller för administratörens granskning.** Se 7.5. | — |
-
----
+| # | Problem | Status |
+|---|---------|--------|
+| 1 | **Tre överlappande use case för att starta ett parti.** UC-06 *Starta spelet*, UC-01 *Starta nytt parti* och UC-13 *Starta ett nytt parti* beskriver delvis samma sak. UC-13 har bara två egna FR och skulle kunna vara ett alternativflöde i UC-01. | **Öppet** — en sammanslagning är ett designbeslut som gruppen måste ta, inte ett skrivfel. |
+| 2 | **Systemet stod som primär aktör i UC-14 och UC-15.** Kursens definition är att en aktör *konsumerar* förväntade resultat; systemet konsumerar ingenting. | Rättat — UC-14 har nu Spelare och Motståndare, UC-15 har Spelare. Se ändringsloggen i respektive fil. |
+| 3 | **"Systemet" och "Databasen" stod som sekundära aktörer** i 23 av 39 filer. Interna komponenter, inte aktörer. | Rättat i samtliga 23 filer. |
+| 4 | **Aktörsnamnen skilde sig** mellan `01-inledning.md` och UC-filerna: Besökare/Gästanvändare, Administratör/Systemadministratör. Inledningen motsade dessutom sig själv mellan 1.3 och 1.4. | Rättat — 1.4 är omskriven och UC-NFR-01 använder Gästanvändare. |
+| 5 | **Fyra use case saknade egna FR:** UC-32, UC-NFR-01, UC-NFR-02, UC-NFR-03. | Rättat — FR-23, FR-24, FR-27 och FR-31 tillagda. Det fyllde samtidigt de sista hålen i FR-numreringen, som nu är obruten 1–32. |
+| 6 | **Inget use case för dataskyddsombudet**, trots att det stod som primär aktör och tar emot två eskaleringar från UC-NFR-04. | Rättat — UC-NFR-08 tillagt, med FR-32 och AC-NFR-08. |
 
 ## 7.7 Var kraven och testfallen finns
 

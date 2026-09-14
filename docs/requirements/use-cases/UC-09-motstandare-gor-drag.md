@@ -6,7 +6,7 @@
 | Namn | Motståndare gör drag |
 | Version | 1.0 |
 | Primär aktör | Motståndaren (datorn eller online-motståndaren) |
-| Sekundär aktör | Systemet, Spelaren |
+| Sekundär aktör | Spelaren |
 | Relaterade FR | FR-06.2, FR-06.3, FR-06.4, FR-06.5, FR-08.4, FR-08.8 |
 | Relaterade NFR | NFR-02.3, NFR-02.4, NFR-04.3, NFR-09.3 |
 

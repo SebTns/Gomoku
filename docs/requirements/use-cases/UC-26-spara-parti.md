@@ -6,7 +6,7 @@
 | Namn | Spara parti |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet, Databasen |
+| Sekundär aktör | — |
 | Relaterade FR | FR-26.1, FR-26.2, FR-26.3, FR-26.4, FR-26.5, FR-26.6, FR-26.7, FR-26.8, FR-26.9 |
 | Relaterade NFR | NFR-04.2, NFR-07.4 |
 

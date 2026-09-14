@@ -388,6 +388,77 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 
 ---
 
+## FR-23: Återställ spelet
+
+**Realiserar:** UC-32 Återställ spelet
+
+| ID | Krav |
+| --- | --- |
+| FR-23.1 | Systemet ska låta spelaren återställa ett pågående parti till ett tomt bräde. |
+| FR-23.2 | Systemet ska begära en bekräftelse innan återställningen genomförs, eftersom den inte går att ångra. |
+| FR-23.3 | Systemet ska behålla partiets konfiguration — brädstorlek, färger, motståndartyp och svårighetsgrad — vid en återställning. |
+| FR-23.4 | Systemet ska nollställa dragräknaren och dragregistret när partiet återställs. |
+| FR-23.5 | Systemet ska ge första draget till svart efter en återställning (FR-04.3). |
+| FR-23.6 | Systemet ska kräva båda spelarnas samtycke innan ett parti mot en vän återställs. |
+| FR-23.7 | Systemet ska inte tillåta återställning av ett avslutat parti. |
+| FR-23.8 | Om spelaren avbryter bekräftelsen ska partiet fortsätta oförändrat. |
+
+---
+
+## FR-24: Samtycke till cookies
+
+**Realiserar:** UC-NFR-01 Ge samtycke till cookie  
+**Kopplade begränsningar:** SR-02.7, SR-03.1
+
+| ID | Krav |
+| --- | --- |
+| FR-24.1 | Systemet ska visa ett cookie-meddelande vid gästanvändarens första besök, innan några icke-nödvändiga cookies laddas. |
+| FR-24.2 | Meddelandet ska förklara vilka cookies som används och för vilket ändamål. |
+| FR-24.3 | Systemet ska erbjuda valen "Acceptera alla", "Acceptera nödvändiga" och egna val. |
+| FR-24.4 | Systemet ska spara gästanvändarens val med tidpunkt och den version av informationen som visades. |
+| FR-24.5 | Systemet ska endast ladda cookies som omfattas av det sparade valet. |
+| FR-24.6 | Systemet ska behandla ett stängt meddelande utan aktivt val som ett nekande av icke-nödvändiga cookies. |
+| FR-24.7 | Systemet ska inte visa meddelandet igen så länge ett sparat val finns. |
+| FR-24.8 | Systemet ska erbjuda "Cookie-inställningar" där ett tidigare val kan ändras eller återkallas. |
+| FR-24.9 | Systemet ska göra det lika enkelt att återkalla ett samtycke som att lämna det. |
+
+---
+
+## FR-27: Tillgång till personuppgifter
+
+**Realiserar:** UC-NFR-02 Begära tillgång till personuppgifter  
+**Kopplade begränsningar:** SR-03.1, SR-03.2
+
+| ID | Krav |
+| --- | --- |
+| FR-27.1 | Systemet ska låta en registrerad spelare begära en kopia av sina personuppgifter. |
+| FR-27.2 | Systemet ska verifiera att begäran kommer från den registrerade spelaren själv. |
+| FR-27.3 | Systemet ska registrera begäran med ett unikt begärande-ID, typ (ÅTKOMST), status och tidpunkt. |
+| FR-27.4 | Systemet ska samla in samtliga personuppgifter som finns om spelaren. |
+| FR-27.5 | Systemet ska tillhandahålla uppgifterna i ett strukturerat, maskinläsbart format. |
+| FR-27.6 | Systemet ska besvara begäran inom 30 dagar (SR-03.2). |
+| FR-27.7 | Om begäran inte kan behandlas ska systemet informera spelaren om orsaken och låta spelaren försöka igen. |
+| FR-27.8 | Systemet ska inte lämna ut personuppgifter som rör en annan person i samma export. |
+
+---
+
+## FR-31: Information om behandling hos tredje part
+
+**Realiserar:** UC-NFR-03 Informeras om delning med tredje part  
+**Kopplade begränsningar:** SR-03.1, SR-03.3
+
+| ID | Krav |
+| --- | --- |
+| FR-31.1 | Systemet ska visa vilka tredje parter som behandlar personuppgifter för systemets räkning. |
+| FR-31.2 | Systemet ska beskriva vilken behandling varje tredje part utför. |
+| FR-31.3 | Systemet ska ange om personuppgifter överförs till ett land utanför EES. |
+| FR-31.4 | Vid en sådan överföring ska systemet ange vilka skyddsåtgärder som gäller. |
+| FR-31.5 | Systemet ska visa att ingen överföring sker, när ingen överföring sker. |
+| FR-31.6 | Systemet ska visa att inga personuppgifter delas med tredje part, när ingen delning sker. |
+| FR-31.7 | Informationen ska vara nåbar utan att spelaren behöver logga in. |
+
+---
+
 ## FR-25: Välj inloggningsmetod
 
 **Realiserar:** UC-25 Välj inloggningsmetod
@@ -482,17 +553,34 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 
 ---
 
+## FR-32: Granskning av eskalerade databegäranden
+
+**Realiserar:** UC-NFR-08 Dataskyddsombudet granskar en raderingsbegäran  
+**Kopplade begränsningar:** SR-03.1, SR-03.2, SR-03.3, SR-03.4
+
+| ID | Krav |
+| --- | --- |
+| FR-32.1 | Systemet ska visa en lista över raderingsbegäranden som eskalerats till dataskyddsombudet. |
+| FR-32.2 | Listan ska för varje begäran visa begärande-ID, mottagningsdatum, kvarvarande tid till 30-dagarsgränsen och orsaken till eskaleringen. |
+| FR-32.3 | Systemet ska visa vilka datakategorier som är raderade, anonymiserade respektive kvar för en enskild begäran. |
+| FR-32.4 | Systemet ska låta dataskyddsombudet registrera ett beslut med rättslig grund och motivering. |
+| FR-32.5 | Systemet ska registrera beslutet med tidpunkt och vilket dataskyddsombud som fattade det. |
+| FR-32.6 | Systemet ska underrätta den registrerade spelaren om utfallet av granskningen. |
+| FR-32.7 | Systemet ska varna dataskyddsombudet när det återstår 5 dagar till 30-dagarsgränsen för en obeslutad begäran. |
+| FR-32.8 | Systemet ska markera en begäran som passerat 30-dagarsgränsen utan beslut som försenad, och bevara avvikelsen för efterlevnadsgranskning. |
+
+---
+
 ## Täckningsstatus – use case utan krav i denna fil
 
-Kraven ovan täcker UC-01 – UC-14, UC-17 – UC-31 och UC-NFR-04.
+Kraven ovan täcker UC-01 – UC-14 och UC-17 – UC-32, samt UC-NFR-01 – UC-NFR-04 och UC-NFR-08.
 Följande use case finns som filer i repot men saknar ännu krav här. Skriv in dem när
 respektive UC är färdigskriven.
 
 | Område | Berörda UC | Status |
 |--------|-----------|--------|
 | Partiavslut och resultat | UC-15 Förlust, UC-16 Vinst | saknas — täcks indirekt av FR-08.9 och FR-08.14, men behöver egna krav för resultatvyn |
-| Återställning | UC-32 Återställ spelet | saknas |
-| GDPR – övriga | UC-NFR-01, UC-NFR-02, UC-NFR-03, UC-NFR-05 | saknas — kraven ligger i dag enbart som NFR-07, NFR-10, NFR-11 och NFR-12 |
+| GDPR – övriga | UC-NFR-05 Ta bort konto | täcks av FR-15 och FR-30; inget eget FR-block |
 | Prestanda och återkoppling | UC-NFR-06, UC-NFR-07 | saknas — kraven ligger som NFR-02 |
 
 ---

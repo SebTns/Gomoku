@@ -6,7 +6,7 @@
 | Namn | Välj inloggningsmetod |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet |
+| Sekundär aktör | Extern identitetsleverantör |
 | Relaterade FR | FR-25.1, FR-25.2, FR-25.3, FR-25.4, FR-25.5 |
 | Relaterade NFR | NFR-07.1, NFR-07.3, NFR-06.1 |
 

@@ -5,8 +5,8 @@
 | Use Case ID | UC-15 |
 | Namn | Förlust |
 | Version | 1.0 |
-| Primär aktör | Systemet |
-| Sekundär aktör | Spelaren, Motståndaren |
+| Primär aktör | Spelare |
+| Sekundär aktör | Motståndare, AI-motståndare |
 | Relaterade FR | FR-08.9, FR-08.10, FR-08.13 |
 | Relaterade NFR | NFR-02.4, NFR-04.6 |
 
@@ -64,3 +64,9 @@ Vid steg 1 väljer spelaren "Ge upp".
 ## Öppna frågor
 
 - Ska förlusten visas med en kort förklaring (t.ex. "fem i rad för motståndaren")?
+
+---
+
+## Ändringslogg
+
+**1.1** — Rättad aktör. Primär aktör var tidigare angiven som *Systemet*. Enligt kursens definition är en aktör en **konsument** av förväntade resultat. Förlusten konsumeras av den spelare som förlorar — det är hen som ska få beskedet, och det är hens förväntan kravet gäller.

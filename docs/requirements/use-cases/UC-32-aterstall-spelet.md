@@ -6,8 +6,8 @@
 | Namn | Återställ spelet |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet, Motståndaren |
-| Relaterade FR | FR-03.7, FR-08.13 |
+| Sekundär aktör | Motståndaren |
+| Relaterade FR | FR-23.1 – FR-23.8, FR-03.7, FR-08.13 |
 | Relaterade NFR | NFR-08.2 |
 
 ---

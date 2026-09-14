@@ -6,7 +6,7 @@
 | Namn | Vinst |
 | Version | 1.0 |
 | Primär aktör | Spelare |
-| Sekundär aktör | Systemet, Motståndaren |
+| Sekundär aktör | Motståndaren |
 | Relaterade FR | FR-06.5, FR-08.8, FR-08.9, FR-08.10, FR-08.13 |
 | Relaterade NFR | NFR-02.4, NFR-04.6, NFR-06.3 |
 
