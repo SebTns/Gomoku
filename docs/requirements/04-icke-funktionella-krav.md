@@ -71,7 +71,7 @@ på referensenheten i NFR-01.2 vid 25 Mbit/s. Utan denna definition är NFR-02.2
 
 | ID | Krav |
 |----|------|
-| NFR-04.1 | Alla felmeddelanden ska vara på svenska, beskriva vad som hänt och ange nästa steg för spelaren. |
+| NFR-04.1 | Alla felmeddelanden ska vara på engelska, beskriva vad som hänt och ange nästa steg för spelaren. |
 | NFR-04.2 | Systemet ska bevara ett pågående partis tillstånd vid sidomladdning eller tillfälligt nätverksavbrott och tillåta återanslutning inom 5 minuter. |
 | NFR-04.3 | Systemet ska upptäcka en frånkopplad motståndare och meddela den kvarvarande spelaren inom 15 sekunder. |
 | NFR-04.4 | Varje inkommen rapport ska registreras med unikt ID och tidsstämpel. |
