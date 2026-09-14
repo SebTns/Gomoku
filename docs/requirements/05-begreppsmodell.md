@@ -80,4 +80,4 @@ classDiagram
     HumanPlayer "1" --> "1" Statistics : tracks
 
     Player "1" ..> "1" Player      : opposes as Opponent
-
+```
