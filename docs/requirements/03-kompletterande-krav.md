@@ -18,10 +18,6 @@ Definitionerna i `00-begreppslista.md` tar företräde vid konflikt.
 | SR-01.8 | En inbjudan är giltig i 15 minuter och kan användas av högst en motståndare. | FR-07.3, FR-07.8 |
 | SR-01.9 | En gästanvändare har inte tillgång till historik, topplista eller sociala funktioner. | `00-begreppslista.md`, Gästanvändare |
 
-> **Not.** Hänvisningen till `08-business-rules.md` är borttagen. Filen fanns i lärarens
-> referensrepo `miwashi-edu/gomoku` men har aldrig funnits här, och i vår numrering är 08
-> *Use Cases och Test Cases*.
-
 ## SR-02: Tekniska begränsningar
 
 | ID | Begränsning |
