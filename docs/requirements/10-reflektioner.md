@@ -24,14 +24,44 @@ berodde på — inte bara vad de var.
 
 | Motsägelse | Var | Hur den löstes |
 |---|---|---|
-| Vinstvillkoret: exakt fem eller fem-eller-fler? | UC-02 öppen fråga mot `00-begreppslista.md` | Begreppslistan är normerande. FR-08.14, FR-08.15, AC-02-06. |
+| Vinstvillkoret: exakt fem eller fem-eller-fler? | UC-02 öppen fråga mot `00-begreppslista.md` | Begreppslistan är normerande. FR-08.14, FR-08.15, AC-02-06 och AC-02-06b. |
 | Svarstid: 0,33 sekunder eller 100 ms? | AC-02 mot NFR-02.2 | Kravet gäller framför acceptanskriteriet. |
 | Är spelarnamnet en personuppgift? | NFR-03.3 mot `00-begreppslista.md` | Begreppslistan säger ja. NFR-03.3 delades i .3, .6 och .7. |
 | Ångra: bara mot datorn, eller också mot vän? | FR-12.3 mot FR-12.6 | Kraven uteslöt varandra. Löst med FR-12.7. |
 | Radering: all data, eller anonymiserad? | FR-15.4 mot FR-30.7 och NFR-12.5 | GDPR-kraven gäller. FR-15.4 skrevs om. |
 | Spårbarhet som pekade fel | UC-NFR-04 hänvisade till UC-18, UC-NFR-07, UC-NFR-09 | Numren kom från lärarens referensrepo. Rättade. |
+| Engelska eller svenska felmeddelanden? | SR-04.3 mot NFR-04.1 | Löst — engelska gäller. Regeln var bara ett antagande och är nu skriven som NFR-13. |
 
 Frågan att svara på: *varför* uppstod de? Flera av dem har samma orsak — vilken?
+
+Den sista av dem är värd en egen tanke. Motsägelsen såg ut att vara en detalj — vilket språk
+felmeddelanden skrivs på — men när den skulle lösas visade det sig att **språkregeln aldrig hade
+varit ett krav**. Den stod som SR-04.3, ett antagande, och antaganden testas inte. NFR-04.1 var
+det enda stället regeln fick praktisk verkan, och det täckte bara felmeddelanden — inte
+knapptexter, regeltext, cookie-texter eller e-post.
+
+Ett antagande som inget krav bygger vidare på är osynligt tills något motsäger det. Det är
+motsatsen till problemet i 10.3: där pekade spårbarheten fel, här fanns den inte alls.
+
+### Ett fel i ett testfall, inte i ett krav
+
+Det första utkastet av AC-02-06 beskrev ett brädläge som inte kan existera: *fem stenar i rad som
+redan är blockerad i båda ändar, så att femman inte utlöst vinst*. Men fem i rad **är** en vinst —
+blockerade ändar spelar roll för hotbilden i spelet, inte för vinstvillkoret. Uppställningen
+förutsatte alltså ett parti som redan var avgjort.
+
+Felet upptäcktes av en gruppmedlem vid genomläsning, inte av något verktyg. Kravet (FR-08.15) var
+hela tiden rätt; det var testfallet som beskrev fel väg dit.
+
+Det korrekta brädläget är att en **lucka fylls**: två grupper av samma färg på samma linje med en
+ledig punkt emellan, där ingen grupp är fem lång. Det är det enda sätt en överlinje kan uppstå,
+eftersom en rad som byggs en sten i taget avgör partiet redan vid fem.
+
+Reflektionen värd att dra: ett testfall kan vara logiskt omöjligt utan att något syns. Det
+kompilerar inte, det körs inte, och en granskning som bara kontrollerar att kravnumret stämmer
+hittar det aldrig. Den maskinella kontrollen av kravreferenser hade godkänt kriteriet —
+alla FR-nummer i det fanns och pekade rätt. Spårbarhet säger att kravet är kopplat till ett test.
+Den säger ingenting om att testet är möjligt att köra.
 
 ## 10.3 Upptäckter
 

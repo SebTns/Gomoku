@@ -123,6 +123,11 @@ faktiskt kör i tid — och den skillnaden är medveten.
 hjälp. Det är testbart, men bara genom observerad användbarhetstest med personer som inte sett
 systemet. Ett krav som aldrig körs i CI kontrolleras i praktiken en gång och glöms sedan.
 
+**Krav som gäller tvärs över allt.** NFR-13 (språk) hör inte till något enskilt användningsfall.
+Det är inte otestbart, men det syns inte i täckningstabellen ovan, eftersom den är sorterad på
+use case. AC-NFR-13 är därför skrivet mot systemet som helhet. Samma sak gäller NFR-01
+(kompatibilitet) och NFR-06 (tillgänglighet), som i dag saknar egna acceptanskriterier.
+
 ## 8.6 Kriterier som medvetet står ofärdiga
 
 Fyra acceptanskriterier saknar kravreferens och väntar på ett gruppbeslut. De står kvar i sina

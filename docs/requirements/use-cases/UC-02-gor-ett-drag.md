@@ -9,7 +9,7 @@
 | **Sekundär aktör** | Motståndare (spelare eller datorn) |
 | **Relaterade FR** | FR-08.1 – FR-08.17 |
 | **Relaterade NFR** | NFR-02.2, NFR-02.4, NFR-06.3, NFR-06.4, NFR-06.5, NFR-08.2 |
-| **Relaterade AC** | AC-02-01 – AC-02-08 |
+| **Relaterade AC** | AC-02-01 – AC-02-09, AC-02-06b |
 
 ## Beskrivning
 Spelaren placerar en sten på en ledig skärningspunkt på brädet. Systemet validerar draget,
@@ -69,7 +69,8 @@ Vid steg 7 misslyckas registreringen av draget.
 
 ### AF-06: Överlinje — sex eller fler i rad
 Vid steg 8 ingår den senast placerade stenen i en obruten rad av sex eller fler stenar av
-samma färg.
+samma färg. Detta kan bara inträffa när draget **fyller en lucka** mellan två grupper av samma
+färg, eftersom en rad som byggs en sten i taget avgör partiet redan vid exakt fem.
 - Systemet utser **ingen** vinnare (FR-08.15).
 - Partiet fortsätter och turen lämnas över som i steg 9.
 - Se Regelbeslut nedan.
@@ -97,12 +98,24 @@ Frågan stod tidigare öppen i denna fil. Den är avgjord mot `00-begreppslista.
 "5 i rad = *Exakt* fem på varandra följande stenar" och "6 eller mer i rad = Inte en vinst enligt
 vanliga Gomoku-regler". Begreppslistan säger uttryckligen att dess definitioner tar företräde vid
 konflikt, så den är normerande. Beslutet är skrivet till krav i FR-08.14 – FR-08.16 och testas av
-AC-02-05 och AC-02-06.
+AC-02-05, AC-02-06 och AC-02-06b.
 
 Konsekvensen är att kontrollen i steg 8 måste mäta radens **fulla längd** åt båda hållen från den
 senast placerade stenen, inte bara leta efter fem intilliggande stenar. En implementation som
-stannar vid fem hittar en vinst även i en sexa, och skulle passera ett test som bara lägger fem
-stenar.
+stannar vid fem hittar en vinst även mitt i en sjua.
+
+**När kan en överlinje alls uppstå?** Bara när ett drag fyller en lucka. En rad som byggs en sten
+i taget kommer aldrig förbi fem, eftersom partiet avgörs i samma ögonblick raden blir fem lång —
+fem i rad är en vinst oavsett om ändarna är blockerade. Blockerade ändar spelar roll för
+hotbilden i spelet, inte för vinstvillkoret.
+
+Det brädläge som krävs är alltså två grupper av samma färg på samma linje med exakt en ledig punkt
+emellan, där ingen grupp är fem lång. Giltiga kombinationer är 1+4, 2+3, 2+4, 3+3, 3+4 och 4+4,
+vilket efter draget ger sex till nio i rad. Fyller draget en lucka så att raden blir **exakt** fem
+(1+3 eller 2+2) är det däremot en vinst — det testas av AC-02-06b.
+
+Det är också därför FR-08.16 finns. Den placerade stenen hamnar mitt i raden, inte i änden, så
+kontrollen måste utgå från den och mäta åt båda hållen.
 
 ## Öppna frågor
 - Ska ett drag kunna ångras (→ UC-19), och i så fall inom vilken tid? FR-12 finns skriven, men

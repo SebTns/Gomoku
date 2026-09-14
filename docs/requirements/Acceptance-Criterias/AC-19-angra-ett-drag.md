@@ -12,7 +12,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **And** spelaren har gjort minst ett drag  
 **And** datorn ännu inte har svarat  
 
-**When** spelaren väljer "Ångra"  
+**When** spelaren väljer "Undo"  
 
 **Then** ska systemet ta bort spelarens senast placerade sten  
 **And** återställa brädet till läget före draget  
@@ -29,7 +29,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att ett parti mot datorn pågår  
 **And** inga drag har gjorts  
 
-**When** spelaren väljer "Ångra"  
+**When** spelaren väljer "Undo"  
 
 **Then** ska systemet avvisa ångringen  
 **And** visa att det inte finns något att ångra  
@@ -45,7 +45,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **And** spelaren har gjort ett drag  
 **And** datorn har gjort sitt nästa drag  
 
-**When** spelaren väljer "Ångra"  
+**When** spelaren väljer "Undo"  
 
 **Then** ska systemet förhindra ångringen  
 **And** brädet ska vara oförändrat  
@@ -59,7 +59,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Given** att ett parti är avslutat med ett resultat  
 
-**When** spelaren väljer "Ångra"  
+**When** spelaren väljer "Undo"  
 
 **Then** ska systemet avvisa ångringen  
 **And** resultatet ska vara oförändrat.
@@ -73,7 +73,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att ett lokalt parti på samma enhet pågår (UC-18)  
 **And** minst ett drag har gjorts  
 
-**When** en spelare väljer "Ångra"  
+**When** en spelare väljer "Undo"  
 
 **Then** ska systemet begära en bekräftelse innan draget ångras  
 **And** ångringen ska genomföras först när bekräftelsen ges  
@@ -88,7 +88,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att ett online-parti mot en vän pågår  
 **And** spelaren har gjort minst ett drag  
 
-**When** spelaren söker efter "Ångra"  
+**When** spelaren söker efter "Undo"  
 
 **Then** ska funktionen inte vara tillgänglig  
 **And** brädet ska vara oförändrat.
@@ -109,7 +109,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att ett parti mot datorn pågår  
 **And** spelaren just har ångrat sitt senaste drag  
 
-**When** spelaren väljer "Ångra" igen  
+**When** spelaren väljer "Undo" igen  
 
 **Then** ska systemet svara enligt gruppens beslut i UC-19:s öppna fråga.
 

@@ -21,13 +21,13 @@ En registrerad spelare tar bort sitt konto permanent och utlöser fullständig r
 
 ## Huvudflöde (grundläggande sökväg)
 
-1. Användaren navigerar till **"Kontoinställningar"** → **"Sekretess och data"** → **"Radera konto"**.
+1. Användaren navigerar till **"Account Settings"** → **"Privacy & Data"** → **"Delete Account"**.
 
 2. Systemet visar en otvetydig varning om att borttagning av konto:
 - Är **irreversibel** (FR-15.3)
 - Kommer att radera alla personuppgifter inom 30 dagar (NFR-12.2, SR-03.2)
 - Kommer att anonymisera historiska spelposter
-3. Användaren anger sitt lösenord och klickar på **"Radera mitt konto"** (steg 1 av 2).
+3. Användaren anger sitt lösenord och klickar på **"Delete My Account"** (steg 1 av 2).
 
 4. Systemet skickar ett bekräftelsemejl med en tidsbegränsad länk.
 5. Användaren klickar på bekräftelselänken i e-postmeddelandet (steg 2 av 2).

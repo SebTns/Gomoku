@@ -14,7 +14,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **When** spelaren öppnar adressen  
 
 **Then** ska startsidan vara färdigrenderad inom 2 sekunder vid 25 Mbit/s  
-**And** visa valen "Spela mot datorn", "Spela mot vän" och "Visa spelregler"  
+**And** visa valen "Play vs Computer", "Play with a Friend" och "Game Rules"  
 **And** ingen installation ska krävas.
 
 ---
@@ -25,7 +25,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Given** att spelaren inte är inloggad  
 
-**When** spelaren väljer "Spela mot datorn" från startsidan  
+**When** spelaren väljer "Play vs Computer" från startsidan  
 
 **Then** ska partiet kunna startas och genomföras  
 **And** ingen inloggning ska krävas.
@@ -54,7 +54,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **When** spelaren öppnar applikationen  
 
-**Then** ska valet "Återuppta parti" visas  
+**Then** ska valet "Resume Game" visas  
 **And** partitillståndet ska återställas när valet görs  
 **And** brädet, turen och dragräknaren ska vara desamma som när partiet lämnades.
 

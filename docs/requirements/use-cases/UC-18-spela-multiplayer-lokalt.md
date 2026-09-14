@@ -23,13 +23,13 @@ Två spelare spelar mot varandra på samma enhet (hot-seat) utan internet, där 
 ## Förutsättningar
 
 - Applikationen är öppen.
-- Spelaren väljer "Spela mot vän" och anger lokalt läge.
+- Spelaren väljer "Play with a Friend" och anger lokalt läge.
 
 ---
 
 ## Huvudflöde
 
-1. Spelaren väljer "Spela mot vän" (lokalt läge).
+1. Spelaren väljer "Play with a Friend" (lokalt läge).
 2. Systemet låter båda spelarna ange namn (→ UC-07).
 3. Systemet låter spelarna välja färg (→ UC-04).
 4. Systemet renderar ett tomt bräde.

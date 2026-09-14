@@ -28,7 +28,7 @@ Spelaren registrerar ett konto med namn, e-postadress och lösenord för att få
 
 ## Huvudflöde
 
-1. Spelaren väljer "Skapa konto".
+1. Spelaren väljer "Create Account".
 2. Systemet visar registreringsformuläret.
 3. Spelaren anger synligt namn, e-postadress och lösenord.
 4. Systemet validerar uppgifterna (format, längd, lösenordsregler).
@@ -53,7 +53,7 @@ Vid steg 4 är något fält ogiltigt.
 - Spelaren korrigerar och skickar igen.
 
 ### AF-03: Spelaren avbryter
-Vid steg 3 väljer spelaren "Avbryt".
+Vid steg 3 väljer spelaren "Cancel".
 
 - Inget konto skapas och spelaren återgår till startsidan.
 

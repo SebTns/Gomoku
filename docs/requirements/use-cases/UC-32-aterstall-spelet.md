@@ -27,7 +27,7 @@ Spelaren återställer ett pågående parti till startläge, så att hen kan bö
 
 ## Huvudflöde
 
-1. Spelaren väljer "Återställ spel".
+1. Spelaren väljer "Reset Game".
 2. Systemet begär bekräftelse (pågående parti kommer att förloras).
 3. Spelaren bekräftar.
 4. Systemet rensar brädet.
@@ -40,14 +40,14 @@ Spelaren återställer ett pågående parti till startläge, så att hen kan bö
 ## Alternativa flöden
 
 ### AF-01: Spelaren ångrar sig
-Vid steg 3 väljer spelaren "Avbryt".
+Vid steg 3 väljer spelaren "Cancel".
 
 - Partiet fortsätter oförändrat.
 
 ### AF-02: Partiet är redan avslutat
 Vid steg 1 är partiet avslutat.
 
-- Systemet hänvisar till "Spela igen" (→ UC-13) i stället.
+- Systemet hänvisar till "Play Again" (→ UC-13) i stället.
 
 ---
 

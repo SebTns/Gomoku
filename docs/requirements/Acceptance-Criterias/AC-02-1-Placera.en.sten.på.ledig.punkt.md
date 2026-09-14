@@ -94,20 +94,61 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Relaterade krav:** FR-08.15, FR-08.16
 
-**Given** att ett parti pågår  
-**And** spelaren har fem stenar av sin färg i en obruten rad som redan är blockerad i båda ändar
-av motståndarens stenar, så att femman inte har utlöst vinst  
-**And** det finns en ledig punkt som förlänger raden till sex  
+**Given** att ett parti pågår och det är svarts tur  
+**And** svart har tre stenar i rad på en linje  
+**And** därefter följer en ledig punkt på samma linje  
+**And** därefter följer tre svarta stenar i rad  
+**And** ingen av grupperna är fem i rad, så partiet har status PÅGÅENDE  
 
-**When** spelaren placerar en sten på den punkten så att raden blir sex stenar lång  
+**When** svart placerar en sten på den lediga punkten mellan grupperna  
+**And** raden därmed blir sju stenar lång  
 
 **Then** ska systemet inte utse någon vinnare  
 **And** partiet ska fortsätta med status PÅGÅENDE  
-**And** turen ska lämnas över till motståndaren.
+**And** turen ska lämnas över till vit.
 
-> **Testnot.** Detta kriterium är det som skiljer en korrekt implementation från en som stannar
-> vid fem intilliggande stenar. Ett test som bara lägger fem stenar passerar båda. Uppställningen
-> kräver därför ett konstruerat brädläge, inte ett spelat parti.
+> **Varför uppställningen ser ut så här.** En överlinje kan bara uppstå genom att en **lucka
+> fylls**. Att förlänga en rad en sten i taget går inte, eftersom raden då passerar exakt fem och
+> partiet avgörs i det ögonblicket — fem i rad är en vinst oavsett om ändarna är blockerade.
+> Blockerade ändar spelar roll för hotbilden i spelet, inte för vinstvillkoret.
+>
+> Det brädläge som krävs är alltså två grupper av samma färg på samma linje med exakt en ledig
+> punkt emellan, där **ingen grupp är fem lång** och grupperna tillsammans plus den nya stenen
+> blir fler än fem. Giltiga kombinationer: 1+4, 2+3, 2+4, 3+3, 3+4 och 4+4, vilket ger sex till
+> nio i rad.
+
+> **Testnot.** Kriteriet är det som skiljer en korrekt implementation från en som stannar vid fem
+> intilliggande stenar. En sådan implementation hittar en femma mitt i sjuan och utropar vinst.
+> Den passerar varje test som bara lägger stenar en i taget, eftersom ett sådant test aldrig
+> skapar en överlinje. Uppställningen kräver därför ett konstruerat brädläge.
+>
+> Det är också därför FR-08.16 finns: den placerade stenen hamnar **mitt i** raden, så kontrollen
+> måste mäta åt båda hållen från den. En implementation som bara räknar framåt ser tre stenar och
+> missar hela sjuan.
+
+---
+
+### AC-02-06b: Att fylla en lucka till exakt fem är en vinst
+
+**Relaterade krav:** FR-08.9, FR-08.14, FR-08.16
+
+**Given** att ett parti pågår och det är svarts tur  
+**And** svart har två stenar i rad, en ledig punkt, och därefter två svarta stenar på samma linje  
+**And** partiet har status PÅGÅENDE  
+
+**When** svart placerar en sten på den lediga punkten  
+**And** raden därmed blir exakt fem stenar lång  
+
+**Then** ska systemet avsluta partiet  
+**And** utse svart till vinnare  
+**And** markera den vinnande raden visuellt.
+
+> **Varför båda behövs.** AC-02-06 och AC-02-06b har samma sorts brädläge — två grupper med en
+> lucka emellan — men motsatt förväntat resultat. Skillnaden är bara radens totala längd efter
+> draget: fem vinner, sex eller fler gör det inte. Tillsammans låser de fast att kontrollen mäter
+> **hela** raden genom den placerade stenen och inte bara letar efter fem stenar någonstans i den.
+> Ett av kriterierna ensamt räcker inte: AC-02-06b passerar även för en implementation som räknar
+> fel uppåt, och AC-02-06 passerar även för en som aldrig utser någon vinnare alls.
 
 ---
 
@@ -138,7 +179,7 @@ av motståndarens stenar, så att femman inte har utlöst vinst
 **When** spelaren väljer en ledig punkt  
 **And** registreringen av draget misslyckas  
 
-**Then** ska systemet visa ett felmeddelande på svenska som beskriver vad som hänt och nästa steg  
+**Then** ska systemet visa ett felmeddelande på engelska som beskriver vad som hänt och nästa steg  
 **And** återställa brädet till läget före draget  
 **And** låta spelaren försöka igen.
 

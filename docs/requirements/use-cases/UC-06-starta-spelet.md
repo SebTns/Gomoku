@@ -23,7 +23,7 @@ Detta use case omfattar att få igång applikationen, inte att starta ett parti 
 1. Spelaren öppnar spelets adress i sin webbläsare.
 2. Systemet laddar applikationen.
 3. Systemet visar startsidan.
-4. Systemet visar valen "Spela mot datorn", "Spela mot vän" och "Visa spelregler".
+4. Systemet visar valen "Play vs Computer", "Play with a Friend" och "Game Rules".
 5. Spelaren väljer ett av alternativen.
 6. Systemet går vidare till valt flöde (UC-01, UC-03 eller UC-20).
 
@@ -37,7 +37,7 @@ Vid steg 2 misslyckas laddningen.
 
 ### AF-02: Spelaren har ett pågående parti
 Vid steg 3 finns ett sparat, pågående parti.
-- Systemet visar även valet "Återuppta parti".
+- Systemet visar även valet "Resume Game".
 - Väljer spelaren detta återställs partitillståndet och spelaren fortsätter i UC-02.
 
 ## Postconditions
@@ -51,4 +51,4 @@ Vid steg 3 finns ett sparat, pågående parti.
 - Startsidan ska fungera på skärmbredder från 360 px (NFR-01.2).
 
 ## Öppna frågor
-- Ska "Återuppta parti" finnas redan i v1, eller vänta till UC-27 (starta sparat parti)?
+- Ska "Resume Game" finnas redan i v1, eller vänta till UC-27 (starta sparat parti)?

@@ -40,7 +40,7 @@ Partiet avslutas med förlust för spelaren när motståndaren får fem i rad (e
 ## Alternativa flöden
 
 ### AF-01: Spelaren ger upp i stället
-Vid steg 1 väljer spelaren "Ge upp".
+Vid steg 1 väljer spelaren "Resign".
 
 - Förlusten registreras utan att fem i rad kontrolleras (→ UC-11).
 

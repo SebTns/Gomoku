@@ -10,7 +10,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Given** att spelaren har ett konto med avslutade partier i historiken  
 
-**When** spelaren väljer "Spelhistorik"  
+**When** spelaren väljer "Game History"  
 
 **Then** ska systemet visa en lista över spelarens tidigare avslutade partier  
 **And** varje rad ska visa datum, motståndare, brädstorlek, svårighetsgrad och resultat.
@@ -48,7 +48,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Given** att spelaren inte har några avslutade partier  
 
-**When** spelaren väljer "Spelhistorik"  
+**When** spelaren väljer "Game History"  
 
 **Then** ska systemet visa en tom lista med en kort förklaring  
 **And** erbjuda en väg vidare till att starta ett parti.
@@ -59,12 +59,12 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Relaterade krav:** NFR-04.1, NFR-04.6
 
-**Given** att spelaren har valt "Spelhistorik"  
+**Given** att spelaren har valt "Game History"  
 **And** historiken inte kan hämtas  
 
 **When** vyn visas  
 
-**Then** ska systemet visa ett felmeddelande på svenska  
+**Then** ska systemet visa ett felmeddelande på engelska  
 **And** erbjuda möjlighet att försöka igen.
 
 ---

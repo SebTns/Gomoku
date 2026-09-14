@@ -21,7 +21,7 @@ kan registreras och hanteras vidare.
 
 ## Huvudflöde
 
-1. Spelaren väljer "Rapportera problem".
+1. Spelaren väljer "Report a Problem".
 2. Systemet visar ett formulär för problemrapportering.
 3. Systemet visar vilka uppgifter som bifogas automatiskt (webbläsare, tidpunkt, parti-ID och
    synligt spelarnamn).
@@ -79,7 +79,7 @@ rapporten finns kvar lokalt så att den kan skickas om.
 - Spelaren ska informeras om vad som bifogas innan rapporten skickas (NFR-03.7).
 - Rapporteringen ska inte avbryta ett pågående parti (NFR-03.4).
 - Om rapporten inte kan skickas ska den sparas lokalt så att spelaren kan försöka igen (NFR-03.5).
-- Felmeddelanden ska vara på svenska, beskriva vad som hänt och ange nästa steg (NFR-04.1).
+- Felmeddelanden ska vara på engelska, beskriva vad som hänt och ange nästa steg (NFR-04.1).
 - Varje rapport ska registreras med ett unikt ID och en tidsstämpel (NFR-04.4).
 - Systemet ska inte logga personuppgifter i den tekniska felloggen (NFR-04.5).
 - Varje felvy ska ha minst en väg vidare (NFR-04.6).

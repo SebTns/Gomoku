@@ -28,7 +28,7 @@ Spelaren kopplar en ytterligare inloggningsmetod (t.ex. inloggning via Google) t
 
 ## Huvudflöde
 
-1. Spelaren väljer "Lägg till inloggningsmetod".
+1. Spelaren väljer "Add Login Method".
 2. Systemet visar tillgängliga metoder.
 3. Spelaren väljer en metod (t.ex. Google).
 4. Systemet skickar spelaren till den externa leverantörens flöde.

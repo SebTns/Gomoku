@@ -11,7 +11,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att spelaren befinner sig i spelet  
 **And** spelaren har upptäckt ett tekniskt problem  
 
-**When** spelaren öppnar funktionen "Rapportera problem"  
+**When** spelaren öppnar funktionen "Report a Problem"  
 **And** beskriver problemet  
 **And** skickar rapporten  
 
@@ -94,7 +94,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att ett parti pågår  
 **And** det är spelarens tur  
 
-**When** spelaren öppnar funktionen "Rapportera problem"  
+**When** spelaren öppnar funktionen "Report a Problem"  
 
 **Then** ska funktionen gå att nå inom högst två klick från den aktuella vyn  
 **And** partiet ska behålla status PÅGÅENDE  

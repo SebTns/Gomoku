@@ -18,6 +18,7 @@ värde eller observerbart utfall är inte ett krav — då är det en ambition o
 | NFR-10 | Tillgång till personuppgifter | Registrerad spelare — UC-NFR-02 |
 | NFR-11 | Delning av personuppgifter med tredje part | Registrerad spelare — UC-NFR-03 |
 | NFR-12 | Radering av personuppgifter | Registrerad spelare, DPO — UC-NFR-04, UC-NFR-05 |
+| NFR-13 | Språk i gränssnittet | Samtliga mänskliga aktörer — SR-04.3 |
 
 
 ## NFR-01: Kompatibilitet med enheter och webbläsare
@@ -184,5 +185,33 @@ tillstånd ska vara omöjligt. Ett sådant krav går inte att bevisa genom test,
 falsifiera: ett test kan visa att uppgifterna *går* att återskapa, aldrig att de aldrig gör
 det. Kravet verifieras därför genom ett begränsat antal namngivna sökvägar (databas,
 säkerhetskopia, applikationslogg, dataexport, sökindex). Se AC-NFR-04-05.
+
+---
+
+## NFR-13: Språk i gränssnittet
+
+**Kopplad begränsning:** SR-04.3  
+**Relaterade NFR:** NFR-04.1, NFR-06.1
+
+| ID | Krav |
+|----|------|
+| NFR-13.1 | All text som systemet presenterar för en användare ska vara på engelska. |
+| NFR-13.2 | Kravet i NFR-13.1 omfattar knappar och etiketter, fel- och bekräftelsemeddelanden, regelsammanfattningen, cookie-texter, standardvärden som visas för användaren, samt e-post som systemet skickar. |
+| NFR-13.3 | Dokumentets rotelement ska ange `lang="en"`, så att skärmläsare uttalar innehållet korrekt (WCAG 2.1, kriterium 3.1.1). |
+| NFR-13.4 | Den byggda applikationen ska inte innehålla några användarvända textsträngar på annat språk än engelska. |
+| NFR-13.5 | Datum, klockslag och tal som visas för användaren ska formateras entydigt och inte bero på webbläsarens språkinställning. |
+
+**Anmärkning om dokumentationens språk.** Kravdokumentationen i detta repo är skriven på svenska,
+och begreppsmodellen i `05-begreppsmodell.md` använder svenska begreppsnamn. Det är ingen
+motsägelse mot NFR-13: kraven skiljer på **dokumentationsspråk** och **produktspråk**.
+Dokumentationen läses av gruppen, gränssnittet av användaren. Där ett krav anger en knapptext
+inom citattecken är den engelska strängen den som gäller; den svenska prosan runt omkring namnger
+funktionen, inte etiketten.
+
+**Om testbarheten.** NFR-13.1 och NFR-13.2 är svåra att verifiera uttömmande — det är samma sorts
+negativa påstående som NFR-12.4, fast om språk i stället för data. NFR-13.4 är formulerat för att
+ge en avgränsad kontroll som går att köra: en sökning i byggartefakten efter svenska tecken
+(å, ä, ö) och efter en lista kända svenska ord. Den fångar inte en engelsk mening med fel
+terminologi, och den ska inte påstås göra det. Se AC-NFR-13.
 
 ---

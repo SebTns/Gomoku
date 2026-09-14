@@ -27,7 +27,7 @@ Spelaren byter lösenord på sitt konto för att välja ett nytt, säkrare löse
 
 ## Huvudflöde
 
-1. Spelaren väljer "Byta lösenord".
+1. Spelaren väljer "Change Password".
 2. Systemet visar formuläret med nuvarande lösenord, nytt lösenord och upprepning av nytt lösenord.
 3. Spelaren fyller i formuläret.
 4. Systemet validerar det nuvarande lösenordet.

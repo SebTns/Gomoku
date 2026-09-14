@@ -20,7 +20,7 @@ varandra på var sin enhet.
 
 ## Huvudflöde
 
-1. Spelaren väljer "Spela mot vän" på startsidan.
+1. Spelaren väljer "Play with a Friend" på startsidan.
 2. Spelaren konfigurerar partiet: brädstorlek och färgval (→ UC-01, UC-04).
 3. Systemet skapar en inbjudan med en unik länk.
 4. Systemet visar länken och möjlighet att kopiera eller dela den.

@@ -84,7 +84,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **When** spelaren försöker logga in  
 
-**Then** ska systemet visa ett felmeddelande på svenska som beskriver vad som hänt  
+**Then** ska systemet visa ett felmeddelande på engelska som beskriver vad som hänt  
 **And** erbjuda möjlighet att försöka igen  
 **And** spelaren ska förbli utloggad.
 

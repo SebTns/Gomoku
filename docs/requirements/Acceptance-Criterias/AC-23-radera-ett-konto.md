@@ -15,7 +15,7 @@ nedan överlappar inte dem, utan slutar där raderingsprocessen tar vid.
 **Given** att spelaren är inloggad  
 **And** befinner sig i kontoinställningarna  
 
-**When** spelaren väljer "Radera konto"  
+**When** spelaren väljer "Delete Account"  
 **And** anger sitt lösenord  
 **And** bekräftar  
 
@@ -31,7 +31,7 @@ nedan överlappar inte dem, utan slutar där raderingsprocessen tar vid.
 
 **Relaterade krav:** FR-15.3, FR-15.4, FR-30.7, NFR-12.5, NFR-12.6, SR-03.4
 
-**Given** att spelaren har valt "Radera konto"  
+**Given** att spelaren har valt "Delete Account"  
 
 **When** systemet visar varningen om vad raderingen innebär  
 
@@ -54,7 +54,7 @@ nedan överlappar inte dem, utan slutar där raderingsprocessen tar vid.
 
 **Relaterade krav:** FR-15.7
 
-**Given** att spelaren har valt "Radera konto"  
+**Given** att spelaren har valt "Delete Account"  
 **And** systemet begär bekräftelse  
 
 **When** spelaren avbryter  
@@ -69,7 +69,7 @@ nedan överlappar inte dem, utan slutar där raderingsprocessen tar vid.
 
 **Relaterade krav:** FR-15.2, FR-15.6
 
-**Given** att spelaren har valt "Radera konto"  
+**Given** att spelaren har valt "Delete Account"  
 **And** systemet begär lösenordet  
 
 **When** spelaren anger fel lösenord  

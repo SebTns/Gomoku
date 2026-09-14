@@ -24,7 +24,7 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 | ID | Krav |
 |----|------|
 | FR-01.1 | Systemet ska visa en startsida när applikationen öppnas. |
-| FR-01.2 | Startsidan ska erbjuda valen "Spela mot datorn", "Spela mot vän" och "Visa spelregler". |
+| FR-01.2 | Startsidan ska erbjuda valen "Play vs Computer", "Play with a Friend" och "Game Rules" (NFR-13.1). |
 | FR-01.3 | Systemet ska vara spelbart utan inloggning (gästläge). |
 | FR-01.4 | Om applikationen inte kan laddas ska systemet visa ett felmeddelande med möjlighet att försöka igen. |
 | FR-01.5 | Systemet ska visa startsidan inom en (1) navigering från valfri vy i spelet. |
@@ -40,7 +40,7 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 | FR-02.1 | Systemet ska låta spelaren ange ett synligt spelarnamn innan ett parti startas. |
 | FR-02.2 | Systemet ska acceptera namn på 2–20 tecken bestående av bokstäver, siffror, bindestreck och understreck. |
 | FR-02.3 | Systemet ska avvisa namn som bryter mot FR-02.2 och visa vilken regel som inte uppfylls. |
-| FR-02.4 | Systemet ska tilldela ett standardnamn ("Spelare 1") om spelaren inte anger något namn. |
+| FR-02.4 | Systemet ska tilldela standardnamnet "Player 1" om spelaren inte anger något namn (NFR-13.2). |
 | FR-02.5 | Systemet ska visa spelarens namn i turindikatorn och i resultatvyn. |
 | FR-02.6 | Systemet ska spara senast använda namn lokalt och föreslå det vid nästa besök. |
 | FR-02.7 | Systemet ska inte tillåta namnbyte under ett pågående parti. |
@@ -89,13 +89,13 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 
 | ID | Krav |
 | --- | --- |
-| FR-05.1 | Systemet ska erbjuda tre svårighetsgrader: Lätt, Medel och Svår. |
-| FR-05.2 | Systemet ska förvälja Medel. |
+| FR-05.1 | Systemet ska erbjuda tre svårighetsgrader, benämnda "Easy", "Medium" och "Hard" i gränssnittet (NFR-13.1). |
+| FR-05.2 | Systemet ska förvälja Medium. |
 | FR-05.3 | Systemet ska visa en kort beskrivning av vad varje svårighetsgrad innebär. |
 | FR-05.4 | Systemet ska endast erbjuda val av svårighetsgrad när motståndaren är datorn. |
 | FR-05.5 | Systemet ska låsa svårighetsgraden under ett pågående parti. |
 | FR-05.6 | Systemet ska komma ihåg senast valda svårighetsgrad till nästa parti. |
-| FR-05.7 | Systemet ska starta ett parti på Medel om vald svårighetsgrad inte kan tillämpas. |
+| FR-05.7 | Systemet ska starta ett parti på Medium om vald svårighetsgrad inte kan tillämpas. |
 
 ---
 
@@ -378,8 +378,8 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 
 | ID | Krav |
 | --- | --- |
-| FR-22.1 | Systemet ska visa en regelsammanfattning när spelaren väljer "Visa spelregler". |
-| FR-22.2 | Regelsammanfattningen ska beskriva spelets mål, hur ett drag görs, vinstvillkoret och när partiet blir oavgjort. |
+| FR-22.1 | Systemet ska visa en regelsammanfattning när spelaren väljer "Game Rules". |
+| FR-22.2 | Regelsammanfattningen ska beskriva spelets mål, hur ett drag görs, vinstvillkoret och när partiet blir oavgjort, på engelska (NFR-13.2). |
 | FR-22.3 | Regelsammanfattningen ska ange att vinstvillkoret är exakt fem i rad och att sex eller fler i rad inte är en vinst (SR-01.3). |
 | FR-22.4 | Systemet ska återföra spelaren till den vy hen kom ifrån när reglerna stängs. |
 | FR-22.5 | Systemet ska gå vidare till konfigurationsvyn om spelaren väljer att starta ett parti direkt från regelvyn. |
@@ -414,12 +414,12 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 | --- | --- |
 | FR-24.1 | Systemet ska visa ett cookie-meddelande vid gästanvändarens första besök, innan några icke-nödvändiga cookies laddas. |
 | FR-24.2 | Meddelandet ska förklara vilka cookies som används och för vilket ändamål. |
-| FR-24.3 | Systemet ska erbjuda valen "Acceptera alla", "Acceptera nödvändiga" och egna val. |
+| FR-24.3 | Systemet ska erbjuda valen "Accept All", "Accept Necessary" och egna val. |
 | FR-24.4 | Systemet ska spara gästanvändarens val med tidpunkt och den version av informationen som visades. |
 | FR-24.5 | Systemet ska endast ladda cookies som omfattas av det sparade valet. |
 | FR-24.6 | Systemet ska behandla ett stängt meddelande utan aktivt val som ett nekande av icke-nödvändiga cookies. |
 | FR-24.7 | Systemet ska inte visa meddelandet igen så länge ett sparat val finns. |
-| FR-24.8 | Systemet ska erbjuda "Cookie-inställningar" där ett tidigare val kan ändras eller återkallas. |
+| FR-24.8 | Systemet ska erbjuda "Cookie Settings" där ett tidigare val kan ändras eller återkallas. |
 | FR-24.9 | Systemet ska göra det lika enkelt att återkalla ett samtycke som att lämna det. |
 
 ---
@@ -496,7 +496,7 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 
 | ID | Krav |
 | --- | --- |
-| FR-28.1 | Systemet ska låta spelaren öppna funktionen "Rapportera problem" från spelet. |
+| FR-28.1 | Systemet ska låta spelaren öppna funktionen "Report a Problem" från spelet. |
 | FR-28.2 | Systemet ska låta spelaren beskriva det tekniska problemet i ett fritextfält. |
 | FR-28.3 | Systemet ska kräva en beskrivning av problemet innan rapporten kan skickas. |
 | FR-28.4 | Om beskrivningen saknas ska systemet informera spelaren om detta och rapporten ska inte registreras. |
@@ -545,7 +545,7 @@ efterhand, eftersom testfall och acceptanskriterier redan refererar till dem.
 | FR-30.6 | Systemet ska radera personuppgifter som inte omfattas av en lagringsskyldighet. |
 | FR-30.7 | Systemet ska anonymisera de poster som måste bevaras (samtyckesregister, begäranden, drag och partier) så att de inte kan kopplas till spelaren. |
 | FR-30.8 | Systemet ska sätta begärans status till GENOMFÖRD och registrera tidpunkten när raderingen är klar. |
-| FR-30.9 | Systemet ska skicka en bekräftelse på genomförd radering till spelarens registrerade e-postadress. |
+| FR-30.9 | Systemet ska skicka en bekräftelse på genomförd radering till spelarens registrerade e-postadress, på engelska (NFR-13.2). |
 | FR-30.10 | Systemet ska genomföra raderingen inom 30 dagar från det att begäran verifierades (SR-03.2). |
 | FR-30.11 | Om raderingen inte kan genomföras inom 30 dagar ska systemet underrätta dataskyddsombudet och informera spelaren om förseningen och ett nytt datum. |
 | FR-30.12 | Om en rättslig skyldighet hindrar fullständig radering ska systemet radera övriga uppgifter, informera spelaren om vilka uppgifter som bevaras och på vilken rättslig grund. |

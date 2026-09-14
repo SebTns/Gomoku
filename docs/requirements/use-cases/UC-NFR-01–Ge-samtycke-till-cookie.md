@@ -29,7 +29,7 @@ Gästanvändaren ger eller nekar samtycke till cookies vid första besöket, i e
 
 1. Systemet visar ett meddelande om cookies vid första besöket.
 2. Systemet förklarar vilka cookies som används och varför.
-3. Gästanvändaren väljer "Acceptera alla", "Acceptera nödvändiga" eller gör egna val.
+3. Gästanvändaren väljer "Accept All", "Accept Necessary" eller gör egna val.
 4. Systemet sparar gästanvändarens val.
 5. Systemet laddar endast cookies enligt valet.
 6. Systemet visar inte meddelandet igen vid nästa besök.
@@ -46,7 +46,7 @@ Vid steg 3 stänger besökaren meddelandet utan att välja.
 ### AF-02: Gästanvändaren vill ändra sitt val
 Vid ett senare besök vill besökaren ändra sitt tidigare val.
 
-- Systemet erbjuder "Cookie-inställningar" där valet kan ändras.
+- Systemet erbjuder "Cookie Settings" där valet kan ändras.
 
 ---
 

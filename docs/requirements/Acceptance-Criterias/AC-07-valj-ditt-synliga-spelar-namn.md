@@ -3,7 +3,7 @@ Relaterade krav: FR-02.1, FR-02.2, FR-02.5, UC-07 (Steg 1-7)
 
 Given att spelaren har öppnat spelet (UC-06)
 And inget parti är pågående
-And systemet visar ett fält med det senast använda namnet ifyllt, eller standardnamnet "Spelare 1"
+And systemet visar ett fält med det senast använda namnet ifyllt, eller standardnamnet "Player 1"
 
 When spelaren skriver in ett namn som består av 2–20 tecken (bokstäver, siffror, bindestreck eller understreck) och bekräftar
 
@@ -36,7 +36,7 @@ And inget parti är pågående
 
 When spelaren lämnar namnfältet tomt och bekräftar
 
-Then ska systemet automatiskt tilldela standardnamnet "Spelare 1"
+Then ska systemet automatiskt tilldela standardnamnet "Player 1"
 And spara standardnamnet lokalt
 And visa standardnamnet i gränssnittet
 

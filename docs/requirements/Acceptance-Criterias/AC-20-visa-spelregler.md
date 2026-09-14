@@ -10,7 +10,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Given** att spelaren befinner sig på startsidan  
 
-**When** spelaren väljer "Visa spelregler"  
+**When** spelaren väljer "Game Rules"  
 
 **Then** ska systemet visa en regelsammanfattning  
 **And** sammanfattningen ska beskriva spelets mål  
@@ -74,7 +74,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att regelsammanfattningen visas  
 **And** inget parti pågår  
 
-**When** spelaren väljer "Starta parti"  
+**When** spelaren väljer "Start Game"  
 
 **Then** ska systemet visa konfigurationsvyn  
 **And** reglerna ska stängas.
@@ -85,12 +85,12 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Relaterade krav:** FR-22.6, NFR-04.1, NFR-04.6
 
-**Given** att spelaren har valt "Visa spelregler"  
+**Given** att spelaren har valt "Game Rules"  
 **And** regelsammanfattningen inte kan laddas  
 
 **When** vyn visas  
 
-**Then** ska systemet visa ett felmeddelande på svenska som beskriver vad som hänt  
+**Then** ska systemet visa ett felmeddelande på engelska som beskriver vad som hänt  
 **And** erbjuda möjlighet att försöka igen  
 **And** erbjuda en väg tillbaka till den föregående vyn.
 

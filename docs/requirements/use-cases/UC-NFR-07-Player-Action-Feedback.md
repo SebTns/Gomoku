@@ -46,7 +46,7 @@ Vid steg 3 är det inte spelarens tur.
 
 ### AF-03: Ett fel uppstår
 Vid valfritt steg misslyckas en systemåtgärd.
-- Systemet visar ett felmeddelande på svenska som beskriver vad som hänt och nästa steg
+- Systemet visar ett felmeddelande på engelska som beskriver vad som hänt och nästa steg
   (NFR-04.1).
 - Spelaren har minst en väg vidare (NFR-04.6).
 

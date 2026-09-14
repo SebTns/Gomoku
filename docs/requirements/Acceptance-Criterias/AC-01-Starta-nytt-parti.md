@@ -9,7 +9,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Relaterade krav:** FR-03.1, FR-03.2, FR-03.3, FR-03.4, FR-04.3, NFR-02.1
 
 **Given** att spelaren är på startsidan  
-**And** har valt "Starta nytt parti"  
+**And** har valt "New Game"  
 **And** ser konfigurationsvyn med brädstorlek, motståndartyp och färgval  
 
 **When** spelaren bekräftar inställningarna  
@@ -25,7 +25,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Relaterade krav:** FR-03.2, FR-05.2
 
-**Given** att spelaren har valt "Starta nytt parti"  
+**Given** att spelaren har valt "New Game"  
 
 **When** konfigurationsvyn visas  
 
@@ -58,7 +58,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **When** systemet försöker starta partiet  
 
-**Then** ska systemet visa ett felmeddelande på svenska som beskriver vad som hänt  
+**Then** ska systemet visa ett felmeddelande på engelska som beskriver vad som hänt  
 **And** behålla spelaren i konfigurationsvyn  
 **And** låta spelaren försöka igen.
 

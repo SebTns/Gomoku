@@ -21,7 +21,7 @@ går att följa utan konto eller inloggning.
 ## Huvudflöde
 
 1. Spelaren väljer att ändra sitt spelarnamn.
-2. Systemet visar ett fält med det senast använda namnet ifyllt, eller standardnamnet "Spelare 1".
+2. Systemet visar ett fält med det senast använda namnet ifyllt, eller standardnamnet "Player 1".
 3. Spelaren skriver in önskat namn.
 4. Systemet validerar namnet mot reglerna: 2–20 tecken, endast bokstäver, siffror, bindestreck och understreck.
 5. Spelaren bekräftar.
@@ -38,7 +38,7 @@ Vid steg 4 bryter namnet mot valideringsreglerna.
 
 ### AF-02: Spelaren anger inget namn
 Vid steg 3 lämnar spelaren fältet tomt och bekräftar.
-- Systemet tilldelar standardnamnet "Spelare 1".
+- Systemet tilldelar standardnamnet "Player 1".
 - Flödet fortsätter från steg 6.
 
 ### AF-03: Spelaren avbryter

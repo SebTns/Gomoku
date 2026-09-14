@@ -28,9 +28,9 @@ Spelaren raderar sitt konto permanent, varvid kontouppgifter och tillhörande da
 
 ## Huvudflöde
 
-1. Spelaren väljer "Radera konto".
+1. Spelaren väljer "Delete Account".
 2. Systemet visar information om vad raderingen innebär.
-3. Systemet begär bekräftelse (t.ex. lösenord eller skriv "RADERA").
+3. Systemet begär bekräftelse (t.ex. lösenord eller skriv "DELETE").
 4. Spelaren bekräftar.
 5. Systemet raderar kontot och tillhörande data.
 6. Systemet loggar ut spelaren.

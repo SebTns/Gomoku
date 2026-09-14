@@ -27,7 +27,7 @@ Spelaren avslutar ett pågående parti i förtid genom att ge upp, vilket regist
 
 ## Huvudflöde
 
-1. Spelaren väljer "Ge upp".
+1. Spelaren väljer "Resign".
 2. Systemet begär bekräftelse.
 3. Spelaren bekräftar.
 4. Systemet avslutar partiet med status `AVSLUTAT`.
@@ -40,14 +40,14 @@ Spelaren avslutar ett pågående parti i förtid genom att ge upp, vilket regist
 ## Alternativa flöden
 
 ### AF-01: Spelaren ångrar sig
-Vid steg 3 väljer spelaren "Avbryt".
+Vid steg 3 väljer spelaren "Cancel".
 
 - Partiet fortsätter som tidigare utan att något registreras.
 
 ### AF-02: Partiet är redan avslutat
 Vid steg 1 har partiet redan avgjorts.
 
-- Systemet avvisar "Ge upp" och visar resultatvyn.
+- Systemet avvisar "Resign" och visar resultatvyn.
 
 ---
 
@@ -61,11 +61,11 @@ Vid steg 1 har partiet redan avgjorts.
 
 ## Särskilda krav
 
-- Felmeddelanden och bekräftelseförfrågningar ska vara på svenska (NFR-04.1).
+- Felmeddelanden och bekräftelseförfrågningar ska vara på engelska (NFR-04.1).
 - Spelaren ska alltid ha en väg vidare från resultatvyn (NFR-04.6).
 
 ---
 
 ## Öppna frågor
 
-- Ska det finnas en tidsgräns innan "Ge upp" är tillgängligt (t.ex. tidigast efter 5 drag)?
+- Ska det finnas en tidsgräns innan "Resign" är tillgängligt (t.ex. tidigast efter 5 drag)?

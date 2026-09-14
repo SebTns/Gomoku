@@ -27,7 +27,7 @@ Spelaren läser en kort regelsammanfattning för Gomoku i spelet, så att en ny 
 
 ## Huvudflöde
 
-1. Spelaren väljer "Visa spelregler".
+1. Spelaren väljer "Game Rules".
 2. Systemet visar regelsammanfattningen (mål, drag, vinstvillkor, oavgjort).
 3. Spelaren läser reglerna.
 4. Spelaren stänger reglerna.
@@ -43,7 +43,7 @@ Vid steg 2 misslyckas laddningen.
 - Systemet visar ett felmeddelande med möjlighet att försöka igen.
 
 ### AF-02: Spelaren startar ett parti direkt
-Vid steg 3 väljer spelaren "Starta parti" från regelvyn.
+Vid steg 3 väljer spelaren "Start Game" från regelvyn.
 
 - Systemet går vidare till konfigurationsvyn (→ UC-01).
 

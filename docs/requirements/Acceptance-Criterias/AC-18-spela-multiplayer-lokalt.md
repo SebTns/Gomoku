@@ -10,7 +10,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 
 **Given** att applikationen är öppen på en enhet  
 
-**When** spelaren väljer "Spela mot vän" och anger lokalt läge  
+**When** spelaren väljer "Play with a Friend" och anger lokalt läge  
 **And** båda spelarna anger var sitt synliga spelarnamn  
 **And** färgvalet är gjort  
 

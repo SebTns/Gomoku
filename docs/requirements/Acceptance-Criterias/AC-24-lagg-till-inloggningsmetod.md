@@ -15,7 +15,7 @@ testas av AC-25.
 **And** befinner sig i kontoinställningarna  
 **And** metoden M inte är kopplad till kontot  
 
-**When** spelaren väljer "Lägg till inloggningsmetod"  
+**When** spelaren väljer "Add Login Method"  
 **And** väljer metoden M  
 **And** bekräftar sitt nuvarande lösenord  
 **And** godkänner kopplingen hos den externa leverantören  

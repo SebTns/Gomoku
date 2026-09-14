@@ -27,7 +27,7 @@ Spelaren återupptar ett tidigare sparat parti från den punkt där det avbröts
 
 ## Huvudflöde
 
-1. Spelaren väljer "Sparade partier".
+1. Spelaren väljer "Saved Games".
 2. Systemet visar en lista över sparade partier.
 3. Spelaren väljer ett parti.
 4. Systemet laddar partitillståndet.

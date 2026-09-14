@@ -19,14 +19,14 @@ och skapandet av partiet, fram till att spelplanen visas. Själva spelandet sker
 
 ## Huvudflöde
 
-1. Spelaren väljer "Starta nytt parti" på startsidan.
+1. Spelaren väljer "New Game" på startsidan.
 2. Systemet visar konfigurationsvyn med:
    - Brädstorlek: 15×15 (standard) eller 19×19
    - Motståndare: datorn eller en vän
    - Färgval (→ UC-04)
    - Svårighetsgrad, om motståndaren är datorn (→ UC-08)
 3. Spelaren gör sina val eller behåller standardvärdena.
-4. Spelaren bekräftar med "Starta".
+4. Spelaren bekräftar med "Start".
 5. Systemet skapar ett parti med status `PÅGÅENDE`.
 6. Systemet tilldelar färger enligt spelarens val och ger den andra färgen till motståndaren.
 7. Systemet renderar ett tomt bräde av vald storlek.
@@ -36,7 +36,7 @@ och skapandet av partiet, fram till att spelplanen visas. Själva spelandet sker
 ## Alternativa flöden
 
 ### AF-01: Spelaren avbryter konfigurationen
-Vid steg 4 väljer spelaren "Avbryt" eller lämnar vyn.
+Vid steg 4 väljer spelaren "Cancel" eller lämnar vyn.
 - Systemet kasserar konfigurationen.
 - Inget parti skapas.
 - Spelaren återgår till startsidan.
@@ -60,9 +60,9 @@ Vid steg 1 finns ett pågående parti.
 **Misslyckat:** Inget parti har skapats och spelaren har fått ett felmeddelande.
 
 ## Särskilda krav
-- Brädet ska renderas inom 2 sekunder från att "Starta" valts (NFR-02.1).
+- Brädet ska renderas inom 2 sekunder från att "Start" valts (NFR-02.1).
 - Ändringar i konfigurationen ska synas i gränssnittet inom 300 ms (NFR-02.7).
 
 ## Öppna frågor
 - Ska brädstorleken 19×19 ingå i v1 eller skjutas upp?
-- Avgränsning mot UC-13 "Starta ett nytt parti" måste beslutas — se journalen.
+- Avgränsning mot UC-13 "New Game" måste beslutas — se journalen.

@@ -46,5 +46,5 @@ Definitionerna i `00-begreppslista.md` tar företräde vid konflikt.
 |----|-----------|
 | SR-04.1 | Spelare har tillgång till en enhet med en modern webbläsare och en stabil internetanslutning. |
 | SR-04.2 | Den primära målgruppen finns i Europeiska unionen. |
-| SR-04.3 | Systemet kommer initialt endast att stödja engelska; lokalisering är utanför ramen för v1. |
+| SR-04.3 | Systemet kommer initialt endast att stödja engelska; lokalisering är utanför ramen för v1. Antagandet är skrivet till testbart krav i NFR-13. |
 | SR-04.4 | AI:n körs på serversidan; klienter skickar flyttförfrågningar och tar emot AI-svar. |

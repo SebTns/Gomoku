@@ -27,7 +27,7 @@ Spelaren avslutar ett pågående parti i förtid (utan att ge upp), vilket spara
 
 ## Huvudflöde
 
-1. Spelaren väljer "Avsluta parti".
+1. Spelaren väljer "End Game".
 2. Systemet begär bekräftelse.
 3. Spelaren bekräftar.
 4. Systemet sparar partistatusen (positioner, tur, inställningar) innan avslut.
@@ -40,7 +40,7 @@ Spelaren avslutar ett pågående parti i förtid (utan att ge upp), vilket spara
 ## Alternativa flöden
 
 ### AF-01: Spelaren ångrar sig
-Vid steg 3 väljer spelaren "Avbryt".
+Vid steg 3 väljer spelaren "Cancel".
 
 - Partiet fortsätter som tidigare.
 

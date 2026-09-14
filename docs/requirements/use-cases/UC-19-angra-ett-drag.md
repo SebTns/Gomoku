@@ -28,7 +28,7 @@ Spelaren ångrar sitt senaste drag så att brädet och turen återställs till l
 
 ## Huvudflöde
 
-1. Spelaren väljer "Ångra".
+1. Spelaren väljer "Undo".
 2. Systemet återställer det senaste draget (stenen tas bort).
 3. Systemet återställer turen till spelaren.
 4. Systemet uppdaterar dragräknaren.
@@ -41,7 +41,7 @@ Spelaren ångrar sitt senaste drag så att brädet och turen återställs till l
 ### AF-01: Det finns inget drag att ångra
 Vid steg 1 har spelaren inte gjort något drag.
 
-- Systemet avvisar "Ångra" och visar att det inte finns något att ångra.
+- Systemet avvisar "Undo" och visar att det inte finns något att ångra.
 
 ### AF-02: Det är motståndarens drag att ångra
 Vid steg 1 är det motståndarens senaste drag som skulle ångras.
@@ -51,7 +51,7 @@ Vid steg 1 är det motståndarens senaste drag som skulle ångras.
 ### AF-03: Partiet är avslutat
 Vid steg 1 är partiet redan avslutat.
 
-- Systemet avvisar "Ångra".
+- Systemet avvisar "Undo".
 
 ---
 

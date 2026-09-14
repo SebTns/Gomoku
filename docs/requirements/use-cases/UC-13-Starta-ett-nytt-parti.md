@@ -27,7 +27,7 @@ Efter ett avslutat parti startar spelaren ett nytt parti direkt från resultatvy
 
 ## Huvudflöde
 
-1. Spelaren väljer "Spela igen" i resultatvyn.
+1. Spelaren väljer "Play Again" i resultatvyn.
 2. Systemet återställer spelplanen till startläge (tomt bräde, svart börjar).
 3. Systemet skapar ett nytt parti med status `PÅGÅENDE`.
 4. Systemet behåller partikonfigurationen (brädstorlek, motståndare, svårighetsgrad) om inget annat anges.
@@ -38,7 +38,7 @@ Efter ett avslutat parti startar spelaren ett nytt parti direkt från resultatvy
 ## Alternativa flöden
 
 ### AF-01: Spelaren vill ändra inställningar
-Vid steg 1 väljer spelaren "Ändra inställningar".
+Vid steg 1 väljer spelaren "Settings".
 
 - Systemet visar konfigurationsvyn (→ UC-01).
 - Efter bekräftelse startas partiet med de nya inställningarna.

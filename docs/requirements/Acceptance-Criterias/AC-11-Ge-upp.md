@@ -5,7 +5,7 @@
 **Relaterade krav:** FR-09.1, FR-09.2, FR-09.3, FR-09.4
 
 **Given** att ett parti pågår  
-**When** spelaren väljer "Ge upp"  
+**When** spelaren väljer "Resign"  
 **Then** ska systemet visa en bekräftelse  
 **When** spelaren bekräftar att hen vill ge upp  
 **Then** ska systemet avsluta partiet  
@@ -20,9 +20,9 @@
 **Relaterade krav:** FR-09.2, FR-09.6
 
 **Given** att ett parti pågår  
-**And** spelaren har valt "Ge upp"  
+**And** spelaren har valt "Resign"  
 **And** systemet visar en bekräftelse  
-**When** spelaren väljer "Avbryt"  
+**When** spelaren väljer "Cancel"  
 **Then** ska uppgivandet inte genomföras  
 **And** partiet ska fortsätta.
 
@@ -33,5 +33,5 @@
 **Relaterade krav:** FR-09.5
 
 **Given** att partiet redan är avslutat  
-**When** spelaren försöker välja "Ge upp"  
+**When** spelaren försöker välja "Resign"  
 **Then** ska systemet förhindra att spelaren ger upp.

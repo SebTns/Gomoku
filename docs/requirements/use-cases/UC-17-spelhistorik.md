@@ -27,7 +27,7 @@ Spelaren visar sin spelhistorik med tidigare partier, inklusive datum, motstånd
 
 ## Huvudflöde
 
-1. Spelaren väljer "Spelhistorik".
+1. Spelaren väljer "Game History".
 2. Systemet hämtar spelarens avslutade partier.
 3. Systemet visar en lista med datum, motståndare, brädstorlek och resultat.
 4. Spelaren kan välja ett parti för att se detaljer.

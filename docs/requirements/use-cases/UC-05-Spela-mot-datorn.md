@@ -21,7 +21,7 @@ Spelaren spelar ett helt parti Gomoku mot datorn, från partistart till resultat
 ## Huvudflöde
 
 1. Systemet visar startsidan.
-2. Spelaren väljer "Spela mot datorn".
+2. Spelaren väljer "Play vs Computer".
 3. Systemet visar de svårighetsgrader som finns (→ UC-08).
 4. Spelaren väljer en svårighetsgrad.
 5. Systemet startar ett nytt parti mot datorn (→ UC-01).

@@ -27,7 +27,7 @@ Spelaren ändrar sina kontoinställningar, såsom synligt namn och e-postadress,
 
 ## Huvudflöde
 
-1. Spelaren väljer "Ändra kontoinställningar".
+1. Spelaren väljer "Account Settings".
 2. Systemet visar nuvarande inställningar.
 3. Spelaren ändrar önskade fält.
 4. Spelaren sparar ändringarna.

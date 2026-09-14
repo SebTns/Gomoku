@@ -11,7 +11,7 @@ Testspråk: Given / When / Then (BDT). Varje kriterium anger vilka krav det veri
 **Given** att spelaren befinner sig på startsidan  
 **And** e-postadressen inte är registrerad sedan tidigare  
 
-**When** spelaren väljer "Skapa konto"  
+**When** spelaren väljer "Create Account"  
 **And** anger synligt namn, en giltig e-postadress och ett lösenord på minst 8 tecken  
 **And** bekräftar  
 
@@ -61,7 +61,7 @@ eller ett synligt namn som bryter mot FR-02.2
 
 **Given** att spelaren har fyllt i registreringsformuläret  
 
-**When** spelaren väljer "Avbryt"  
+**When** spelaren väljer "Cancel"  
 
 **Then** ska inget konto skapas  
 **And** spelaren ska återgå till startsidan  

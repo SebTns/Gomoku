@@ -27,7 +27,7 @@ Spelaren sparar ett pågående parti så att det kan återupptas senare utan att
 
 ## Huvudflöde
 
-1. Spelaren väljer "Spara parti".
+1. Spelaren väljer "Save Game".
 2. Systemet frågar om spelaren vill spara till kontot, molnet eller en fil för nedladdning.
 3. Systemet sparar partitillståndet (positioner, tur, färger, brädstorlek, svårighetsgrad).
 4. Systemet visar en bekräftelse på att partiet är sparat.

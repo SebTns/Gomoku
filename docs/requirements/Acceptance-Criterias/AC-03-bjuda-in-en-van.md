@@ -6,7 +6,7 @@
 
 **Given** att spelaren är på startsidan och har ett synligt spelarnamn
 
-**When** spelaren väljer "Spela med en vän"
+**When** spelaren väljer "Play with a Friend"
 
 **Then** ska systemet skapa en unik inbjudningslänk inom 1 sekund  
 **And** visa inbjudningslänken för spelaren  
