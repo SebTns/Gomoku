@@ -63,6 +63,12 @@ hittar det aldrig. Den maskinella kontrollen av kravreferenser hade godkänt kri
 alla FR-nummer i det fanns och pekade rätt. Spårbarhet säger att kravet är kopplat till ett test.
 Den säger ingenting om att testet är möjligt att köra.
 
+Rättningen gav dessutom ett kriterium till. Fyller ett drag en lucka så att raden blir *exakt* fem
+är det en vinst — AC-02-06b. De två kriterierna har samma sorts brädläge men motsatt förväntat
+resultat, och tillsammans låser de fast att kontrollen mäter hela raden genom den placerade
+stenen. Var för sig räcker de inte: AC-02-06b passerar även för en implementation som räknar fel
+uppåt, och AC-02-06 passerar även för en som aldrig utser någon vinnare alls.
+
 ## 10.3 Upptäckter
 
 Vad blev synligt först när något ritades eller skrevs ned, som inte syntes i texten?
@@ -76,19 +82,25 @@ Exempel som finns dokumenterade:
 - UC-28 och UC-29 möts i samma modereringsärende men refererar aldrig till varandra.
 - Dataskyddsombudet stod som aktör utan att äga något användningsfall, trots att UC-NFR-04
   eskalerar till det.
+- Språkregeln fanns bara som ett antagande (SR-04.3). Att den aldrig blivit ett krav upptäcktes
+  först när antagandet motsades — och då hade 57 knapptexter i 46 filer hunnit bli svenska utan
+  att något sa ifrån. Se avsnittet nedan.
 
 ## 10.4 Krav som inte går att verifiera fullt ut
 
 Sammanställningen finns i `08-use-cases-och-test-cases.md` 8.5. Reflektionen är en annan sak:
 vad betyder det för kvalitetsarbetet att ett krav är verifierbart i teorin men inte i en pipeline?
 
-Tre fall värda att skriva om:
+Fyra fall värda att skriva om:
 
 - **NFR-12.4** — att raderade uppgifter inte ska kunna återskapas är ett negativt påstående. Det
-  går att falsifiera, inte att bevisa.
+  går att falsifiera, inte att bevisa. AC-NFR-04-05 räknar upp fem sökvägar i stället.
 - **NFR-05.2 och SR-03.2** — 12 månader respektive 30 dagar. Simulerad tid verifierar logiken,
   inte att produktionsjobbet kör.
 - **NFR-06.6** — två minuter för en ny spelare. Testbart, men bara med människor.
+- **NFR-13.1** — all text på engelska. En uttömmande kontroll är inte bara opraktisk utan
+  meningslös: en knapp kan vara på engelska och ändå säga fel sak. NFR-13.4 ger avgränsningen som
+  går att köra, och AC-NFR-13-07 säger rakt ut vad den inte täcker.
 
 ## 10.5 Är det kvalitet? Är det krav?
 
@@ -121,3 +133,28 @@ Inte en artighetsfras. Vad i arbetsordningen skapade det merarbete som beskrivs 
 ## Att ta bort innan inlämning
 
 Den här rutan, och alla rubriker du inte skrivit under.
+
+---
+
+## Bilaga: Antagandet som aldrig blev ett krav
+
+Den motsägelse som såg minst intressant ut — vilket språk felmeddelanden skrivs på — visade sig
+peka på en brist av en annan sort än de övriga fem.
+
+Språkregeln stod som **SR-04.3** bland antagandena: *systemet kommer initialt endast att stödja
+engelska*. Ett antagande är per definition något man inte verifierar. NFR-04.1 var det enda
+stället där regeln fick praktisk verkan, och det täckte bara felmeddelanden. Knapptexter,
+regelsammanfattning, cookie-texter och e-post låg utanför varje krav.
+
+Följden syntes i dokumentationen så snart någon letade: kraven sa engelska medan 57 knapptexter i
+46 filer stod på svenska. Ingen hade lagt märke till det, eftersom inget krav påstod något om dem
+— och där inget krav finns kan inget acceptanskriterium heller finnas.
+
+Regeln är nu skriven som NFR-13 med åtta acceptanskriterier. Men poängen är inte språket. Ett
+antagande som inget krav bygger vidare på är **osynligt tills något motsäger det**. Det är
+motsatsen till problemet med de felpekande korsreferenserna: där pekade spårbarheten fel, här
+fanns den inte alls — och en frånvarande länk syns inte i någon kontroll.
+
+`03-kompletterande-krav.md` innehåller fyra antaganden till. Frågan att ställa till var och en är
+densamma: *finns det ett krav som skulle gå sönder om antagandet var falskt?* Om svaret är nej är
+antagandet inte förankrat i något, och ingen kommer att märka när det slutar gälla.
