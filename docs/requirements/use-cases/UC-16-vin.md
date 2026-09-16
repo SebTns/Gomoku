@@ -7,14 +7,15 @@
 | Version | 1.0 |
 | Primär aktör | Spelare |
 | Sekundär aktör | Motståndaren |
-| Relaterade FR | FR-06.5, FR-08.8, FR-08.9, FR-08.10, FR-08.13 |
+| Relaterade FR | FR-06.5, FR-08.8, FR-08.9, FR-08.10, FR-08.13, FR-08.14 |
 | Relaterade NFR | NFR-02.4, NFR-04.6, NFR-06.3 |
+| Relaterade SR | SR-01.3 |
 
 ---
 
 ## Beskrivning
 
-Partiet avslutas med vinst för spelaren när spelaren får fem i rad, varvid vinsten registreras, den vinnande raden markeras och vinstmeddelandet visas.
+Partiet avslutas med vinst för spelaren när spelaren får exakt fem i rad, varvid vinsten registreras, den vinnande raden markeras och vinstmeddelandet visas.
 
 ---
 
@@ -22,7 +23,7 @@ Partiet avslutas med vinst för spelaren när spelaren får fem i rad, varvid vi
 
 - Ett parti pågår.
 - Det är spelarens tur.
-- Spelaren har fyra stenar i rad med öppen förlängning.
+- Spelaren har fyra stenar som med yttligare en sten kan bilda exakt 5 i rad (inte 6 eller mer).
 
 ---
 
