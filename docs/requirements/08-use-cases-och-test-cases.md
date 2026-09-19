@@ -25,7 +25,7 @@ Varje led svarar på en egen fråga:
 | Use Case | Vad vill aktören uppnå? | `use-cases/` |
 | Krav | Vad ska systemet göra för att det ska ske? | `02`, `03`, `04` |
 | Acceptanskriterium | Hur ser man skillnaden mellan rätt och fel? | `Acceptance-Criterias/` |
-| Testfall | Hur körs kontrollen? | `tests/` (tom i detta skede) |
+| Testfall | Hur körs kontrollen? | `tests/` — sammanfattning i [`tests/tester.md`](../../tests/tester.md) |
 
 ## 8.2 Hur use case-delarna översätts till testdelar
 
@@ -46,12 +46,13 @@ kontrollerad.
 
 ## 8.3 Täckning per användningsfall
 
-40 användningsfall, 29 med acceptanskriterier, 172 kriterier totalt.
+40 användningsfall, samtliga med acceptanskriterier. 41 testfiler och 254 testfall i `tests/`
+(inklusive AC-NFR-13, som gäller systemet som helhet).
 
 | UC-ID | Namn | Primär aktör | Acceptanskriterier | Antal |
 |-------|------|--------------|--------------------|-------|
 | UC-01 | Starta nytt parti | Spelare | AC-01-01 – AC-01-05 | 5 |
-| UC-02 | Gör ett drag | Spelare | AC-02-01 – AC-02-09 | 9 |
+| UC-02 | Gör ett drag | Spelare | AC-02-01 – AC-02-09 (+ AC-02-06b) | 10 |
 | UC-03 | Bjud in en vän | Spelare (inbjudare) | AC-03-01 – AC-03-06 | 6 |
 | UC-04 | Välja färg | Spelare | AC-04-01 – AC-04-04 | 4 |
 | UC-05 | Spela mot datorn | Spelare | AC-05-01 – AC-05-07 | 7 |
@@ -75,34 +76,34 @@ kontrollerad.
 | UC-23 | Radera ett konto | Spelare | AC-23-01 – AC-23-07 | 7 |
 | UC-24 | Lägg till inloggningsmetod | Spelare | AC-24-01 – AC-24-08 | 8 |
 | UC-25 | Välj inloggningsmetod | Spelare | AC-25-01 – AC-25-05 | 5 |
-| UC-26 | Spara parti | Spelare | **saknas** | 0 |
-| UC-27 | Starta sparat parti | Spelare | **saknas** | 0 |
+| UC-26 | Spara parti | Spelare | AC-26-01 – AC-26-08 | 8 |
+| UC-27 | Starta sparat parti | Spelare | AC-27-01 – AC-27-06 | 6 |
 | UC-28 | Rapportera ett tekniskt problem | Spelare | AC-28-01 – AC-28-07 | 7 |
 | UC-29 | Tillfälligt blockera en spelare | Administratör | AC-29-01 – AC-29-08 | 8 |
-| UC-30 | Ändra kontoinställningar | Spelare | **saknas** | 0 |
-| UC-31 | Byta lösenord | Spelare | **saknas** | 0 |
-| UC-32 | Återställ spelet | Spelare | **saknas** | 0 |
-| UC-NFR-01 | Ge samtycke till cookie | Gästanvändare | **saknas** | 0 |
-| UC-NFR-02 | Begära tillgång till personuppgifter | Registrerad spelare | **saknas** | 0 |
-| UC-NFR-03 | Informeras om delning med tredje part | Spelare | **saknas** | 0 |
+| UC-30 | Ändra kontoinställningar | Spelare | AC-30-01 – AC-30-06 | 6 |
+| UC-31 | Byta lösenord | Spelare | AC-31-01 – AC-31-07 | 7 |
+| UC-32 | Återställ spelet | Spelare | AC-32-01 – AC-32-06 | 6 |
+| UC-NFR-01 | Ge samtycke till cookie | Gästanvändare | AC-NFR-01-01 – AC-NFR-01-07 | 7 |
+| UC-NFR-02 | Begära tillgång till personuppgifter | Registrerad spelare | AC-NFR-02-01 – AC-NFR-02-06 | 6 |
+| UC-NFR-03 | Informeras om delning med tredje part | Spelare | AC-NFR-03-01 – AC-NFR-03-05 | 5 |
 | UC-NFR-04 | Begär radering av data (rätt till radering) | Registrerad spelare | AC-NFR-04-01 – AC-NFR-04-09 | 9 |
-| UC-NFR-05 | Ta bort konto | Registrerad spelare | **saknas** | 0 |
-| UC-NFR-06 | Systemets responstid efter spelarens handling | Spelare | **saknas** | 0 |
-| UC-NFR-07 | Spelaren får återkoppling efter handling | Spelare | **saknas** | 0 |
+| UC-NFR-05 | Ta bort konto | Registrerad spelare | AC-NFR-05-01 – AC-NFR-05-06 | 6 |
+| UC-NFR-06 | Systemets responstid efter spelarens handling | Spelare | AC-NFR-06-01 – AC-NFR-06-08 | 8 |
+| UC-NFR-07 | Spelaren får återkoppling efter handling | Spelare | AC-NFR-07-01 – AC-NFR-07-08 | 8 |
 | UC-NFR-08 | Dataskyddsombudet granskar en raderingsbegäran | Dataskyddsombud (DPO) | AC-NFR-08-01 – AC-NFR-08-05 | 5 |
 
 ---
 
-## 8.4 Var täckningen saknas
+## 8.4 Var täckningen saknades
 
-De användningsfall som står med **0** ovan har krav men inga acceptanskriterier. Kraven är alltså
-skrivna men aldrig översatta till något observerbart, och ingen av dem kan i dag sägas vara
-verifierad.
+Fram till v.37 hade elva användningsfall krav men inga acceptanskriterier: UC-26, UC-27, UC-30,
+UC-31, UC-32 och UC-NFR-01, -02, -03, -05, -06, -07. Kraven var skrivna men aldrig översatta till
+något observerbart. De har nu fått testfall i `tests/`.
 
-Det är värt att vara tydlig med varför det spelar roll. Kursens definition säger att ett krav är en
-förväntan som är testbar. Ett krav utan acceptanskriterium är inte automatiskt otestbart — men
-ingen har visat att det går att testa, och skillnaden mellan de två är osynlig tills någon
-försöker.
+Arbetet visade fyra ställen där use case och krav säger olika saker (sparplatser i UC-26,
+avslutat parti i UC-26 AF-03, e-poststeget i UC-NFR-05 och antal mätningar för NFR-02). De står
+listade i [`tests/tester.md`](../../tests/tester.md) under *Öppna frågor*. Det är just den sortens
+lucka som bara syns när någon försöker skriva ett *Then*.
 
 ## 8.5 Krav som inte går att verifiera fullt ut
 
